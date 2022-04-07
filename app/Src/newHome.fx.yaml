@@ -745,7 +745,7 @@ newHome As screen:
                             OnSelect: |-
                                 =Set(courseNameFolder, Concat(Filter(Split(slnc_courseNameEN_1.Text,""),IsMatch(Result,"^[a-zA-Z0-9\s]+")),Result));
                                 Set(resetScroll, false);
-                                ClearCollect(formData,
+                                ClearCollect(dataForm,
                                 {  
                                     requestor_name: textInput_Requestor_2.Text,
                                     Title: Text(First(FirstN(Sort('wrtracking-production-version-001', ID, Descending), 1)).ID+6033),
@@ -757,10 +757,10 @@ newHome As screen:
                                     SLNC_CourseNameEN:If(IsBlank(slnc_courseNameEN_1),"",slnc_courseNameEN_1.Text),
                                     SLNC_CourseNameFR:If(IsBlank(slnc_courseNameFR_1),"",slnc_courseNameFR_1.Text),
                                     CourseFolderName:If(IsBlank(courseNameFolder),"",courseNameFolder),
-                                    SLNC_ClassID:If(IsBlank(slnc_classID_8), 0,Value(slnc_classID_8.Text)),
-                                    SLNC_CourseID:If(IsBlank(slnc_courseID_tf_7),0,Value(slnc_courseID_tf_7.Text)),
-                                    SDD_ClassID:If(IsBlank(sdd_classID_8),0,Value(sdd_classID_8.Text)),
-                                    SDD_CourseID:If(IsBlank(sdd_courseID_8),0,Value(sdd_courseID_8.Text)),
+                                    SLNC_ClassID:If(IsBlank(slnc_classID_8), "",slnc_classID_8.Text),
+                                    SLNC_CourseID:If(IsBlank(slnc_courseID_tf_7),"",slnc_courseID_tf_7.Text),
+                                    SDD_ClassID:If(IsBlank(sdd_classID_8),"",sdd_classID_8.Text),
+                                    SDD_CourseID:If(IsBlank(sdd_courseID_8),"",sdd_courseID_8.Text),
                                     SLNC_ContentTitleEN: If(IsBlank(slnc_contentTitleEN_2),"",slnc_contentTitleEN_2.Text),
                                     SLNC_ContentTitleFR:If(IsBlank(slnc_contentTitleFR_2),"",slnc_contentTitleFR_2.Text),
                                     request_details: If(IsBlank(textInput_requestDetails_2),"",textInput_requestDetails_2.Text),
@@ -776,7 +776,7 @@ newHome As screen:
                                     CustomB:If(!IsBlank(txtinput_wp_row_number),txtinput_wp_row_number.Text,""),
                                     CustomC:If(!IsBlank(txtInput_adaptlink), Substitute(txtInput_adaptlink.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", " ")
                                 });
-                                'MeD-PRD-NewWR'.Run(JSON(formData,IndentFour));
+                                'MeD-PRD-NewWR'.Run(JSON(dataForm,IndentFour));
                                 
                                 Reset(dd_Bizline_2);Reset(textInput_Requestor_2);Reset(dd_typeofwork_2);Reset(dd_medium_2);
                                 Reset(dd_requestLan_2);Reset(slnc_courseNameEN_1);Reset(slnc_courseNameFR_1);Reset(slnc_contentTitleEN_2);Reset(slnc_contentTitleFR_2);Reset(textInput_requestDetails_2);
