@@ -974,7 +974,7 @@ editWR As screen:
                                     submitted_date:dateP_submitted_2.SelectedDate,
                                     requestor_email:Office365Users.MyProfileV2().mail,
                                     CustomA:dp_WP_Tab_1.SelectedText.Value,
-                                    CustomB:txtinput_wp_row_number_1.Text,
+                                    CustomB:"",
                                     CustomC:If(!IsBlank(txtInput_adaptlink_1), Substitute(txtInput_adaptlink_1.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", " ")
                                 
                                 });
