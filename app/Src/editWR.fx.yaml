@@ -699,7 +699,7 @@ editWR As screen:
                                 Default: =PlannedGallery.Selected.field_37
                                 Height: =158
                                 Mode: =TextMode.MultiLine
-                                Reset: =btn_Clear_3.Pressed
+                                Reset: =
                                 TabIndex: =41
                                 Width: =1204
                                 X: =88
