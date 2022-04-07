@@ -869,7 +869,7 @@ editWR As screen:
                                     SLNC_CourseNameFR:If(IsBlank(slnc_courseNameFR_2),"",slnc_courseNameFR_2.Text),
                                     CourseFolderName:If(IsBlank(courseNameFolder),"",courseNameFolder),
                                 
-                                    SLNC_ClassID:If(IsBlank(slnc_classID_3),"",Value(slnc_classID_3.Text)),
+                                    SLNC_ClassID:If(IsBlank(slnc_classID_3),"",slnc_classID_3.Text),
                                     SLNC_CourseID:If(IsBlank(slnc_courseID_tf_2),"",slnc_courseID_tf_2.Text),
                                     SDD_ClassID:If(IsBlank(sdd_classID_3),"",sdd_classID_3.Text),
                                     SDD_CourseID:If(IsBlank(sdd_courseID_3),"",sdd_courseID_3.Text),
