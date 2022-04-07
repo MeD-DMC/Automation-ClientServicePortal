@@ -77,7 +77,7 @@ newHome As screen:
 
                         dateP_dueDate_2 As datepicker:
                             BorderColor: =RGBA(31, 124, 155, 1)
-                            DefaultDate: =Today()+30
+                            DefaultDate: =Today()+1
                             Format: ="yyyy-mm-dd"
                             IconBackground: =RGBA(31, 124, 155, 1)
                             Reset: =btn_Clear_2.Pressed
