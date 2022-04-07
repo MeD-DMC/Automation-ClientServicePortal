@@ -333,6 +333,7 @@ editWR As screen:
                                 =[If(dd_lan_selector_2.SelectedText.Value="EN", LookUp(ProjectStatus, ID=16).Title, LookUp(ProjectStatus, ID=16).French)
                                 ]
                             Reset: =btn_Clear_5.Pressed
+                            Visible: =false
                             Width: =188
                             X: =1117
                             Y: =130
@@ -857,6 +858,8 @@ editWR As screen:
                             OnSelect: |+
                                 =Set(courseNameFolder, Concat(Filter(Split(slnc_courseNameEN_2.Text,""),IsMatch(Result,"^[a-zA-Z0-9\s]+")),Result));
                                 Set(resetScroll, false);
+                                //test
+                                
                                 ClearCollect(dataForm,
                                 {
                                     ID: PlannedGallery.Selected.ID,
