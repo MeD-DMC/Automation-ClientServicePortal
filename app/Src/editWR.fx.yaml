@@ -232,6 +232,7 @@ editWR As screen:
                                 DefaultSelectedItems: =PlannedGallery.Selected.field_6
                                 DisplayFields: =["Value"]
                                 HoverColor: =RGBA(255, 255, 255, 1)
+                                HoverFill: =RGBA(105, 69, 156, 1)
                                 InputTextPlaceholder: ="Select the Business Line"
                                 IsSearchable: =false
                                 Items: =Choices('wrtracking-production-version-001'.businessLine)
