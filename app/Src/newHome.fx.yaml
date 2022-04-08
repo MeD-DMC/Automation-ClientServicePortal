@@ -848,6 +848,9 @@ newHome As screen:
                                     CustomC:If(!IsBlank(txtInput_adaptlink), Substitute(txtInput_adaptlink.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", " ")
                                 });
                                 'MeD-PRD-NewWR'.Run(JSON(dataForm,IndentFour));
+                                
+                                //If using both languages ---
+                                //
                                 If(dd_requestLan_2.Selected.Value="BOTH" || dd_requestLan_2.Selected.Value="Les deux",
                                 ClearCollect(dataForm,
                                 {  
@@ -879,11 +882,17 @@ newHome As screen:
                                     CustomA:dp_WP_Tab.SelectedText.Value,
                                     CustomB:If(!IsBlank(txtinput_wp_row_number),txtinput_wp_row_number.Text,""),
                                     CustomC:If(!IsBlank(txtInput_adaptlink), Substitute(txtInput_adaptlink.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", " ")
-                                }));
+                                })
+                                );
+                                If(dd_requestLan_2.Selected.Value="BOTH" || dd_requestLan_2.Selected.Value="Les deux",
+                                    'MeD-PRD-NewWR'.Run(JSON(dataForm,IndentFour));
+                                );
+                                
+                                //Reset data ---
                                 
                                 Reset(dd_Bizline_2);Reset(textInput_Requestor_2);Reset(dd_typeofwork_2);Reset(dd_medium_2);
                                 Reset(dd_requestLan_2);Reset(slnc_courseNameEN_1);Reset(slnc_courseNameFR_1);Reset(slnc_contentTitleEN_2);Reset(slnc_contentTitleFR_2);Reset(textInput_requestDetails_2);
-                                Reset(dateP_submitted_2);Reset(dd_projectstatus);Reset(cb_isgnwt);Reset(cb_isaccessibility);Reset(dateP_dueDate_2);Reset(dateP_submitted_2);Reset(cb_isadhoc);Reset(dp_WP_Tab);Reset(sdd_courseID_8);Reset(slnc_courseID_tf_7);Reset(slnc_classID_8);Reset(sdd_classID_8);
+                                Reset(dateP_submitted_2);Reset(dd_projectstatus);Reset(cb_isgnwt);Reset(cb_isaccessibility);Reset(dateP_dueDate_2);Reset(dateP_submitted_2);Reset(cb_isadhoc);Reset(dp_WP_Tab);Reset(sdd_courseID_8);Reset(slnc_courseID_tf_7);Reset(slnc_classID_8);Reset(sdd_classID_8);Reset(sdd_classID_FR);Reset(slnc_classID_FR);
                                 Reset(txtinput_wp_row_number);Reset(txtInput_adaptlink);
                                 
                                 Navigate(screen_complete, Transition.None);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
