@@ -57,6 +57,25 @@ newHome As screen:
                         Width: =Parent.Width
                         ZIndex: =1
 
+                        Label13 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(31, 124, 155, 1)
+                            BorderThickness: =1
+                            Color: =RGBA(109, 49, 162, 1)
+                            Fill: =RGBA(255, 255, 255, 1)
+                            Height: =138
+                            PaddingBottom: =10
+                            PaddingLeft: =10
+                            PaddingRight: =10
+                            PaddingTop: =10
+                            Size: =10
+                            Text: =If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="66").English, LookUp(langPack, Title="66").French)
+                            Visible: =If(dd_requestLan_2.SelectedText.Value = "BOTH" || dd_requestLan_2.SelectedText.Value = "Les deux" , true, false)
+                            Width: =149
+                            X: =1123
+                            Y: =169
+                            ZIndex: =1
+
                         Label1_58 As label:
                             Height: =46
                             TabIndex: =9
@@ -64,7 +83,7 @@ newHome As screen:
                             Width: =160
                             X: =98
                             Y: =181
-                            ZIndex: =3
+                            ZIndex: =4
 
                         Label1_60 As label:
                             Height: =37
@@ -73,7 +92,7 @@ newHome As screen:
                             Width: =119
                             X: =985
                             Y: =75
-                            ZIndex: =4
+                            ZIndex: =5
 
                         dateP_dueDate_2 As datepicker:
                             BorderColor: =RGBA(31, 124, 155, 1)
@@ -85,7 +104,7 @@ newHome As screen:
                             Width: =166
                             X: =1106
                             Y: =74
-                            ZIndex: =5
+                            ZIndex: =6
 
                         dd_Bizline_2 As combobox:
                             BorderColor: =RGBA(31, 124, 155, 1)
@@ -108,7 +127,7 @@ newHome As screen:
                             Width: =300
                             X: =248
                             Y: =184
-                            ZIndex: =6
+                            ZIndex: =7
 
                         Label1_59 As label:
                             Height: =37
@@ -118,7 +137,7 @@ newHome As screen:
                             Width: =97
                             X: =567
                             Y: =130
-                            ZIndex: =7
+                            ZIndex: =8
 
                         dd_medium_2 As dropdown:
                             BorderColor: =RGBA(31, 124, 155, 1)
@@ -145,7 +164,7 @@ newHome As screen:
                             Width: =200
                             X: =713
                             Y: =129
-                            ZIndex: =8
+                            ZIndex: =9
 
                         as_medium_2 As label:
                             Color: =RGBA(168, 0, 0, 1)
@@ -154,7 +173,7 @@ newHome As screen:
                             Width: =67
                             X: =644
                             Y: =123
-                            ZIndex: =9
+                            ZIndex: =10
 
                         textInput_Requestor_2 As text:
                             BorderColor: =RGBA(31, 124, 155, 1)
@@ -166,7 +185,7 @@ newHome As screen:
                             Width: =300
                             X: =248
                             Y: =132
-                            ZIndex: =10
+                            ZIndex: =11
 
                         Label1_57 As label:
                             Height: =37
@@ -175,7 +194,7 @@ newHome As screen:
                             Width: =138
                             X: =98
                             Y: =133
-                            ZIndex: =11
+                            ZIndex: =12
 
                         Label1_56 As label:
                             Height: =42
@@ -184,7 +203,7 @@ newHome As screen:
                             Width: =97
                             X: =985
                             Y: =127
-                            ZIndex: =12
+                            ZIndex: =13
 
                         dd_requestLan_2 As dropdown:
                             BorderColor: =RGBA(31, 124, 155, 1)
@@ -193,14 +212,14 @@ newHome As screen:
                             Default: ="Select / Choisir"
                             HoverColor: =RGBA(255, 255, 255, 1)
                             HoverFill: =RGBA(31, 124, 155, 1)
-                            Items: =["EN","FR","BOTH"]
+                            Items: =["EN","FR",If(dd_lan_selector.SelectedText.Value="EN", "BOTH", "Les deux")]
                             Reset: =btn_Clear_2.Pressed
                             SelectionFill: =RGBA(31, 124, 155, 1)
                             TabIndex: =14
                             Width: =170
                             X: =1102
                             Y: =129
-                            ZIndex: =13
+                            ZIndex: =14
 
                         Label1_54 As label:
                             Height: =46
@@ -208,7 +227,7 @@ newHome As screen:
                             Text: =If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="19").English, LookUp(langPack, Title="19").French)
                             X: =567
                             Y: =181
-                            ZIndex: =14
+                            ZIndex: =15
 
                         Label1_55 As label:
                             Height: =37
@@ -217,7 +236,7 @@ newHome As screen:
                             Width: =163
                             X: =567
                             Y: =77
-                            ZIndex: =15
+                            ZIndex: =16
 
                         dateP_submitted_2 As datepicker:
                             BorderColor: =RGBA(31, 124, 155, 1)
@@ -229,7 +248,7 @@ newHome As screen:
                             Width: =198
                             X: =713
                             Y: =74
-                            ZIndex: =16
+                            ZIndex: =17
 
                         dd_typeofwork_2 As dropdown:
                             BorderColor: =RGBA(31, 124, 155, 1)
@@ -245,10 +264,10 @@ newHome As screen:
                             Reset: =btn_Clear_2.Pressed
                             SelectionFill: =RGBA(31, 124, 155, 1)
                             TabIndex: =12
-                            Width: =389
+                            Width: =410
                             X: =713
                             Y: =184
-                            ZIndex: =17
+                            ZIndex: =18
 
                         lbl_warning_3 As label:
                             Color: =RGBA(168, 0, 0, 1)
@@ -260,7 +279,7 @@ newHome As screen:
                             Width: =850
                             X: =96
                             Y: =41
-                            ZIndex: =18
+                            ZIndex: =19
 
                         Label2_13 As label:
                             FontWeight: =FontWeight.Bold
@@ -270,7 +289,7 @@ newHome As screen:
                             Width: =450
                             X: =40
                             Y: =6
-                            ZIndex: =19
+                            ZIndex: =20
 
                         Label1_1 As label:
                             Text: =If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="12").English, LookUp(langPack, Title="12").French)
@@ -298,7 +317,7 @@ newHome As screen:
                             Width: =25
                             X: =682
                             Y: =184
-                            ZIndex: =24
+                            ZIndex: =23
 
                         as_businessLine As label:
                             Color: =RGBA(168, 0, 0, 1)
@@ -307,26 +326,7 @@ newHome As screen:
                             Width: =36
                             X: =219
                             Y: =181
-                            ZIndex: =25
-
-                        Label13 As label:
-                            AutoHeight: =true
-                            BorderColor: =RGBA(31, 124, 155, 1)
-                            BorderThickness: =1
-                            Color: =RGBA(109, 49, 162, 1)
-                            Fill: =RGBA(255, 255, 255, 1)
-                            Height: =138
-                            PaddingBottom: =10
-                            PaddingLeft: =10
-                            PaddingRight: =10
-                            PaddingTop: =10
-                            Size: =9
-                            Text: =If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="66").English, LookUp(langPack, Title="66").French)
-                            Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH", true, false)
-                            Width: =149
-                            X: =1123
-                            Y: =169
-                            ZIndex: =38
+                            ZIndex: =24
 
                         checkboxes As group:
                             Height: =5
@@ -344,7 +344,7 @@ newHome As screen:
                                 Width: =658
                                 X: =94
                                 Y: =237
-                                ZIndex: =1
+                                ZIndex: =2
 
                             cb_isgnwt As checkbox:
                                 BorderColor: =RGBA(31, 124, 155, 1)
@@ -356,7 +356,7 @@ newHome As screen:
                                 Width: =1079
                                 X: =94
                                 Y: =287
-                                ZIndex: =2
+                                ZIndex: =3
 
                             Label1 As label:
                                 Color: =RGBA(109, 49, 162, 1)
@@ -370,7 +370,7 @@ newHome As screen:
                                     =
                                     If(dd_lan_selector_1.SelectedText.Value="EN",640 ,765)
                                 Y: =248
-                                ZIndex: =29
+                                ZIndex: =26
 
                         wp_details As group:
                             Height: =5
@@ -386,7 +386,7 @@ newHome As screen:
                                 Width: =927
                                 X: =94
                                 Y: =476
-                                ZIndex: =26
+                                ZIndex: =25
 
                             dp_WP_Tab As dropdown:
                                 Default: ="Select WP Quarter"
@@ -395,7 +395,7 @@ newHome As screen:
                                 Width: =300
                                 X: =269
                                 Y: =417
-                                ZIndex: =30
+                                ZIndex: =27
 
                             txtinput_wp_row_number As text:
                                 Default: =""
@@ -405,7 +405,7 @@ newHome As screen:
                                 Width: =519
                                 X: =746
                                 Y: =414
-                                ZIndex: =31
+                                ZIndex: =28
 
                             Label1_170 As label:
                                 Height: =46
@@ -415,7 +415,7 @@ newHome As screen:
                                 Width: =160
                                 X: =96
                                 Y: =414
-                                ZIndex: =32
+                                ZIndex: =29
 
                             Label1_171 As label:
                                 Height: =46
@@ -425,7 +425,7 @@ newHome As screen:
                                 Width: =140
                                 X: =602
                                 Y: =414
-                                ZIndex: =33
+                                ZIndex: =30
 
                             Label2_29 As label:
                                 FontWeight: =FontWeight.Bold
@@ -436,7 +436,7 @@ newHome As screen:
                                 Width: =450
                                 X: =40
                                 Y: =367
-                                ZIndex: =34
+                                ZIndex: =31
 
                         adapt_details As group:
                             Height: =5
@@ -454,7 +454,7 @@ newHome As screen:
                                 Width: =393
                                 X: =40
                                 Y: =365
-                                ZIndex: =35
+                                ZIndex: =32
 
                             txtInput_adaptlink As text:
                                 Default: =""
@@ -462,7 +462,7 @@ newHome As screen:
                                 Width: =1001
                                 X: =269
                                 Y: =424
-                                ZIndex: =36
+                                ZIndex: =33
 
                             Label1_172 As label:
                                 Height: =50
@@ -475,7 +475,7 @@ newHome As screen:
                                 Width: =160
                                 X: =96
                                 Y: =419
-                                ZIndex: =37
+                                ZIndex: =34
 
                     section2_1 As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.Start
@@ -520,25 +520,77 @@ newHome As screen:
 
                         "'sd-title' As label":
                             FontWeight: =FontWeight.Bold
-                            Height: =198
+                            Height: =36
                             TabIndex: =40
                             Text: ="Saba Dev Details"
                             VerticalAlign: =VerticalAlign.Top
-                            Width: =604
+                            Width: =164
                             X: =678
                             Y: =136
                             ZIndex: =21
 
                         "'sl-title' As label":
                             FontWeight: =FontWeight.Bold
-                            Height: =198
+                            Height: =36
                             TabIndex: =40
                             Text: ="Saba Live Details"
                             VerticalAlign: =VerticalAlign.Top
-                            Width: =613
+                            Width: =167
                             X: =65
                             Y: =136
                             ZIndex: =22
+
+                        "'FR IDs' As group":
+                            Height: =5
+                            Width: =5
+                            X: =40
+                            Y: =40
+                            ZIndex: =28
+
+                            sdd_classID_FR As text:
+                                BorderColor: =RGBA(31, 124, 155, 1)
+                                Default: =
+                                Reset: =
+                                TabIndex: =30
+                                Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH", true, false)
+                                Width: =367
+                                X: =906
+                                Y: =304
+                                ZIndex: =24
+
+                            Label1_174 As label:
+                                Height: =37
+                                TabIndex: =22
+                                Text: =If(dd_lan_selector_1.SelectedText.Value="EN", LookUp(langPack, Title="44").English & " (FR)", LookUp(langPack, Title="44").French & " (FR)")
+                                Tooltip: ="*"
+                                Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH", true, false)
+                                X: =82
+                                Y: =303
+                                ZIndex: =25
+
+                            slnc_classID_FR As text:
+                                BorderColor: =RGBA(31, 124, 155, 1)
+                                Default: =
+                                OnChange: =
+                                Reset: =
+                                TabIndex: =23
+                                Tooltip: ="*"
+                                Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH", true, false)
+                                Width: =354
+                                X: =310
+                                Y: =304
+                                ZIndex: =26
+
+                            Label1_175 As label:
+                                Height: =38
+                                TabIndex: =29
+                                Text: =If(dd_lan_selector_1.SelectedText.Value="EN", LookUp(langPack, Title="44").English & " (FR)", LookUp(langPack, Title="44").French & " (FR)")
+                                Tooltip: ="*"
+                                Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH", true, false)
+                                Width: =160
+                                X: =705
+                                Y: =304
+                                ZIndex: =27
 
                         Group12 As group:
                             Height: =5
@@ -553,7 +605,7 @@ newHome As screen:
                                 Text: =If(dd_lan_selector_1.SelectedText.Value="EN", LookUp(langPack, Title="43").English, LookUp(langPack, Title="43").French)
                                 Tooltip: ="*"
                                 X: =705
-                                Y: =219
+                                Y: =191
                                 ZIndex: =14
 
                             sdd_classID_8 As text:
@@ -563,16 +615,16 @@ newHome As screen:
                                 TabIndex: =30
                                 Width: =367
                                 X: =906
-                                Y: =279
+                                Y: =251
                                 ZIndex: =15
 
                             Label1_157 As label:
                                 Height: =37
                                 TabIndex: =22
-                                Text: =If(dd_lan_selector_1.SelectedText.Value="EN", LookUp(langPack, Title="44").English, LookUp(langPack, Title="44").French)
+                                Text: =If(dd_lan_selector_1.SelectedText.Value="EN", LookUp(langPack, Title="44").English & (If(dd_requestLan_2.SelectedText.Value="BOTH" || dd_requestLan_2.SelectedText.Value="Les deux", " (EN)", "")), LookUp(langPack, Title="44").French & (If(dd_requestLan_2.SelectedText.Value="BOTH" || dd_requestLan_2.SelectedText.Value="Les deux", " (AN)", "")))
                                 Tooltip: ="*"
                                 X: =82
-                                Y: =278
+                                Y: =250
                                 ZIndex: =16
 
                             Label1_158 As label:
@@ -582,7 +634,7 @@ newHome As screen:
                                 Tooltip: ="*"
                                 Width: =110
                                 X: =82
-                                Y: =219
+                                Y: =191
                                 ZIndex: =17
 
                             slnc_classID_8 As text:
@@ -594,17 +646,17 @@ newHome As screen:
                                 Tooltip: ="*"
                                 Width: =354
                                 X: =310
-                                Y: =279
+                                Y: =251
                                 ZIndex: =18
 
                             Label1_156 As label:
                                 Height: =38
                                 TabIndex: =29
-                                Text: =If(dd_lan_selector_1.SelectedText.Value="EN", LookUp(langPack, Title="44").English, LookUp(langPack, Title="44").French)
+                                Text: =If(dd_lan_selector_1.SelectedText.Value="EN", LookUp(langPack, Title="44").English & (If(dd_requestLan_2.SelectedText.Value="BOTH" || dd_requestLan_2.SelectedText.Value="Les deux", " (EN)", "")), LookUp(langPack, Title="44").French & (If(dd_requestLan_2.SelectedText.Value="BOTH" || dd_requestLan_2.SelectedText.Value="Les deux", " (AN)", "")))
                                 Tooltip: ="*"
-                                Width: =137
+                                Width: =160
                                 X: =705
-                                Y: =279
+                                Y: =251
                                 ZIndex: =19
 
                             slnc_courseID_tf_7 As text:
@@ -614,7 +666,7 @@ newHome As screen:
                                 TabIndex: =21
                                 Width: =354
                                 X: =310
-                                Y: =215
+                                Y: =187
                                 ZIndex: =20
 
                             sdd_courseID_8 As text:
@@ -624,7 +676,7 @@ newHome As screen:
                                 TabIndex: =28
                                 Width: =367
                                 X: =906
-                                Y: =215
+                                Y: =187
                                 ZIndex: =23
 
                         Group13 As group:
@@ -642,7 +694,7 @@ newHome As screen:
                                 TabIndex: =37
                                 Width: =963
                                 X: =310
-                                Y: =426
+                                Y: =440
                                 ZIndex: =2
 
                             Label1_68 As label:
@@ -651,7 +703,7 @@ newHome As screen:
                                 Tooltip: ="*"
                                 Width: =183
                                 X: =82
-                                Y: =428
+                                Y: =442
                                 ZIndex: =3
 
                             Label1_67 As label:
@@ -661,7 +713,7 @@ newHome As screen:
                                 Tooltip: ="*"
                                 Width: =198
                                 X: =82
-                                Y: =347
+                                Y: =375
                                 ZIndex: =4
 
                             slnc_contentTitleEN_2 As text:
@@ -671,7 +723,7 @@ newHome As screen:
                                 TabIndex: =34
                                 Width: =963
                                 X: =310
-                                Y: =346
+                                Y: =374
                                 ZIndex: =5
 
                         Group11 As group:
@@ -772,7 +824,7 @@ newHome As screen:
                                    // sharewith:If(IsBlank(cb_sharewith_usernames),Collect(random,{}),cb_sharewith_usernames.SelectedItems.Claims),
                                     typeofwork:dd_typeofwork_2.Selected.Value,
                                     medium:dd_medium_2.Selected.Value,
-                                    request_language:dd_requestLan_2.Selected.Value,
+                                    request_language:If(dd_requestLan_2.Selected.Value="BOTH","EN",dd_requestLan_2.Selected.Value),
                                     SLNC_CourseNameEN:If(IsBlank(slnc_courseNameEN_1),"",slnc_courseNameEN_1.Text),
                                     SLNC_CourseNameFR:If(IsBlank(slnc_courseNameFR_1),"",slnc_courseNameFR_1.Text),
                                     CourseFolderName:If(IsBlank(courseNameFolder),"",courseNameFolder),
@@ -796,6 +848,38 @@ newHome As screen:
                                     CustomC:If(!IsBlank(txtInput_adaptlink), Substitute(txtInput_adaptlink.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", " ")
                                 });
                                 'MeD-PRD-NewWR'.Run(JSON(dataForm,IndentFour));
+                                If(dd_requestLan_2.Selected.Value="BOTH" || dd_requestLan_2.Selected.Value="Les deux",
+                                ClearCollect(dataForm,
+                                {  
+                                    requestor_name: textInput_Requestor_2.Text,
+                                    Title: Text(First(FirstN(Sort('wrtracking-production-version-001', ID, Descending), 1)).ID+6033),
+                                    businessLine: dd_Bizline_2.Selected.Value,
+                                   // sharewith:If(IsBlank(cb_sharewith_usernames),Collect(random,{}),cb_sharewith_usernames.SelectedItems.Claims),
+                                    typeofwork:dd_typeofwork_2.Selected.Value,
+                                    medium:dd_medium_2.Selected.Value,
+                                    request_language:"FR",
+                                    SLNC_CourseNameEN:If(IsBlank(slnc_courseNameEN_1),"",slnc_courseNameEN_1.Text),
+                                    SLNC_CourseNameFR:If(IsBlank(slnc_courseNameFR_1),"",slnc_courseNameFR_1.Text),
+                                    CourseFolderName:If(IsBlank(courseNameFolder),"",courseNameFolder),
+                                    SLNC_ClassID:If(IsBlank(slnc_classID_FR), "",slnc_classID_FR.Text),
+                                    SLNC_CourseID:If(IsBlank(slnc_courseID_tf_7),"",slnc_courseID_tf_7.Text),
+                                    SDD_ClassID:If(IsBlank(sdd_classID_FR),"",sdd_classID_FR.Text),
+                                    SDD_CourseID:If(IsBlank(sdd_courseID_8),"",sdd_courseID_8.Text),
+                                    SLNC_ContentTitleEN: If(IsBlank(slnc_contentTitleEN_2),"",slnc_contentTitleEN_2.Text),
+                                    SLNC_ContentTitleFR:If(IsBlank(slnc_contentTitleFR_2),"",slnc_contentTitleFR_2.Text),
+                                    request_details: If(IsBlank(textInput_requestDetails_2),"",textInput_requestDetails_2.Text),
+                                    project_status_date:dateP_submitted_2.SelectedDate,
+                                    projectStatus:Text(LookUp(ProjectStatus,ID = 1).ID),
+                                    isAccessibility:cb_isaccessibility.Value,
+                                    isGNWT:cb_isgnwt.Value,
+                                    isAdhoc:cb_isadhoc.Value,
+                                    due_date:dateP_dueDate_2.SelectedDate,
+                                    submitted_date:dateP_submitted_2.SelectedDate,
+                                    requestor_email:Office365Users.MyProfileV2().mail,
+                                    CustomA:dp_WP_Tab.SelectedText.Value,
+                                    CustomB:If(!IsBlank(txtinput_wp_row_number),txtinput_wp_row_number.Text,""),
+                                    CustomC:If(!IsBlank(txtInput_adaptlink), Substitute(txtInput_adaptlink.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", " ")
+                                }));
                                 
                                 Reset(dd_Bizline_2);Reset(textInput_Requestor_2);Reset(dd_typeofwork_2);Reset(dd_medium_2);
                                 Reset(dd_requestLan_2);Reset(slnc_courseNameEN_1);Reset(slnc_courseNameFR_1);Reset(slnc_contentTitleEN_2);Reset(slnc_contentTitleFR_2);Reset(textInput_requestDetails_2);

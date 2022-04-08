@@ -31307,6 +31307,246 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.sdd_classID_FR.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.sdd_classID_FR.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.sdd_classID_FR"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.sdd_classID_FR.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.sdd_classID_FR.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.sdd_classID_FR"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Low"
+          },
+          "ruleId": "acc-TabOrderShouldBeChecked",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.Label1_174.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.Label1_174.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.Label1_174"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.Label1_174.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.Label1_174.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.Label1_174"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Low"
+          },
+          "ruleId": "acc-TabOrderShouldBeChecked",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.slnc_classID_FR.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.slnc_classID_FR.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.slnc_classID_FR"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.slnc_classID_FR.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.slnc_classID_FR.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.slnc_classID_FR"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Low"
+          },
+          "ruleId": "acc-TabOrderShouldBeChecked",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.Label1_175.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.Label1_175.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.Label1_175"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.Label1_175.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.Label1_175.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section2_1.Label1_175"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Low"
+          },
+          "ruleId": "acc-TabOrderShouldBeChecked",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.mediumFlag"
                 }
               ],
@@ -36299,6 +36539,36 @@
                 "member": "Text",
                 "module": "newHome",
                 "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_56"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.dd_requestLan_2.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.dd_requestLan_2.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.dd_requestLan_2"
               }
             }
           ],
