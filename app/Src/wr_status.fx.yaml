@@ -369,23 +369,22 @@ wr_status As screen:
                                 Text: |
                                     =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="47").English, LookUp(langPack, Title="47").French),": ", If(dd_lan_selector.SelectedText.Value="EN", LookUp(ProjectStatus,Title = ThisItem.projectStatus_temp.Value).Title,LookUp(ProjectStatus,Title = ThisItem.projectStatus_temp.Value).French))
                                 Width: =233
-                                X: =224
-                                Y: =10
+                                Y: =110
                                 ZIndex: =31
 
                             Icon2 As icon.NextArrow:
                                 Color: =RGBA(31, 124, 155, 1)
-                                Height: =48
+                                Height: =41
                                 Icon: =Icon.Edit
                                 OnSelect: =Navigate(editWR,None)
                                 TabIndex: =0
-                                Width: =48
-                                X: =PlannedGallery.Width-86
-                                Y: =19
+                                Width: =41
+                                X: =472
+                                Y: =33
                                 ZIndex: =32
 
                             lbl_coursename As label:
-                                Height: =50
+                                Height: =70
                                 PaddingBottom: =0
                                 PaddingLeft: =0
                                 PaddingRight: =10
@@ -394,7 +393,7 @@ wr_status As screen:
                                 Text: |-
                                     =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="48").English, LookUp(langPack, Title="48").French&" "),": ", If(dd_lan_selector.SelectedText.Value="EN", ThisItem.field_15, ThisItem.field_16))
                                 VerticalAlign: =VerticalAlign.Top
-                                Width: =PlannedGallery.Width - 80
+                                Width: =459
                                 Y: =40
                                 ZIndex: =33
 
@@ -412,6 +411,8 @@ wr_status As screen:
                                 ZIndex: =34
 
                             Subtitle3_1 As label:
+                                Align: =Align.Right
+                                Color: =RGBA(31, 124, 155, 1)
                                 Height: =27
                                 OnSelect: =Select(Parent)
                                 PaddingBottom: =0
@@ -422,7 +423,8 @@ wr_status As screen:
                                 Text: |-
                                     =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="52").English, LookUp(langPack, Title="52").French),": ", Text(ThisItem.field_32,"yyyy-mmm-dd"))
                                 Width: =270
-                                Y: =118
+                                X: =253
+                                Y: =111
                                 ZIndex: =35
 
                             Separator3 As rectangle:
@@ -441,10 +443,10 @@ wr_status As screen:
                                 PaddingLeft: =0
                                 PaddingRight: =0
                                 PaddingTop: =0
-                                Size: =12
-                                Text: =Concatenate(ThisItem.SLNC_CourseID & ThisItem.request_language.Value)
+                                Size: =13
+                                Text: =Concatenate(ThisItem.SLNC_CourseID &" " & ThisItem.request_language.Value)
                                 Width: =142
-                                X: =82
+                                X: =89
                                 Y: =10
                                 ZIndex: =37
 
@@ -533,7 +535,7 @@ wr_status As screen:
                                     TabIndex: =0
                                     Width: =48
                                     X: =ActiveGallery.Width-86
-                                    Y: =10
+                                    Y: =17
                                     ZIndex: =42
 
                                 Label5 As label:
@@ -547,7 +549,7 @@ wr_status As screen:
                                     Text: =If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="51").English, LookUp(langPack, Title="51").French)
                                     Width: =54
                                     X: =ActiveGallery.Width-86
-                                    Y: =58
+                                    Y: =51
                                     ZIndex: =44
 
                             Label4_1 As label:
@@ -572,9 +574,8 @@ wr_status As screen:
                                 Size: =12
                                 Text: |-
                                     =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="47").English, LookUp(langPack, Title="47").French),": ", If(dd_lan_selector.SelectedText.Value="EN", LookUp(ProjectStatus,Title = ThisItem.projectStatus_temp.Value).Title,LookUp(ProjectStatus,Title = ThisItem.projectStatus_temp.Value).French))
-                                Width: =367
-                                X: =184
-                                Y: =10
+                                Width: =262
+                                Y: =112
                                 ZIndex: =40
 
                             Title3_1 As label:
@@ -592,7 +593,7 @@ wr_status As screen:
                                 ZIndex: =41
 
                             lbl_coursename_1 As label:
-                                Height: =45
+                                Height: =65
                                 PaddingBottom: =0
                                 PaddingLeft: =0
                                 PaddingRight: =10
@@ -601,11 +602,13 @@ wr_status As screen:
                                 Text: |-
                                     =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="48").English, LookUp(langPack, Title="48").French&" "),": ", If(dd_lan_selector.SelectedText.Value="EN", ThisItem.field_15, ThisItem.field_16))
                                 VerticalAlign: =VerticalAlign.Top
-                                Width: =425
-                                Y: =50
+                                Width: =443
+                                Y: =43
                                 ZIndex: =43
 
                             Subtitle3_2 As label:
+                                Align: =Align.Right
+                                Color: =RGBA(31, 124, 155, 1)
                                 Height: =27
                                 OnSelect: =Select(Parent)
                                 PaddingBottom: =0
@@ -616,7 +619,8 @@ wr_status As screen:
                                 Text: |-
                                     =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="52").English, LookUp(langPack, Title="52").French),": ", Text(ThisItem.field_32,"yyyy-mmm-dd"))
                                 Width: =270
-                                Y: =118
+                                X: =249
+                                Y: =111
                                 ZIndex: =45
 
                             Separator3_1 As rectangle:
@@ -626,4 +630,19 @@ wr_status As screen:
                                 Width: =Parent.TemplateWidth
                                 Y: =144
                                 ZIndex: =46
+
+                            Title3_3 As label:
+                                FontWeight: =FontWeight.Normal
+                                Height: =26
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =13
+                                Text: =Concatenate(ThisItem.SLNC_CourseID &" " & ThisItem.request_language.Value)
+                                Width: =123
+                                X: =82
+                                Y: =10
+                                ZIndex: =47
 
