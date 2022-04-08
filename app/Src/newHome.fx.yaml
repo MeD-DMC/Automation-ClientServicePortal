@@ -216,8 +216,8 @@ newHome As screen:
                             Reset: =btn_Clear_2.Pressed
                             SelectionFill: =RGBA(31, 124, 155, 1)
                             TabIndex: =14
-                            Width: =170
-                            X: =1102
+                            Width: =166
+                            X: =1106
                             Y: =129
                             ZIndex: =14
 

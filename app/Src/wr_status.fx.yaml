@@ -379,7 +379,7 @@ wr_status As screen:
                                 OnSelect: =Navigate(editWR,None)
                                 TabIndex: =0
                                 Width: =41
-                                X: =472
+                                X: =Parent.Width-80
                                 Y: =33
                                 ZIndex: =32
 
@@ -534,7 +534,7 @@ wr_status As screen:
                                     OnSelect: =Navigate(viewWR,None)
                                     TabIndex: =0
                                     Width: =48
-                                    X: =ActiveGallery.Width-86
+                                    X: =Parent.Width-86
                                     Y: =17
                                     ZIndex: =42
 
@@ -548,7 +548,7 @@ wr_status As screen:
                                     TabIndex: =0
                                     Text: =If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="51").English, LookUp(langPack, Title="51").French)
                                     Width: =54
-                                    X: =ActiveGallery.Width-86
+                                    X: =Parent.Width-86
                                     Y: =51
                                     ZIndex: =44
 
