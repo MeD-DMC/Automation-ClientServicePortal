@@ -178,7 +178,7 @@ editWR As screen:
                                 Items: =Choices('wrtracking-production-version-001'.request_language)
                                 OnChange: |-
                                     =If(IsMatch(dd_requestLan_3.SelectedText.Value,"Select",Contains),
-                                    UpdateContext({langFlag:false}), UpdateContext({langFlag:true}));
+                                    UpdateContext({langFlag:true}), UpdateContext({langFlag:false}));
                                 Reset: =btn_Clear_3.Pressed
                                 SelectionFill: =RGBA(31, 124, 155, 1)
                                 TabIndex: =14
@@ -266,7 +266,7 @@ editWR As screen:
                                 Items: =Choices('wrtracking-production-version-001'.medium)
                                 OnChange: |-
                                     =If(IsMatch(dd_medium_3.SelectedText.Value,"Select",Contains),
-                                    UpdateContext({mediumFlag:false}), UpdateContext({mediumFlag:true}));
+                                    UpdateContext({mediumFlag:true}), UpdateContext({mediumFlag:false}));
                                 OnSelect: =
                                 PressedFill: =RGBA(31, 124, 155, 1)
                                 Reset: =btn_Clear_3.Pressed
@@ -716,7 +716,6 @@ editWR As screen:
                                 Default: =PlannedGallery.Selected.field_37
                                 Height: =158
                                 Mode: =TextMode.MultiLine
-                                Reset: =
                                 TabIndex: =41
                                 Width: =1204
                                 X: =88
