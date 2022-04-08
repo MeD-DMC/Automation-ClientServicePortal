@@ -176,6 +176,9 @@ editWR As screen:
                                 Default: =PlannedGallery.Selected.field_9.Value
                                 HoverColor: =RGBA(255, 255, 255, 1)
                                 Items: =Choices('wrtracking-production-version-001'.request_language)
+                                OnChange: |-
+                                    =If(IsMatch(dd_requestLan_3.SelectedText.Value,"Select",Contains),
+                                    UpdateContext({langFlag:false}), UpdateContext({langFlag:true}));
                                 Reset: =btn_Clear_3.Pressed
                                 SelectionFill: =RGBA(31, 124, 155, 1)
                                 TabIndex: =14
@@ -262,12 +265,7 @@ editWR As screen:
                                 HoverFill: =RGBA(31, 124, 155, 1)
                                 Items: =Choices('wrtracking-production-version-001'.medium)
                                 OnChange: |-
-                                    =If(
-                                    IsMatch(dd_medium_3.SelectedText.Value,"pptx",Contains) Or 
-                                    IsMatch(dd_medium_3.SelectedText.Value,"pps",Contains) Or
-                                    IsMatch(dd_medium_3.SelectedText.Value,"doc",Contains) Or
-                                    IsMatch(dd_medium_3.SelectedText.Value,"pdf",Contains) Or
-                                    IsMatch(dd_medium_3.SelectedText.Value,"xlsx",Contains),
+                                    =If(IsMatch(dd_medium_3.SelectedText.Value,"Select",Contains),
                                     UpdateContext({mediumFlag:false}), UpdateContext({mediumFlag:true}));
                                 OnSelect: =
                                 PressedFill: =RGBA(31, 124, 155, 1)
@@ -391,6 +389,15 @@ editWR As screen:
                             Y: =259
                             ZIndex: =33
 
+                        as_medium_9 As label:
+                            Color: =RGBA(168, 0, 0, 1)
+                            Height: =36
+                            Text: ="*"
+                            Width: =67
+                            X: =575
+                            Y: =188
+                            ZIndex: =34
+
                         Group9 As group:
                             Height: =5
                             Width: =5
@@ -444,6 +451,15 @@ editWR As screen:
                                 Y: =377
                                 ZIndex: =32
 
+                        as_medium_10 As label:
+                            Color: =RGBA(168, 0, 0, 1)
+                            Height: =36
+                            Text: ="*"
+                            Width: =67
+                            X: =923
+                            Y: =133
+                            ZIndex: =35
+
                     section2_2 As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.Start
                         FillPortions: =0
@@ -495,8 +511,8 @@ editWR As screen:
                                 Height: =27
                                 Text: ="*"
                                 Width: =44
-                                X: =272
-                                Y: =328
+                                X: =229
+                                Y: =332
                                 ZIndex: =10
 
                             slnc_contentTitleEN_3 As text:
@@ -635,8 +651,8 @@ editWR As screen:
                                 Height: =28
                                 Text: ="*"
                                 Width: =43
-                                X: =201
-                                Y: =142
+                                X: =172
+                                Y: =149
                                 ZIndex: =24
 
                             as_sdd_classID_3 As label:
@@ -778,6 +794,15 @@ editWR As screen:
                                 Y: =205
                                 ZIndex: =17
 
+                        as_slnc_contentTitle_9 As label:
+                            Color: =RGBA(168, 0, 0, 1)
+                            Height: =27
+                            Text: ="*"
+                            Width: =44
+                            X: =864
+                            Y: =85
+                            ZIndex: =33
+
                         Group1 As group:
                             Height: =5
                             Width: =5
@@ -799,8 +824,8 @@ editWR As screen:
                                 Height: =36
                                 Text: ="*"
                                 Width: =67
-                                X: =259
-                                Y: =400
+                                X: =229
+                                Y: =404
                                 ZIndex: =9
 
                             slnc_contentTitleFR_3 As text:
@@ -812,6 +837,15 @@ editWR As screen:
                                 X: =342
                                 Y: =409
                                 ZIndex: =32
+
+                        as_slnc_contentTitle_10 As label:
+                            Color: =RGBA(168, 0, 0, 1)
+                            Height: =27
+                            Text: ="*"
+                            Width: =44
+                            X: =848
+                            Y: =150
+                            ZIndex: =34
 
                     submission_2 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
@@ -858,7 +892,6 @@ editWR As screen:
                             OnSelect: |+
                                 =Set(courseNameFolder, Concat(Filter(Split(slnc_courseNameEN_2.Text,""),IsMatch(Result,"^[a-zA-Z0-9\s]+")),Result));
                                 Set(resetScroll, false);
-                                //test
                                 
                                 ClearCollect(dataForm,
                                 {
