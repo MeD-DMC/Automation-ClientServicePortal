@@ -28,7 +28,7 @@ newHome As screen:
             ZIndex: =1
 
             Main_1 As groupContainer.verticalAutoLayoutContainer:
-                Height: =1400
+                Height: =1600
                 LayoutAlignItems: =LayoutAlignItems.Center
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMode: =LayoutMode.Auto
@@ -59,7 +59,7 @@ newHome As screen:
 
                         Label13 As label:
                             AutoHeight: =true
-                            BorderColor: =RGBA(31, 124, 155, 1)
+                            BorderColor: =RGBA(0, 0, 0, 1)
                             BorderThickness: =1
                             Color: =RGBA(109, 49, 162, 1)
                             Fill: =RGBA(255, 255, 255, 1)
@@ -135,7 +135,7 @@ newHome As screen:
                             Text: =If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="17").English, LookUp(langPack, Title="17").French)
                             Tooltip: ="*"
                             Width: =97
-                            X: =567
+                            X: =564
                             Y: =130
                             ZIndex: =8
 
@@ -171,7 +171,7 @@ newHome As screen:
                             Height: =36
                             Text: ="*"
                             Width: =67
-                            X: =644
+                            X: =637
                             Y: =123
                             ZIndex: =10
 
@@ -225,7 +225,7 @@ newHome As screen:
                             Height: =46
                             TabIndex: =11
                             Text: =If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="19").English, LookUp(langPack, Title="19").French)
-                            X: =567
+                            X: =564
                             Y: =181
                             ZIndex: =15
 
@@ -234,7 +234,7 @@ newHome As screen:
                             TabIndex: =5
                             Text: =If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="15").English, LookUp(langPack, Title="15").French)
                             Width: =163
-                            X: =567
+                            X: =564
                             Y: =77
                             ZIndex: =16
 
@@ -264,7 +264,7 @@ newHome As screen:
                             Reset: =btn_Clear_2.Pressed
                             SelectionFill: =RGBA(31, 124, 155, 1)
                             TabIndex: =12
-                            Width: =410
+                            Width: =400
                             X: =713
                             Y: =184
                             ZIndex: =18
@@ -315,7 +315,7 @@ newHome As screen:
                             Height: =36
                             Text: ="*"
                             Width: =25
-                            X: =682
+                            X: =690
                             Y: =184
                             ZIndex: =23
 
@@ -324,8 +324,8 @@ newHome As screen:
                             Height: =36
                             Text: ="*"
                             Width: =36
-                            X: =219
-                            Y: =181
+                            X: =222
+                            Y: =170
                             ZIndex: =24
 
                         checkboxes As group:
@@ -552,7 +552,7 @@ newHome As screen:
                                 Default: =
                                 Reset: =
                                 TabIndex: =30
-                                Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH", true, false)
+                                Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH" || dd_requestLan_2.SelectedText.Value="Les deux"  , true, false)
                                 Width: =367
                                 X: =906
                                 Y: =304
@@ -563,7 +563,7 @@ newHome As screen:
                                 TabIndex: =22
                                 Text: =If(dd_lan_selector_1.SelectedText.Value="EN", LookUp(langPack, Title="44").English & " (FR)", LookUp(langPack, Title="44").French & " (FR)")
                                 Tooltip: ="*"
-                                Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH", true, false)
+                                Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH" || dd_requestLan_2.SelectedText.Value="Les deux"  , true, false)
                                 X: =82
                                 Y: =303
                                 ZIndex: =25
@@ -575,7 +575,7 @@ newHome As screen:
                                 Reset: =
                                 TabIndex: =23
                                 Tooltip: ="*"
-                                Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH", true, false)
+                                Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH" || dd_requestLan_2.SelectedText.Value="Les deux"  , true, false)
                                 Width: =354
                                 X: =310
                                 Y: =304
@@ -586,7 +586,7 @@ newHome As screen:
                                 TabIndex: =29
                                 Text: =If(dd_lan_selector_1.SelectedText.Value="EN", LookUp(langPack, Title="44").English & " (FR)", LookUp(langPack, Title="44").French & " (FR)")
                                 Tooltip: ="*"
-                                Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH", true, false)
+                                Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH" || dd_requestLan_2.SelectedText.Value="Les deux"  , true, false)
                                 Width: =160
                                 X: =705
                                 Y: =304
@@ -780,8 +780,8 @@ newHome As screen:
                                 Color: =RGBA(168, 0, 0, 1)
                                 Height: =36
                                 Text: ="*"
-                                Width: =67
-                                X: =230
+                                Width: =36
+                                X: =251
                                 Y: =54
                                 ZIndex: =12
 
@@ -789,8 +789,8 @@ newHome As screen:
                                 Color: =RGBA(168, 0, 0, 1)
                                 Height: =36
                                 Text: ="*"
-                                Width: =56
-                                X: =850
+                                Width: =32
+                                X: =857
                                 Y: =54
                                 ZIndex: =13
 
@@ -824,7 +824,7 @@ newHome As screen:
                                    // sharewith:If(IsBlank(cb_sharewith_usernames),Collect(random,{}),cb_sharewith_usernames.SelectedItems.Claims),
                                     typeofwork:dd_typeofwork_2.Selected.Value,
                                     medium:dd_medium_2.Selected.Value,
-                                    request_language:If(dd_requestLan_2.Selected.Value="BOTH","EN",dd_requestLan_2.Selected.Value),
+                                    request_language:If(dd_requestLan_2.Selected.Value="BOTH" || dd_requestLan_2.Selected.Value="Les deux","EN",dd_requestLan_2.Selected.Value),
                                     SLNC_CourseNameEN:If(IsBlank(slnc_courseNameEN_1),"",slnc_courseNameEN_1.Text),
                                     SLNC_CourseNameFR:If(IsBlank(slnc_courseNameFR_1),"",slnc_courseNameFR_1.Text),
                                     CourseFolderName:If(IsBlank(courseNameFolder),"",courseNameFolder),
@@ -855,7 +855,7 @@ newHome As screen:
                                 ClearCollect(dataForm,
                                 {  
                                     requestor_name: textInput_Requestor_2.Text,
-                                    Title: Text(First(FirstN(Sort('wrtracking-production-version-001', ID, Descending), 1)).ID+6033),
+                                    Title: Text(First(FirstN(Sort('wrtracking-production-version-001', ID, Descending), 1)).ID+6034),
                                     businessLine: dd_Bizline_2.Selected.Value,
                                    // sharewith:If(IsBlank(cb_sharewith_usernames),Collect(random,{}),cb_sharewith_usernames.SelectedItems.Claims),
                                     typeofwork:dd_typeofwork_2.Selected.Value,

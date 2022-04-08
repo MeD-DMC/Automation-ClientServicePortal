@@ -369,7 +369,7 @@ wr_status As screen:
                                 Text: |
                                     =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="47").English, LookUp(langPack, Title="47").French),": ", If(dd_lan_selector.SelectedText.Value="EN", LookUp(ProjectStatus,Title = ThisItem.projectStatus_temp.Value).Title,LookUp(ProjectStatus,Title = ThisItem.projectStatus_temp.Value).French))
                                 Width: =233
-                                X: =105
+                                X: =224
                                 Y: =10
                                 ZIndex: =31
 
@@ -392,10 +392,10 @@ wr_status As screen:
                                 PaddingTop: =0
                                 Size: =12
                                 Text: |-
-                                    =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="48").English, LookUp(langPack, Title="48").French),": ", If(dd_lan_selector.SelectedText.Value="EN", ThisItem.field_15, ThisItem.field_16))
+                                    =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="48").English, LookUp(langPack, Title="48").French&" "),": ", If(dd_lan_selector.SelectedText.Value="EN", ThisItem.field_15, ThisItem.field_16))
                                 VerticalAlign: =VerticalAlign.Top
                                 Width: =PlannedGallery.Width - 80
-                                Y: =47
+                                Y: =40
                                 ZIndex: =33
 
                             Label2 As label:
@@ -422,7 +422,7 @@ wr_status As screen:
                                 Text: |-
                                     =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="52").English, LookUp(langPack, Title="52").French),": ", Text(ThisItem.field_32,"yyyy-mmm-dd"))
                                 Width: =270
-                                Y: =97
+                                Y: =118
                                 ZIndex: =35
 
                             Separator3 As rectangle:
@@ -430,8 +430,23 @@ wr_status As screen:
                                 Height: =1
                                 OnSelect: =Select(Parent)
                                 Width: =Parent.TemplateWidth
-                                Y: =Parent.TemplateHeight - 15
+                                Y: =144
                                 ZIndex: =36
+
+                            Title3_2 As label:
+                                FontWeight: =FontWeight.Normal
+                                Height: =26
+                                OnSelect: =Select(Parent)
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =12
+                                Text: =Concatenate(ThisItem.SLNC_CourseID & ThisItem.request_language.Value)
+                                Width: =142
+                                X: =82
+                                Y: =10
+                                ZIndex: =37
 
                 ActiveWRContainer As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
@@ -558,7 +573,7 @@ wr_status As screen:
                                 Text: |-
                                     =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="47").English, LookUp(langPack, Title="47").French),": ", If(dd_lan_selector.SelectedText.Value="EN", LookUp(ProjectStatus,Title = ThisItem.projectStatus_temp.Value).Title,LookUp(ProjectStatus,Title = ThisItem.projectStatus_temp.Value).French))
                                 Width: =367
-                                X: =105
+                                X: =184
                                 Y: =10
                                 ZIndex: =40
 
@@ -584,7 +599,7 @@ wr_status As screen:
                                 PaddingTop: =0
                                 Size: =12
                                 Text: |-
-                                    =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="48").English, LookUp(langPack, Title="48").French),": ", If(dd_lan_selector.SelectedText.Value="EN", ThisItem.field_15, ThisItem.field_16))
+                                    =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="48").English, LookUp(langPack, Title="48").French&" "),": ", If(dd_lan_selector.SelectedText.Value="EN", ThisItem.field_15, ThisItem.field_16))
                                 VerticalAlign: =VerticalAlign.Top
                                 Width: =425
                                 Y: =50
@@ -601,7 +616,7 @@ wr_status As screen:
                                 Text: |-
                                     =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="52").English, LookUp(langPack, Title="52").French),": ", Text(ThisItem.field_32,"yyyy-mmm-dd"))
                                 Width: =270
-                                Y: =97
+                                Y: =118
                                 ZIndex: =45
 
                             Separator3_1 As rectangle:
@@ -609,6 +624,6 @@ wr_status As screen:
                                 Height: =1
                                 OnSelect: =Select(Parent)
                                 Width: =Parent.TemplateWidth
-                                Y: =Parent.TemplateHeight - 15
+                                Y: =144
                                 ZIndex: =46
 
