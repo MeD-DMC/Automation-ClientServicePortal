@@ -34096,36 +34096,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "editWR.langFlag"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "editWR.langFlag",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "langFlag",
-                "module": "editWR",
-                "type": "editWR"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 12
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "editWR.Canvas2_2.DataCard2_2.Main_2.Container4_2.section1_2.dd_typeofwork_3.Items"
                 }
               ],

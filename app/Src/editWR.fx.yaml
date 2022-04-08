@@ -838,14 +838,23 @@ editWR As screen:
                                 Y: =409
                                 ZIndex: =32
 
-                        as_slnc_contentTitle_10 As label:
+                        as_slnc_classID_9 As label:
                             Color: =RGBA(168, 0, 0, 1)
-                            Height: =27
+                            Height: =28
                             Text: ="*"
-                            Width: =44
-                            X: =848
-                            Y: =150
+                            Width: =43
+                            X: =246
+                            Y: =227
                             ZIndex: =34
+
+                        as_slnc_classID_10 As label:
+                            Color: =RGBA(168, 0, 0, 1)
+                            Height: =28
+                            Text: ="*"
+                            Width: =43
+                            X: =925
+                            Y: =227
+                            ZIndex: =35
 
                     submission_2 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
@@ -856,34 +865,9 @@ editWR As screen:
 
                         btn_Submit_4 As button:
                             DisplayMode: |-
-                                =If(
-                                    dd_requestLan_3.Selected.Value <>"FR",
-                                    If(
-                                        mediumFlag,
-                                        If(
-                                            IsBlank(slnc_courseID_tf_2) || IsBlank(slnc_classID_3) || IsBlank(sdd_courseID_3) || IsBlank(sdd_classID_3) ||  IsBlank(slnc_contentTitleEN_3) ,
-                                            DisplayMode.Disabled,
-                                            DisplayMode.Edit
-                                        ),
-                                        If(
-                                            IsBlank(slnc_courseID_tf_2)  || IsBlank(slnc_classID_3) || IsBlank(slnc_contentTitleEN_3) || IsBlank(slnc_contentTitleFR_3),
-                                            DisplayMode.Disabled,
-                                            DisplayMode.Edit
-                                        )
-                                    ),
-                                    If(
-                                        mediumFlag,
-                                        If(
-                                            IsBlank(slnc_courseID_tf_2)  || IsBlank(slnc_classID_3) || IsBlank(sdd_courseID_3) || IsBlank(sdd_classID_3) || IsBlank(slnc_contentTitleFR_3),
-                                            DisplayMode.Disabled,
-                                            DisplayMode.Edit
-                                        ),
-                                        If(
-                                            IsBlank(slnc_courseID_tf_2) || IsBlank(slnc_classID_3) || IsBlank(slnc_contentTitleFR_3) || IsBlank(slnc_contentTitleEN_3),
-                                            DisplayMode.Disabled,
-                                            DisplayMode.Edit
-                                        )
-                                    )
+                                =If(mediumFlag || langFlag || IsBlank(slnc_courseID_tf_2) || IsBlank(slnc_classID_3) || IsBlank(sdd_courseID_3) || IsBlank(sdd_classID_3) ||  IsBlank(slnc_contentTitleEN_3) || IsBlank(slnc_contentTitleFR_3),
+                                DisplayMode.Disabled,
+                                DisplayMode.Edit
                                 )
                             Fill: =RGBA(31, 124, 155, 1)
                             FontWeight: =FontWeight.Normal
