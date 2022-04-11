@@ -10,10 +10,11 @@ VincentTestPage As screen:
         ZIndex: =2
 
     Label14 As label:
-        Height: =56
-        Text: ="FARHIN WAS HERE"
-        Width: =267
-        X: =620
-        Y: =340
+        Height: =405
+        Size: =122
+        Text: ="AWESOME BANANAS"
+        Width: =1168
+        X: =99
+        Y: =189
         ZIndex: =3
 
