@@ -18,3 +18,12 @@ VincentTestPage As screen:
         Y: =189
         ZIndex: =3
 
+    "'fh-test' As label":
+        Height: =405
+        Size: =122
+        Text: ="hellooooo"
+        Width: =1168
+        X: =72
+        Y: =236
+        ZIndex: =3
+
