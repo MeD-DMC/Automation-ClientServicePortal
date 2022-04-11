@@ -330,14 +330,14 @@ newHome As screen:
                             ZIndex: =24
 
                         Container19 As groupContainer:
-                            Height: =If(dd_medium_2.SelectedText.Value="ADAPT (.html)", 160, 0)
+                            Height: =160
+                            Visible: =If(dd_medium_2.SelectedText.Value="ADAPT (.html)", true, false)
                             Width: =1356
                             Y: =339
                             ZIndex: =38
 
                             txtInput_adaptlink As text:
                                 Default: =""
-                                Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH" || dd_requestLan_2.SelectedText.Value="Les deux"  , true, false)
                                 Width: =1001
                                 X: =269
                                 Y: =56
