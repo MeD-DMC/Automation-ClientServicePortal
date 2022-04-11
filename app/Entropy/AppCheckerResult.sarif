@@ -10398,6 +10398,234 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 18,
+                  "charOffset": 2057,
+                  "snippet": {
+                    "text": "txtInput_adaptlink"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 27,
+                  "charOffset": 2049,
+                  "snippet": {
+                    "text": "IsBlank(txtInput_adaptlink)"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "IsBlank"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 18,
+                  "charOffset": 2089,
+                  "snippet": {
+                    "text": "txtInput_adaptlink"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 2107,
+                  "snippet": {
+                    "text": ".Text"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidDot",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 84,
+                  "charOffset": 2078,
+                  "snippet": {
+                    "text": "Substitute(txtInput_adaptlink.Text,\"/preview/5dc446fd27f08836496b6b9e/\",\"/#editor/\")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Substitute"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 18,
+                  "charOffset": 5070,
+                  "snippet": {
+                    "text": "txtInput_adaptlink"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Header.HeaderSlicer_1.Header_Left_1.Container2_1.lbl_AppName_1.FocusedBorderThickness"
                 }
               ],
@@ -29537,19 +29765,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Col1Title_9.FocusedBorderThickness"
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Col1Title_9.FocusedBorderThickness",
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "FocusedBorderThickness",
                 "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Col1Title_9"
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185"
               }
             }
           ],
@@ -29567,19 +29795,109 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Col1Title_9.TabIndex"
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Col1Title_9.TabIndex",
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Col1Title_9"
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Low"
+          },
+          "ruleId": "acc-TabOrderShouldBeChecked",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.txtInput_adaptlink_FR.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.txtInput_adaptlink_FR.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.txtInput_adaptlink_FR"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_186.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_186.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_186"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_186.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_186.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_186"
               }
             }
           ],
@@ -29717,66 +30035,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Low"
-          },
-          "ruleId": "acc-TabOrderShouldBeChecked",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.txtinput_wp_row_number.AccessibleLabel"
                 }
               ],
@@ -29820,96 +30078,6 @@
                 "member": "AccessibleLabel",
                 "module": "newHome",
                 "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.dp_WP_Tab"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_172.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_172.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_172"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_172.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_172.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_172"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Low"
-          },
-          "ruleId": "acc-TabOrderShouldBeChecked",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.txtInput_adaptlink.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.txtInput_adaptlink.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.txtInput_adaptlink"
               }
             }
           ],
@@ -36856,6 +37024,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185.Text",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label2_29.Text"
                 }
               ],
@@ -36899,36 +37097,6 @@
                 "member": "Text",
                 "module": "newHome",
                 "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_170"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 15
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171.Text",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171"
               }
             }
           ],
