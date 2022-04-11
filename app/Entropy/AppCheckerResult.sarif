@@ -29537,49 +29537,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Col1Title_9.FocusedBorderThickness"
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_172.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Col1Title_9.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Col1Title_9"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Col1Title_9.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Col1Title_9.TabIndex",
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_172.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Col1Title_9"
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_172"
               }
             }
           ],
@@ -29591,6 +29561,36 @@
           },
           "ruleId": "acc-TabOrderShouldBeChecked",
           "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.txtInput_adaptlink.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.txtInput_adaptlink.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.txtInput_adaptlink"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -29717,66 +29717,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Low"
-          },
-          "ruleId": "acc-TabOrderShouldBeChecked",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.txtinput_wp_row_number.AccessibleLabel"
                 }
               ],
@@ -29837,49 +29777,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_172.FocusedBorderThickness"
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Col1Title_9.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_172.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_172"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_172.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_172.TabIndex",
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Col1Title_9.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_172"
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Col1Title_9"
               }
             }
           ],
@@ -29897,19 +29807,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.txtInput_adaptlink.AccessibleLabel"
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_186.FocusedBorderThickness"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.txtInput_adaptlink.AccessibleLabel",
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_186.FocusedBorderThickness",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
+                "member": "FocusedBorderThickness",
                 "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.txtInput_adaptlink"
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_186"
               }
             }
           ],
@@ -29919,8 +29829,38 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 9
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Col1Title_9.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Col1Title_9.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Col1Title_9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -31541,6 +31481,156 @@
           },
           "ruleId": "acc-TabOrderShouldBeChecked",
           "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_186.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_186.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_186"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Low"
+          },
+          "ruleId": "acc-TabOrderShouldBeChecked",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Low"
+          },
+          "ruleId": "acc-TabOrderShouldBeChecked",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.txtInput_adaptlink_FR.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.txtInput_adaptlink_FR.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.txtInput_adaptlink_FR"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_172.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_172.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_172"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -34877,6 +34967,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185.Text",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Container19.Label1_185"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "backup.Canvas2_3.DataCard2_3.Main_3.Container4_3.section1_3.dd_typeofwork_4.Items"
                 }
               ],
@@ -36899,36 +37019,6 @@
                 "member": "Text",
                 "module": "newHome",
                 "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_170"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 15
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171.Text",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.section1_1.Label1_171"
               }
             }
           ],
