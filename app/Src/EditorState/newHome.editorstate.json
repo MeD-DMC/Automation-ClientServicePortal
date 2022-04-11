@@ -2538,7 +2538,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "cb_isadhoc",
-      "ParentIndex": 30,
+      "ParentIndex": 33,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3032,7 +3032,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "checkboxes",
-      "ParentIndex": 31,
+      "ParentIndex": 34,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3477,7 +3477,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Col1Title_9",
-      "ParentIndex": 0,
+      "ParentIndex": 25,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7531,7 +7531,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "dp_WP_Tab",
-      "ParentIndex": 29,
+      "ParentIndex": 30,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11032,7 +11032,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1_172",
-      "ParentIndex": 3,
+      "ParentIndex": 31,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -23745,23 +23745,9 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Y",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Y",
         "Width",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Height",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Height",
         "DisplayMode",
         "ZIndex",
         "RadiusTopLeft",
@@ -23793,7 +23779,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txtInput_adaptlink",
-      "ParentIndex": 2,
+      "ParentIndex": 32,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -24367,7 +24353,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txtinput_wp_row_number",
-      "ParentIndex": 28,
+      "ParentIndex": 29,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -24593,7 +24579,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "wp_details",
-      "ParentIndex": 32,
+      "ParentIndex": 35,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

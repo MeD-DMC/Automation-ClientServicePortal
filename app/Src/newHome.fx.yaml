@@ -329,80 +329,6 @@ newHome As screen:
                             Y: =170
                             ZIndex: =24
 
-                        Container19 As groupContainer:
-                            Height: =If(dd_medium_2.SelectedText.Value="ADAPT (.html)", 160, 0)
-                            Width: =1356
-                            Y: =339
-                            ZIndex: =38
-
-                            Col1Title_9 As label:
-                                FontWeight: =FontWeight.Bold
-                                Height: =45
-                                TabIndex: =19
-                                Text: ="Adapt Details | Détails d'Adapt"
-                                Visible: =If(dd_medium_2.SelectedText.Value = "ADAPT (.html)", true,false)
-                                Width: =393
-                                X: =40
-                                Y: =4
-                                ZIndex: =1
-
-                            txtInput_adaptlink As text:
-                                Default: =""
-                                Visible: =If(dd_medium_2.SelectedText.Value = "ADAPT (.html)", true,false)
-                                Width: =1001
-                                X: =269
-                                Y: =56
-                                ZIndex: =2
-
-                            Label1_172 As label:
-                                Height: =63
-                                Size: =12
-                                TabIndex: =7
-                                Text: |-
-                                    ="Preview Link:              
-                                    Lien d'aperçu:"
-                                Visible: =If(dd_medium_2.SelectedText.Value = "ADAPT (.html)", true,false)
-                                Width: =133
-                                X: =80
-                                Y: =70
-                                ZIndex: =3
-
-                            Group7 As group:
-                                Height: =5
-                                Width: =5
-                                X: =60
-                                Y: =60
-                                ZIndex: =7
-
-                                txtInput_adaptlink_FR As text:
-                                    Default: =""
-                                    Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH" || dd_requestLan_2.SelectedText.Value="Les deux"  , true, false)
-                                    Width: =1001
-                                    X: =269
-                                    Y: =108
-                                    ZIndex: =4
-
-                                Label1_185 As label:
-                                    Size: =12
-                                    TabIndex: =7
-                                    Text: =If(dd_lan_selector.SelectedText.Value="EN", "EN", "AN")
-                                    Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH" || dd_requestLan_2.SelectedText.Value="Les deux"  , true, false)
-                                    Width: =43
-                                    X: =226
-                                    Y: =56
-                                    ZIndex: =5
-
-                                Label1_186 As label:
-                                    Height: =39
-                                    Size: =12
-                                    TabIndex: =7
-                                    Text: ="FR"
-                                    Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH" || dd_requestLan_2.SelectedText.Value="Les deux"  , true, false)
-                                    Width: =32
-                                    X: =226
-                                    Y: =109
-                                    ZIndex: =6
-
                         checkboxes As group:
                             Height: =5
                             Width: =5
@@ -502,6 +428,48 @@ newHome As screen:
                                 X: =40
                                 Y: =367
                                 ZIndex: =31
+
+                        Container19 As groupContainer:
+                            Height: =If(dd_medium_2.SelectedText.Value="ADAPT (.html)", 160, 0)
+                            Width: =1356
+                            Y: =339
+                            ZIndex: =38
+
+                            Group7 As group:
+                                Height: =5
+                                Width: =5
+                                X: =60
+                                Y: =60
+                                ZIndex: =7
+
+                                txtInput_adaptlink_FR As text:
+                                    Default: =""
+                                    Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH" || dd_requestLan_2.SelectedText.Value="Les deux"  , true, false)
+                                    Width: =1001
+                                    X: =269
+                                    Y: =108
+                                    ZIndex: =4
+
+                                Label1_185 As label:
+                                    Size: =12
+                                    TabIndex: =7
+                                    Text: =If(dd_lan_selector.SelectedText.Value="EN", "EN", "AN")
+                                    Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH" || dd_requestLan_2.SelectedText.Value="Les deux"  , true, false)
+                                    Width: =43
+                                    X: =226
+                                    Y: =56
+                                    ZIndex: =5
+
+                                Label1_186 As label:
+                                    Height: =39
+                                    Size: =12
+                                    TabIndex: =7
+                                    Text: ="FR"
+                                    Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH" || dd_requestLan_2.SelectedText.Value="Les deux"  , true, false)
+                                    Width: =32
+                                    X: =226
+                                    Y: =109
+                                    ZIndex: =6
 
                     section2_1 As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.Start
