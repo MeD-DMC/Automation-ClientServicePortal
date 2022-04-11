@@ -790,7 +790,6 @@ newHome As screen:
 
                     submission_1 As groupContainer.manualLayoutContainer:
                         FillPortions: =0
-                        Height: =150
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
                         ZIndex: =3
@@ -887,7 +886,7 @@ newHome As screen:
                                 Reset(dd_Bizline_2);Reset(textInput_Requestor_2);Reset(dd_typeofwork_2);Reset(dd_medium_2);
                                 Reset(dd_requestLan_2);Reset(slnc_courseNameEN_1);Reset(slnc_courseNameFR_1);Reset(slnc_contentTitleEN_2);Reset(slnc_contentTitleFR_2);Reset(textInput_requestDetails_2);
                                 Reset(dateP_submitted_2);Reset(dd_projectstatus);Reset(cb_isgnwt);Reset(cb_isaccessibility);Reset(dateP_dueDate_2);Reset(dateP_submitted_2);Reset(cb_isadhoc);Reset(dp_WP_Tab);Reset(sdd_courseID_8);Reset(slnc_courseID_tf_7);Reset(slnc_classID_8);Reset(sdd_classID_8);Reset(sdd_classID_FR);Reset(slnc_classID_FR);
-                                Reset(txtinput_wp_row_number);Reset(txtInput_adaptlink);
+                                Reset(txtinput_wp_row_number);Reset(txtInput_adaptlink);Reset(txtInput_adaptlink_FR);
                                 
                                 Navigate(screen_complete, Transition.None);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
                             TabIndex: =44
