@@ -18,3 +18,12 @@ VincentTestPage As screen:
         Y: =236
         ZIndex: =3
 
+    vtLabel14 As label:
+        Height: =405
+        Size: =122
+        Text: ="AWESOME BANANAS"
+        Width: =1168
+        X: =99
+        Y: =189
+        ZIndex: =3
+
