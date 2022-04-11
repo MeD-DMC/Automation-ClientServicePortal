@@ -335,6 +335,14 @@ newHome As screen:
                             Y: =339
                             ZIndex: =38
 
+                            txtInput_adaptlink As text:
+                                Default: =""
+                                Visible: =If(dd_requestLan_2.SelectedText.Value="BOTH" || dd_requestLan_2.SelectedText.Value="Les deux"  , true, false)
+                                Width: =1001
+                                X: =269
+                                Y: =56
+                                ZIndex: =7
+
                             Group7 As group:
                                 Height: =5
                                 Width: =5
@@ -370,6 +378,24 @@ newHome As screen:
                                     X: =226
                                     Y: =109
                                     ZIndex: =6
+
+                            Label1_69 As label:
+                                Height: =70
+                                TabIndex: =24
+                                Text: =If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="68").English, LookUp(langPack, Title="68").French)
+                                Width: =174
+                                X: =27
+                                Y: =67
+                                ZIndex: =8
+
+                            Col1Title_8 As label:
+                                FontWeight: =FontWeight.Bold
+                                Height: =42
+                                TabIndex: =19
+                                Text: =If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="67").English, LookUp(langPack, Title="67").French)
+                                Width: =393
+                                X: =66
+                                ZIndex: =9
 
                         checkboxes As group:
                             Height: =5
@@ -499,7 +525,7 @@ newHome As screen:
                             TabIndex: =19
                             Text: =If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="27").English, LookUp(langPack, Title="27").French)
                             Width: =393
-                            X: =30
+                            X: =65
                             ZIndex: =10
 
                         Label2_14 As label:
