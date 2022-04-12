@@ -1,4 +1,5 @@
 wr_status As screen:
+    Fill: =RGBA(255,255,255,1)
     Height: =Max(App.Height, App.DesignHeight)
     OnVisible: |-
         =Collect(formDataFR, {Image: 'header-portal'.CollegeBanner});Refresh('wrtracking-production-version-001');Reset(ActiveGallery);Reset(PlannedGallery);
@@ -360,11 +361,11 @@ wr_status As screen:
                             Subtitle3 As label:
                                 Color: |-
                                     =Switch(ThisItem.projectStatus.Value, "Initialize", ColorValue("#1C578A"), "OnWorkPlan", ColorValue("#3c7a4d"), "WithMeD", ColorValue("#1C578A"), "OnHold", ColorValue("#c4971b"), "WithDT", ColorValue("#69459C"), "ToBeLoadedLive", ColorValue("#CD1C6A"),"Closed", ColorValue("#949494"), "WaitingForApproval", ColorValue("#5b5fc7"))
+                                Fill: =RGBA(255,255,255,1)
                                 FontWeight: =FontWeight.Bold
                                 Height: =28
                                 OnSelect: =Select(Parent)
                                 PaddingBottom: =0
-                                PaddingLeft: =0
                                 PaddingRight: =0
                                 PaddingTop: =0
                                 Size: =12
@@ -568,11 +569,11 @@ wr_status As screen:
                             Subtitle3_3 As label:
                                 Color: |-
                                     =Switch(ThisItem.projectStatus.Value, "Initialize", ColorValue("#1C578A"), "OnWorkPlan", ColorValue("#3c7a4d"), "WithMeD", ColorValue("#1C578A"), "OnHold", ColorValue("#c4971b"), "WithDT", ColorValue("#69459C"), "ToBeLoadedLive", ColorValue("#CD1C6A"),"Closed", ColorValue("#949494"), "WaitingForApproval", ColorValue("#5b5fc7"))
+                                Fill: =RGBA(255,255,255,1)
                                 FontWeight: =FontWeight.Bold
                                 Height: =26
                                 OnSelect: =Select(Parent)
                                 PaddingBottom: =0
-                                PaddingLeft: =0
                                 PaddingRight: =0
                                 PaddingTop: =0
                                 Size: =12
