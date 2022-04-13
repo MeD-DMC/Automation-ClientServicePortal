@@ -510,7 +510,7 @@ wr_status As screen:
                         "ActiveGallery As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
                             AlignInContainer: =AlignInContainer.SetByContainer
                             Height: =560
-                            Items: =SortByColumns(Filter('wrtracking-production-version-001',field_2= requestorEmail && projectStatus_temp.Value="WithMeD" || field_2= requestorEmail && projectStatus_temp.Value="ToBeLoadedLive" || field_2= requestorEmail && projectStatus_temp.Value="WithDT" || field_2= requestorEmail && projectStatus_temp.Value="WaitingForApproval" || field_2= requestorEmail && projectStatus_temp.Value="OnHold"),"ID",Descending)
+                            Items: =SortByColumns(Filter('wrtracking-production-version-001',field_2= requestorEmail && projectStatus_temp.Value="WithMeD" || field_2= requestorEmail && projectStatus_temp.Value="ToBeLoadedLive" || field_2= requestorEmail && projectStatus_temp.Value="WithDT" ||  field_2= requestorEmail && projectStatus_temp.Value="Initialize" || field_2= requestorEmail && projectStatus_temp.Value="WaitingForApproval" || field_2= requestorEmail && projectStatus_temp.Value="OnHold"),"ID",Descending)
                             Layout: =Layout.Vertical
                             LayoutMinHeight: =287
                             LayoutMinWidth: =320
