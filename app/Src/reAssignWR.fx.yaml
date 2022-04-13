@@ -480,14 +480,13 @@ reAssignWR As screen:
 
         Button3 As button:
             OnSelect: |-
-                =
-                ForAll(SelectedItems,
+                =ForAll(SelectedItems,
                  Patch('wrtracking-production-version-001', 
                         LookUp('wrtracking-production-version-001',  Title = SelectedItems[@Title]),
                         {requestor_name:Concatenate(Office365Users.MyProfileV2().surname,", ",Office365Users.MyProfileV2().givenName)},
                         {requestor_email:Office365Users.MyProfileV2().mail}
                     );
-                    'NotifyCSH-reassignWR'.Run(JSON({WR:SelectedItems[@Title],newEmail:Office365Users.MyProfileV2().mail},IndentFour));
+                    'NotifyCSH-reassignWR'.Run(JSON({WR:SelectedItems[@Title],oldEmail:SelectedItems[@requestor_email],newEmail:Office365Users.MyProfileV2().mail},IndentFour));
                 );
                 
                 
