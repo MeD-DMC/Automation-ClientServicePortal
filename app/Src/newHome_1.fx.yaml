@@ -1000,13 +1000,6 @@ newHome_1 As screen:
                                     )
                                 );
                                 
-                                ClearCollect(selectedUsers, dd_requestor.SelectedItems);
-                                'MeD-PRD-NewWR2'.Run(
-                                    JSON(
-                                        selectedUsers,
-                                        IndentFour
-                                    )
-                                );
                                 
                                 //If using both languages ---
                                 //
