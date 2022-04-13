@@ -899,14 +899,14 @@ newHome_1 As screen:
                                     CustomB:If(!IsBlank(txtinput_wp_row_number_5),txtinput_wp_row_number_5.Text,""),
                                     CustomC:If(!IsBlank(txtInput_adaptlink_5), Substitute(txtInput_adaptlink_5.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", " ")
                                 });
-                                'MeD-PRD-NewWR'.Run(JSON(dataForm,IndentFour));
+                                'MeD-PRD-NewWR2'.Run(JSON(dataForm,IndentFour));
                                 
                                 //If using both languages ---
                                 //
                                 If(dd_requestLan_9.Selected.Value="BOTH" || dd_requestLan_9.Selected.Value="Les deux",
                                 ClearCollect(dataForm,
                                 {  
-                                    requestor_name: textInput_Requestor_9.Text,
+                                    requestor_name: Concat(dd_requestor.SelectedItems, DisplayName & ";"),
                                     Title: Text(First(FirstN(Sort('wrtracking-production-version-001', ID, Descending), 1)).ID+6034),
                                     businessLine: dd_Bizline_3.Selected.Value,
                                    // sharewith:If(IsBlank(cb_sharewith_usernames),Collect(random,{}),cb_sharewith_usernames.SelectedItems.Claims),
