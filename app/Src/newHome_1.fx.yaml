@@ -4,6 +4,7 @@ newHome_1 As screen:
         =//Reset(sdd_courseID_8);Reset(slnc_courseID_tf_7);Reset(slnc_classID_8);Reset(sdd_classID_8);
         
         Set(resetScroll, true);
+        Collect(selectedUsers, dd_requestor.SelectedItems.DisplayName);
 
     Canvas2_8 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -178,7 +179,7 @@ newHome_1 As screen:
 
                         textInput_Requestor_9 As text:
                             BorderColor: =RGBA(31, 124, 155, 1)
-                            Default: =Concatenate(Office365Users.MyProfileV2().surname,", ",Office365Users.MyProfileV2().givenName)W
+                            Default: =
                             DisplayMode: =DisplayMode.Disabled
                             Height: =38
                             Reset: =btn_Clear_10.Pressed
@@ -510,7 +511,8 @@ newHome_1 As screen:
                             BorderColor: =RGBA(31, 124, 155, 1)
                             ChevronBackground: =RGBA(31, 124, 155, 1)
                             ChevronHoverBackground: =ColorFade(RGBA(31, 124, 155, 1), -20%)
-                            DefaultSelectedItems: =
+                            DefaultSelectedItems: |-
+                                =Office365Users.SearchUser({searchTerm:User().Email})
                             DisplayFields: =["DisplayName"]
                             HoverColor: =RGBA(255, 255, 255, 1)
                             HoverFill: =RGBA(31, 124, 155, 1)
