@@ -293,7 +293,7 @@
     "id": "a3625504-bf4a-40d3-a30f-e94eb3c462a4"
   },
   "bebe27cf-24b0-41cc-9b23-52be4afb7e34": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/d3f4a2b8bf724c35870bd3017cc34d8d-eaa1c1dd4997bbab",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/d3f4a2b8-bf72-4c35-870b-d3017cc34d8d",
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-07.canadacentral.logic.azure.com:443/workflows/d916384140b3464e95740e0e7d2ffc7a/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Ktc7lFi4OSykn9Tw88ircw4LHdurcw1NKB2dA5WpRC8",
       "workflowEndpoint": "/subscriptions/cbd472fe-eafa-4c32-b348-555abce6f9ba/resourceGroups/9ed558468a814246acd8b1a01abfc0d1-42f7b9b85d5f46599e34c59509123c79/providers/Microsoft.Logic/workflows/d3f4a2b8-bf72-4c35-870b-d3017cc34d8d",
@@ -305,12 +305,24 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "0f748b89-d170-443d-b263-828a7e6d6fd8": {
+          "value": "shared_sendmail"
+        },
+        "29c11814-1e0c-4dfe-b672-cccc648bedfd": {
+          "value": "shared_sharepointonline"
+        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "d3f4a2b8-bf72-4c35-870b-d3017cc34d8d"
         }
       },
       "parameterHintsV2": {
+        "shared_sendmail": {
+          "value": "0f748b89-d170-443d-b263-828a7e6d6fd8"
+        },
+        "shared_sharepointonline": {
+          "value": "29c11814-1e0c-4dfe-b672-cccc648bedfd"
+        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "d3f4a2b8-bf72-4c35-870b-d3017cc34d8d"

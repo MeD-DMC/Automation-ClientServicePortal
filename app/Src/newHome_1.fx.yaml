@@ -512,12 +512,13 @@ newHome_1 As screen:
                             ChevronHoverBackground: =ColorFade(RGBA(31, 124, 155, 1), -20%)
                             DefaultSelectedItems: |-
                                 =Office365Users.SearchUser({searchTerm:User().Email})
-                            DisplayFields: =["DisplayName"]
+                            DisplayFields: =["DisplayName","Mail"]
                             HoverColor: =RGBA(255, 255, 255, 1)
                             HoverFill: =RGBA(31, 124, 155, 1)
                             InputTextPlaceholder: ="Find User"
                             Items: |-
                                 =If(dd_requestor.SearchText="",emptyList,Office365Users.SearchUser({searchTerm:dd_requestor.SearchText}))
+                            OnChange: =
                             PressedFill: =RGBA(31, 124, 155, 1)
                             Reset: =
                             SearchFields: =["DisplayName"]
@@ -525,6 +526,7 @@ newHome_1 As screen:
                                 =Search(If(dd_requestor.SearchText="",emptyList,Office365Users.SearchUser({searchTerm:dd_requestor.SearchText})),dd_requestor.SearchText,"DisplayName")
                             SelectionFill: =RGBA(31, 124, 155, 1)
                             TabIndex: =10
+                            Template: =ListItemTemplate.Double
                             Width: =300
                             X: =248
                             Y: =131
