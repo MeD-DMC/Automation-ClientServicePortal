@@ -512,7 +512,7 @@ newHome_1 As screen:
                             ChevronHoverBackground: =ColorFade(RGBA(31, 124, 155, 1), -20%)
                             DefaultSelectedItems: |-
                                 =Office365Users.SearchUser({searchTerm:User().Email})
-                            DisplayFields: =["DisplayName","Mail"]
+                            DisplayFields: =["DisplayName"]
                             HoverColor: =RGBA(255, 255, 255, 1)
                             HoverFill: =RGBA(31, 124, 155, 1)
                             InputTextPlaceholder: ="Find User"
@@ -867,90 +867,297 @@ newHome_1 As screen:
                             FontWeight: =FontWeight.Bold
                             Height: =47
                             HoverFill: =ColorFade(RGBA(31, 124, 155, 1), -20%)
-                            OnSelect: |-
-                                =Set(courseNameFolder, Concat(Filter(Split(slnc_courseNameEN_8.Text,""),IsMatch(Result,"^[a-zA-Z0-9\s]+")),Result));
-                                Set(resetScroll, false);
-                                ClearCollect(dataForm,
-                                {  
-                                    requestor_name: textInput_Requestor_9.Text,
-                                    Title: Text(First(FirstN(Sort('wrtracking-production-version-001', ID, Descending), 1)).ID+6033),
-                                    businessLine: dd_Bizline_3.Selected.Value,
-                                   // sharewith:If(IsBlank(cb_sharewith_usernames),Collect(random,{}),cb_sharewith_usernames.SelectedItems.Claims),
-                                    typeofwork:dd_typeofwork_9.Selected.Value,
-                                    medium:dd_medium_9.Selected.Value,
-                                    request_language:If(dd_requestLan_9.Selected.Value="BOTH" || dd_requestLan_9.Selected.Value="Les deux","EN",dd_requestLan_9.Selected.Value),
-                                    SLNC_CourseNameEN:If(IsBlank(slnc_courseNameEN_8),"",slnc_courseNameEN_8.Text),
-                                    SLNC_CourseNameFR:If(IsBlank(slnc_courseNameFR_8),"",slnc_courseNameFR_8.Text),
-                                    CourseFolderName:If(IsBlank(courseNameFolder),"",courseNameFolder),
-                                    SLNC_ClassID:If(IsBlank(slnc_classID_10), "",slnc_classID_10.Text),
-                                    SLNC_CourseID:If(IsBlank(slnc_courseID_tf_9),"",slnc_courseID_tf_9.Text),
-                                    SDD_ClassID:If(IsBlank(sdd_classID_10),"",sdd_classID_10.Text),
-                                    SDD_CourseID:If(IsBlank(sdd_courseID_10),"",sdd_courseID_10.Text),
-                                    SLNC_ContentTitleEN: If(IsBlank(slnc_contentTitleEN_9),"",slnc_contentTitleEN_9.Text),
-                                    SLNC_ContentTitleFR:If(IsBlank(slnc_contentTitleFR_9),"",slnc_contentTitleFR_9.Text),
-                                    request_details: If(IsBlank(textInput_requestDetails_9),"",textInput_requestDetails_9.Text),
-                                    project_status_date:dateP_submitted_9.SelectedDate,
-                                    projectStatus:Text(LookUp(ProjectStatus,ID = 1).ID),
-                                    isAccessibility:cb_isaccessibility_6.Value,
-                                    isGNWT:cb_isgnwt_6.Value,
-                                    isAdhoc:cb_isadhoc_5.Value,
-                                    due_date:dateP_dueDate_9.SelectedDate,
-                                    submitted_date:dateP_submitted_9.SelectedDate,
-                                    requestor_email:Office365Users.MyProfileV2().mail,
-                                    CustomA:dp_WP_Tab_5.SelectedText.Value,
-                                    CustomB:If(!IsBlank(txtinput_wp_row_number_5),txtinput_wp_row_number_5.Text,""),
-                                    CustomC:If(!IsBlank(txtInput_adaptlink_5), Substitute(txtInput_adaptlink_5.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", " "),
-                                    requestor_list: dd_requestor.SelectedItems
-                                });
-                                'MeD-PRD-NewWR2'.Run(JSON(dataForm,IndentFour));
-                                
+                            OnSelect: |
+                                =Set(
+                                    courseNameFolder,
+                                    Concat(
+                                        Filter(
+                                            Split(
+                                                slnc_courseNameEN_8.Text,
+                                                ""
+                                            ),
+                                            IsMatch(
+                                                Result,
+                                                "^[a-zA-Z0-9\s]+"
+                                            )
+                                        ),
+                                        Result
+                                    )
+                                );
+                                Set(
+                                    resetScroll,
+                                    false
+                                );
+                                ClearCollect(
+                                    dataForm,
+                                    {
+                                        requestor_name: textInput_Requestor_9.Text,
+                                        Title: Text(
+                                            First(
+                                                FirstN(
+                                                    Sort(
+                                                        'wrtracking-production-version-001',
+                                                        ID,
+                                                        Descending
+                                                    ),
+                                                    1
+                                                )
+                                            ).ID + 6033
+                                        ),
+                                        businessLine: dd_Bizline_3.Selected.Value,
+                                        // sharewith:If(IsBlank(cb_sharewith_usernames),Collect(random,{}),cb_sharewith_usernames.SelectedItems.Claims),
+                                        typeofwork: dd_typeofwork_9.Selected.Value,
+                                        medium: dd_medium_9.Selected.Value,
+                                        request_language: If(
+                                            dd_requestLan_9.Selected.Value = "BOTH" || dd_requestLan_9.Selected.Value = "Les deux",
+                                            "EN",
+                                            dd_requestLan_9.Selected.Value
+                                        ),
+                                        SLNC_CourseNameEN: If(
+                                            IsBlank(slnc_courseNameEN_8),
+                                            "",
+                                            slnc_courseNameEN_8.Text
+                                        ),
+                                        SLNC_CourseNameFR: If(
+                                            IsBlank(slnc_courseNameFR_8),
+                                            "",
+                                            slnc_courseNameFR_8.Text
+                                        ),
+                                        CourseFolderName: If(
+                                            IsBlank(courseNameFolder),
+                                            "",
+                                            courseNameFolder
+                                        ),
+                                        SLNC_ClassID: If(
+                                            IsBlank(slnc_classID_10),
+                                            "",
+                                            slnc_classID_10.Text
+                                        ),
+                                        SLNC_CourseID: If(
+                                            IsBlank(slnc_courseID_tf_9),
+                                            "",
+                                            slnc_courseID_tf_9.Text
+                                        ),
+                                        SDD_ClassID: If(
+                                            IsBlank(sdd_classID_10),
+                                            "",
+                                            sdd_classID_10.Text
+                                        ),
+                                        SDD_CourseID: If(
+                                            IsBlank(sdd_courseID_10),
+                                            "",
+                                            sdd_courseID_10.Text
+                                        ),
+                                        SLNC_ContentTitleEN: If(
+                                            IsBlank(slnc_contentTitleEN_9),
+                                            "",
+                                            slnc_contentTitleEN_9.Text
+                                        ),
+                                        SLNC_ContentTitleFR: If(
+                                            IsBlank(slnc_contentTitleFR_9),
+                                            "",
+                                            slnc_contentTitleFR_9.Text
+                                        ),
+                                        request_details: If(
+                                            IsBlank(textInput_requestDetails_9),
+                                            "",
+                                            textInput_requestDetails_9.Text
+                                        ),
+                                        project_status_date: dateP_submitted_9.SelectedDate,
+                                        projectStatus: Text(
+                                            LookUp(
+                                                ProjectStatus,
+                                                ID = 1
+                                            ).ID
+                                        ),
+                                        isAccessibility: cb_isaccessibility_6.Value,
+                                        isGNWT: cb_isgnwt_6.Value,
+                                        isAdhoc: cb_isadhoc_5.Value,
+                                        due_date: dateP_dueDate_9.SelectedDate,
+                                        submitted_date: dateP_submitted_9.SelectedDate,
+                                        requestor_email: Office365Users.MyProfileV2().mail,
+                                        CustomA: dp_WP_Tab_5.SelectedText.Value,
+                                        CustomB: If(
+                                            !IsBlank(txtinput_wp_row_number_5),
+                                            txtinput_wp_row_number_5.Text,
+                                            ""
+                                        ),
+                                        CustomC: If(
+                                            !IsBlank(txtInput_adaptlink_5),
+                                            Substitute(
+                                                txtInput_adaptlink_5.Text,
+                                                "/preview/5dc446fd27f08836496b6b9e/",
+                                                "/#editor/"
+                                            ) & "menu",
+                                            " "
+                                        ),
+                                        requestor_list: dd_requestor.SelectedItems
+                                    }
+                                );
+                                'MeD-PRD-NewWR2'.Run(
+                                    JSON(
+                                        dataForm,
+                                        IndentFour
+                                    )
+                                );
                                 //If using both languages ---
                                 //
-                                If(dd_requestLan_9.Selected.Value="BOTH" || dd_requestLan_9.Selected.Value="Les deux",
-                                ClearCollect(dataForm,
-                                {  
-                                    requestor_name: Concat(dd_requestor.SelectedItems, DisplayName & ";"),
-                                    Title: Text(First(FirstN(Sort('wrtracking-production-version-001', ID, Descending), 1)).ID+6034),
-                                    businessLine: dd_Bizline_3.Selected.Value,
-                                   // sharewith:If(IsBlank(cb_sharewith_usernames),Collect(random,{}),cb_sharewith_usernames.SelectedItems.Claims),
-                                    typeofwork:dd_typeofwork_9.Selected.Value,
-                                    medium:dd_medium_9.Selected.Value,
-                                    request_language:"FR",
-                                    SLNC_CourseNameEN:If(IsBlank(slnc_courseNameEN_8),"",slnc_courseNameEN_8.Text),
-                                    SLNC_CourseNameFR:If(IsBlank(slnc_courseNameFR_8),"",slnc_courseNameFR_8.Text),
-                                    CourseFolderName:If(IsBlank(courseNameFolder),"",courseNameFolder),
-                                    SLNC_ClassID:If(IsBlank(slnc_classID_FR_1), "",slnc_classID_FR_1.Text),
-                                    SLNC_CourseID:If(IsBlank(slnc_courseID_tf_9),"",slnc_courseID_tf_9.Text),
-                                    SDD_ClassID:If(IsBlank(sdd_classID_FR_1),"",sdd_classID_FR_1.Text),
-                                    SDD_CourseID:If(IsBlank(sdd_courseID_10),"",sdd_courseID_10.Text),
-                                    SLNC_ContentTitleEN: If(IsBlank(slnc_contentTitleEN_9),"",slnc_contentTitleEN_9.Text),
-                                    SLNC_ContentTitleFR:If(IsBlank(slnc_contentTitleFR_9),"",slnc_contentTitleFR_9.Text),
-                                    request_details: If(IsBlank(textInput_requestDetails_9),"",textInput_requestDetails_9.Text),
-                                    project_status_date:dateP_submitted_9.SelectedDate,
-                                    projectStatus:Text(LookUp(ProjectStatus,ID = 1).ID),
-                                    isAccessibility:cb_isaccessibility_6.Value,
-                                    isGNWT:cb_isgnwt_6.Value,
-                                    isAdhoc:cb_isadhoc_5.Value,
-                                    due_date:dateP_dueDate_9.SelectedDate,
-                                    submitted_date:dateP_submitted_9.SelectedDate,
-                                    requestor_email:Office365Users.MyProfileV2().mail,
-                                    CustomA:dp_WP_Tab_5.SelectedText.Value,
-                                    CustomB:If(!IsBlank(txtinput_wp_row_number_5),txtinput_wp_row_number_5.Text,""),
-                                    CustomC:If(!IsBlank(txtInput_adaptlink_FR_1), Substitute(txtInput_adaptlink_FR_1.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", " ")
-                                })
+                                If(
+                                    dd_requestLan_9.Selected.Value = "BOTH" || dd_requestLan_9.Selected.Value = "Les deux",
+                                    ClearCollect(
+                                        dataForm,
+                                        {
+                                            requestor_name: Concat(
+                                                dd_requestor.SelectedItems,
+                                                DisplayName & ";"
+                                            ),
+                                            Title: Text(
+                                                First(
+                                                    FirstN(
+                                                        Sort(
+                                                            'wrtracking-production-version-001',
+                                                            ID,
+                                                            Descending
+                                                        ),
+                                                        1
+                                                    )
+                                                ).ID + 6034
+                                            ),
+                                            businessLine: dd_Bizline_3.Selected.Value,
+                                            // sharewith:If(IsBlank(cb_sharewith_usernames),Collect(random,{}),cb_sharewith_usernames.SelectedItems.Claims),
+                                            typeofwork: dd_typeofwork_9.Selected.Value,
+                                            medium: dd_medium_9.Selected.Value,
+                                            request_language: "FR",
+                                            SLNC_CourseNameEN: If(
+                                                IsBlank(slnc_courseNameEN_8),
+                                                "",
+                                                slnc_courseNameEN_8.Text
+                                            ),
+                                            SLNC_CourseNameFR: If(
+                                                IsBlank(slnc_courseNameFR_8),
+                                                "",
+                                                slnc_courseNameFR_8.Text
+                                            ),
+                                            CourseFolderName: If(
+                                                IsBlank(courseNameFolder),
+                                                "",
+                                                courseNameFolder
+                                            ),
+                                            SLNC_ClassID: If(
+                                                IsBlank(slnc_classID_FR_1),
+                                                "",
+                                                slnc_classID_FR_1.Text
+                                            ),
+                                            SLNC_CourseID: If(
+                                                IsBlank(slnc_courseID_tf_9),
+                                                "",
+                                                slnc_courseID_tf_9.Text
+                                            ),
+                                            SDD_ClassID: If(
+                                                IsBlank(sdd_classID_FR_1),
+                                                "",
+                                                sdd_classID_FR_1.Text
+                                            ),
+                                            SDD_CourseID: If(
+                                                IsBlank(sdd_courseID_10),
+                                                "",
+                                                sdd_courseID_10.Text
+                                            ),
+                                            SLNC_ContentTitleEN: If(
+                                                IsBlank(slnc_contentTitleEN_9),
+                                                "",
+                                                slnc_contentTitleEN_9.Text
+                                            ),
+                                            SLNC_ContentTitleFR: If(
+                                                IsBlank(slnc_contentTitleFR_9),
+                                                "",
+                                                slnc_contentTitleFR_9.Text
+                                            ),
+                                            request_details: If(
+                                                IsBlank(textInput_requestDetails_9),
+                                                "",
+                                                textInput_requestDetails_9.Text
+                                            ),
+                                            project_status_date: dateP_submitted_9.SelectedDate,
+                                            projectStatus: Text(
+                                                LookUp(
+                                                    ProjectStatus,
+                                                    ID = 1
+                                                ).ID
+                                            ),
+                                            isAccessibility: cb_isaccessibility_6.Value,
+                                            isGNWT: cb_isgnwt_6.Value,
+                                            isAdhoc: cb_isadhoc_5.Value,
+                                            due_date: dateP_dueDate_9.SelectedDate,
+                                            submitted_date: dateP_submitted_9.SelectedDate,
+                                            requestor_email: Office365Users.MyProfileV2().mail,
+                                            CustomA: dp_WP_Tab_5.SelectedText.Value,
+                                            CustomB: If(
+                                                !IsBlank(txtinput_wp_row_number_5),
+                                                txtinput_wp_row_number_5.Text,
+                                                ""
+                                            ),
+                                            CustomC: If(
+                                                !IsBlank(txtInput_adaptlink_FR_1),
+                                                Substitute(
+                                                    txtInput_adaptlink_FR_1.Text,
+                                                    "/preview/5dc446fd27f08836496b6b9e/",
+                                                    "/#editor/"
+                                                ) & "menu",
+                                                " "
+                                            )
+                                        }
+                                    )
                                 );
-                                If(dd_requestLan_9.Selected.Value="BOTH" || dd_requestLan_9.Selected.Value="Les deux",
-                                    'MeD-PRD-NewWR2'.Run(JSON(dataForm,IndentFour));
+                                If(
+                                    dd_requestLan_9.Selected.Value = "BOTH" || dd_requestLan_9.Selected.Value = "Les deux",
+                                    'MeD-PRD-NewWR2'.Run(
+                                        JSON(
+                                            dataForm,
+                                            IndentFour
+                                        )
+                                    );
+                                    
                                 );
-                                
                                 //Reset data ---
-                                
-                                Reset(dd_Bizline_3);Reset(textInput_Requestor_9);Reset(dd_typeofwork_9);Reset(dd_medium_9);
-                                Reset(dd_requestLan_9);Reset(slnc_courseNameEN_8);Reset(slnc_courseNameFR_8);Reset(slnc_contentTitleEN_9);Reset(slnc_contentTitleFR_9);Reset(textInput_requestDetails_9);
-                                Reset(dateP_submitted_9);Reset(dd_projectstatus_5);Reset(cb_isgnwt_6);Reset(cb_isaccessibility_6);Reset(dateP_dueDate_9);Reset(dateP_submitted_9);Reset(cb_isadhoc_5);Reset(dp_WP_Tab_5);Reset(sdd_courseID_10);Reset(slnc_courseID_tf_9);Reset(slnc_classID_10);Reset(sdd_classID_10);Reset(sdd_classID_FR_1);Reset(slnc_classID_FR_1);
-                                Reset(txtinput_wp_row_number_5);Reset(txtInput_adaptlink_5);Reset(txtInput_adaptlink_FR_1);
-                                
-                                Navigate(screen_complete, Transition.None);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
+                                Reset(dd_Bizline_3);
+                                Reset(textInput_Requestor_9);
+                                Reset(dd_typeofwork_9);
+                                Reset(dd_medium_9);
+                                Reset(dd_requestLan_9);
+                                Reset(slnc_courseNameEN_8);
+                                Reset(slnc_courseNameFR_8);
+                                Reset(slnc_contentTitleEN_9);
+                                Reset(slnc_contentTitleFR_9);
+                                Reset(textInput_requestDetails_9);
+                                Reset(dateP_submitted_9);
+                                Reset(dd_projectstatus_5);
+                                Reset(cb_isgnwt_6);
+                                Reset(cb_isaccessibility_6);
+                                Reset(dateP_dueDate_9);
+                                Reset(dateP_submitted_9);
+                                Reset(cb_isadhoc_5);
+                                Reset(dp_WP_Tab_5);
+                                Reset(sdd_courseID_10);
+                                Reset(slnc_courseID_tf_9);
+                                Reset(slnc_classID_10);
+                                Reset(sdd_classID_10);
+                                Reset(sdd_classID_FR_1);
+                                Reset(slnc_classID_FR_1);
+                                Reset(txtinput_wp_row_number_5);
+                                Reset(txtInput_adaptlink_5);
+                                Reset(txtInput_adaptlink_FR_1);
+                                Navigate(
+                                    screen_complete,
+                                    Transition.None
+                                );
+                                ClearCollect(
+                                    numWRCol,
+                                    (Filter(
+                                        'wrtracking-production-version-001',
+                                        field_2 = requestorEmail
+                                    ))
+                                );
                             TabIndex: =44
                             Text: =If(dd_lan_selector_3.SelectedText.Value="EN", LookUp(langPack, English="Add to WP").English, LookUp(langPack, English="Add to WP").French)
                             Tooltip: ="Submit the Form"
