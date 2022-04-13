@@ -4,7 +4,6 @@ newHome_1 As screen:
         =//Reset(sdd_courseID_8);Reset(slnc_courseID_tf_7);Reset(slnc_classID_8);Reset(sdd_classID_8);
         
         Set(resetScroll, true);
-        Collect(selectedUsers, dd_requestor.SelectedItems.DisplayName);
 
     Canvas2_8 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -179,7 +178,7 @@ newHome_1 As screen:
 
                         textInput_Requestor_9 As text:
                             BorderColor: =RGBA(31, 124, 155, 1)
-                            Default: =
+                            Default: =Concat(dd_requestor.SelectedItems,DisplayName& ", ")
                             DisplayMode: =DisplayMode.Disabled
                             Height: =38
                             Reset: =btn_Clear_10.Pressed
@@ -938,12 +937,12 @@ newHome_1 As screen:
                                 })
                                 );
                                 If(dd_requestLan_9.Selected.Value="BOTH" || dd_requestLan_9.Selected.Value="Les deux",
-                                    'MeD-PRD-NewWR'.Run(JSON(dataForm,IndentFour));
+                                    'MeD-PRD-NewWR2'.Run(JSON(dataForm,IndentFour));
                                 );
                                 
                                 //Reset data ---
                                 
-                                Reset(dd_Bizline_3);Reset(textInput_Requestor_9);Reset(dd_typeofwork_9);Reset(dd_medium_9);Reset(dd_requestor);
+                                Reset(dd_Bizline_3);Reset(textInput_Requestor_9);Reset(dd_typeofwork_9);Reset(dd_medium_9);
                                 Reset(dd_requestLan_9);Reset(slnc_courseNameEN_8);Reset(slnc_courseNameFR_8);Reset(slnc_contentTitleEN_9);Reset(slnc_contentTitleFR_9);Reset(textInput_requestDetails_9);
                                 Reset(dateP_submitted_9);Reset(dd_projectstatus_5);Reset(cb_isgnwt_6);Reset(cb_isaccessibility_6);Reset(dateP_dueDate_9);Reset(dateP_submitted_9);Reset(cb_isadhoc_5);Reset(dp_WP_Tab_5);Reset(sdd_courseID_10);Reset(slnc_courseID_tf_9);Reset(slnc_classID_10);Reset(sdd_classID_10);Reset(sdd_classID_FR_1);Reset(slnc_classID_FR_1);
                                 Reset(txtinput_wp_row_number_5);Reset(txtInput_adaptlink_5);Reset(txtInput_adaptlink_FR_1);
