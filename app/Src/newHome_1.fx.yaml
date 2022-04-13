@@ -991,7 +991,7 @@ newHome_1 As screen:
                                             ) & "menu",
                                             " "
                                         ),
-                                        requestor_list: dd_requestor.SelectedItems.Mail
+                                        requestor_list: dd_requestor.SelectedItems
                                     }
                                 );
                                 'MeD-PRD-NewWR2'.Run(
