@@ -486,7 +486,6 @@ reAssignWR As screen:
                         {requestor_name:Concatenate(Office365Users.MyProfileV2().surname,", ",Office365Users.MyProfileV2().givenName)},
                         {requestor_email:Office365Users.MyProfileV2().mail}
                     )
-                Run
                 );
                 
                 UpdateContext({showPopup:false});Refresh('wrtracking-production-version-001');Reset(gallery_WR);Reset(Gallery2);Clear(SelectedItems);
