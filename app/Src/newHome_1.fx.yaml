@@ -990,8 +990,7 @@ newHome_1 As screen:
                                                 "/#editor/"
                                             ) & "menu",
                                             " "
-                                        ),
-                                        requestor_list: dd_requestor.SelectedItems
+                                        )
                                     }
                                 );
                                 'MeD-PRD-NewWR2'.Run(
@@ -1000,6 +999,15 @@ newHome_1 As screen:
                                         IndentFour
                                     )
                                 );
+                                
+                                ClearCollect(selectedUsers, dd_requestor.SelectedItems);
+                                'MeD-PRD-NewWR2'.Run(
+                                    JSON(
+                                        selectedUsers,
+                                        IndentFour
+                                    )
+                                );
+                                
                                 //If using both languages ---
                                 //
                                 If(
