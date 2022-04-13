@@ -517,13 +517,13 @@ newHome_1 As screen:
                             HoverFill: =RGBA(31, 124, 155, 1)
                             InputTextPlaceholder: ="Find User"
                             Items: |-
-                                =If(dd_requestor.SearchText="",emptyList,Office365Users.SearchUser({searchTerm:dd_requestor.SearchText}))
-                            OnChange: =
+                                =Office365Users.SearchUser({searchTerm:dd_requestor.SearchText})
+                            OnChange: =ClearCollect(selectedUsers,dd_requestor.SelectedItems)
                             PressedFill: =RGBA(31, 124, 155, 1)
                             Reset: =
-                            SearchFields: =["DisplayName"]
+                            SearchFields: =["DisplayName","Mail"]
                             SearchItems: |-
-                                =Search(If(dd_requestor.SearchText="",emptyList,Office365Users.SearchUser({searchTerm:dd_requestor.SearchText})),dd_requestor.SearchText,"DisplayName")
+                                =Search(Office365Users.SearchUser({searchTerm:dd_requestor.SearchText}),dd_requestor.SearchText,"DisplayName","Mail")
                             SelectionFill: =RGBA(31, 124, 155, 1)
                             TabIndex: =10
                             Template: =ListItemTemplate.Double

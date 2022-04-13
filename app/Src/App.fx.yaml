@@ -15,6 +15,5 @@ App As appinfo:
         Set(themeCyan, RGBA(27, 156, 157, 1));
         Set(themePurple, RGBA(105, 70, 156, 1));
         Set(themePink, RGBA(206, 28, 106, 1));
-        Collect(emptyList, {DisplayName:""});
     StartScreen: =
 
