@@ -19,7 +19,7 @@
       "a3625504-bf4a-40d3-a30f-e94eb3c462a4",
       "400da4cc-35f0-44a8-a25a-c375c7effc8f",
       "bebe27cf-24b0-41cc-9b23-52be4afb7e34",
-      "6cb4936d-0d12-412b-9522-21280a27cb7e"
+      "98b4ffbe-5c82-4a78-9e36-237c1cf70c7e"
     ],
     "id": "0f748b89-d170-443d-b263-828a7e6d6fd8"
   },
@@ -229,8 +229,8 @@
     ],
     "id": "650d44e5-f590-450c-9a4a-253595cf9bf6"
   },
-  "6cb4936d-0d12-412b-9522-21280a27cb7e": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/d1af300a-e2ef-43cd-8ec2-d0fc97f31a79",
+  "98b4ffbe-5c82-4a78-9e36-237c1cf70c7e": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/d1af300ae2ef43cd8ec2d0fc97f31a79-eaa1c1dd4997bbab",
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-04.canadacentral.logic.azure.com:443/workflows/9d0031f669cf4b73b999f6149f18bb4c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ZGsHlLP2TmaBf7vjxIxmUz5z3wgwv0KwQymGxi-u8eY",
       "workflowEndpoint": "/subscriptions/cbd472fe-eafa-4c32-b348-555abce6f9ba/resourceGroups/9ed558468a814246acd8b1a01abfc0d1-42f7b9b85d5f46599e34c59509123c79/providers/Microsoft.Logic/workflows/d1af300a-e2ef-43cd-8ec2-d0fc97f31a79",
@@ -242,18 +242,12 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "0f748b89-d170-443d-b263-828a7e6d6fd8": {
-          "value": "shared_sendmail"
-        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "d1af300a-e2ef-43cd-8ec2-d0fc97f31a79"
         }
       },
       "parameterHintsV2": {
-        "shared_sendmail": {
-          "value": "0f748b89-d170-443d-b263-828a7e6d6fd8"
-        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "d1af300a-e2ef-43cd-8ec2-d0fc97f31a79"
@@ -268,7 +262,7 @@
       "shared_sendmail": "0f748b89-d170-443d-b263-828a7e6d6fd8"
     },
     "dependents": [],
-    "id": "6cb4936d-0d12-412b-9522-21280a27cb7e"
+    "id": "98b4ffbe-5c82-4a78-9e36-237c1cf70c7e"
   },
   "a3625504-bf4a-40d3-a30f-e94eb3c462a4": {
     "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/e9089eda25f04f1c8d27448e0404bd6a",

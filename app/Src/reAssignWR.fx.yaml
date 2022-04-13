@@ -480,14 +480,16 @@ reAssignWR As screen:
 
         Button3 As button:
             OnSelect: |-
-                =ForAll(SelectedItems,
+                =ClearCollect(selectWRs,SelectedItems.Title);
+                ForAll(SelectedItems,
                  Patch('wrtracking-production-version-001', 
                         LookUp('wrtracking-production-version-001',  Title = SelectedItems[@Title]),
                         {requestor_name:Concatenate(Office365Users.MyProfileV2().surname,", ",Office365Users.MyProfileV2().givenName)},
                         {requestor_email:Office365Users.MyProfileV2().mail}
-                    );'NotifyCSH-reassignWR'.Run(Office365Users.MyProfileV2().mail);
-                    
+                    );
                 );
+                
+                
                 
                 UpdateContext({showPopup:false});Refresh('wrtracking-production-version-001');Reset(gallery_WR);Reset(Gallery2);Clear(SelectedItems);
             Size: =14
