@@ -1156,7 +1156,7 @@ newHome_1 As screen:
                                     numWRCol,
                                     (Filter(
                                         'wrtracking-production-version-001',
-                                        field_2 = requestorEmail
+                                        requestor_email = requestorEmail
                                     ))
                                 );
                             TabIndex: =44
@@ -1174,7 +1174,7 @@ newHome_1 As screen:
                             HoverFill: =ColorFade(RGBA(31, 124, 155, 1), -20%)
                             OnSelect: |-
                                 =Set(resetScroll, false);
-                                lbl_warning_14.Visible=false;Navigate(wr_status);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
+                                lbl_warning_14.Visible=false;Navigate(wr_status);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',requestor_email=requestorEmail)));
                             TabIndex: =43
                             Text: =If(dd_lan_selector_3.SelectedText.Value="EN", LookUp(langPack, English="Cancel").English, LookUp(langPack, English="Cancel").French)
                             Width: =213
