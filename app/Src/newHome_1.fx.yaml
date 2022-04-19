@@ -867,7 +867,7 @@ newHome_1 As screen:
                             FontWeight: =FontWeight.Bold
                             Height: =47
                             HoverFill: =ColorFade(RGBA(31, 124, 155, 1), -20%)
-                            OnSelect: |
+                            OnSelect: |-
                                 =Set(
                                     courseNameFolder,
                                     Concat(
@@ -1156,11 +1156,7 @@ newHome_1 As screen:
                                         field_2 = requestorEmail
                                     ))
                                 );
-                                
-                                ClearCollect(
-                                    selectedUsers,
-                                    dd_requestor.SelectedItems
-                                );
+                                'CSP-requestors'.Run(textInput_Requestor_9.Text);
                             TabIndex: =44
                             Text: =If(dd_lan_selector_3.SelectedText.Value="EN", LookUp(langPack, English="Add to WP").English, LookUp(langPack, English="Add to WP").French)
                             Tooltip: ="Submit the Form"
