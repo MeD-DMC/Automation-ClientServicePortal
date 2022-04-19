@@ -208,7 +208,28 @@
     "dependents": [],
     "id": "400da4cc-35f0-44a8-a25a-c375c7effc8f"
   },
-  "4bba4baa-be7f-49fa-9298-7833a0050a01": {
+  "650d44e5-f590-450c-9a4a-253595cf9bf6": {
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_planner/connections/83f37f81e8ee405b968abdb0be4b92ee",
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Planner",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1513/1.0.1513.2549/planner/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_planner",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "a3625504-bf4a-40d3-a30f-e94eb3c462a4"
+    ],
+    "id": "650d44e5-f590-450c-9a4a-253595cf9bf6"
+  },
+  "66f4340f-e1b6-4470-b918-1734357d87ee": {
     "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/399d62d627df4ee6af612ee8966c3d5d-eaa1c1dd4997bbab",
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-16.canadacentral.logic.azure.com:443/workflows/35d7acc65fc346f1a07d091721416646/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=gAy7CQmZuKd1JX2cdYEAn8aVis9a6UFKH1gpE0Hxltc",
@@ -239,28 +260,7 @@
     ],
     "dependencies": {},
     "dependents": [],
-    "id": "4bba4baa-be7f-49fa-9298-7833a0050a01"
-  },
-  "650d44e5-f590-450c-9a4a-253595cf9bf6": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_planner/connections/83f37f81e8ee405b968abdb0be4b92ee",
-    "connectionParameters": {
-      "sku": "Enterprise"
-    },
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "Planner",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1513/1.0.1513.2549/planner/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_planner",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "a3625504-bf4a-40d3-a30f-e94eb3c462a4"
-    ],
-    "id": "650d44e5-f590-450c-9a4a-253595cf9bf6"
+    "id": "66f4340f-e1b6-4470-b918-1734357d87ee"
   },
   "98b4ffbe-5c82-4a78-9e36-237c1cf70c7e": {
     "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/d1af300a-e2ef-43cd-8ec2-d0fc97f31a79",
