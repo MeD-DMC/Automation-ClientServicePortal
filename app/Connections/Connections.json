@@ -133,7 +133,8 @@
       "16e72adb-12aa-43dd-a044-fa3fb3edb6af",
       "a3625504-bf4a-40d3-a30f-e94eb3c462a4",
       "400da4cc-35f0-44a8-a25a-c375c7effc8f",
-      "bebe27cf-24b0-41cc-9b23-52be4afb7e34"
+      "bebe27cf-24b0-41cc-9b23-52be4afb7e34",
+      "3296a3b4-5f7a-4910-95e6-4f5ddfecbf50"
     ],
     "id": "29c11814-1e0c-4dfe-b672-cccc648bedfd"
   },
@@ -381,38 +382,5 @@
     },
     "dependents": [],
     "id": "bebe27cf-24b0-41cc-9b23-52be4afb7e34"
-  },
-  "f942bb90-5e85-4f06-a829-b05c209fcc4d": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/6c1a68bf163d40009ab728d8eeb1bbc0-eaa1c1dd4997bbab",
-    "connectionParameters": {
-      "workFlowCallbackUri": "https://prod-18.canadacentral.logic.azure.com:443/workflows/39609825573e4d5eade2c04f5ac3333b/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=cuLdr2Ae79xlN23cWBpwnfMDfkPkdgSdNYw0ZyRTbr4",
-      "workflowEndpoint": "/subscriptions/cbd472fe-eafa-4c32-b348-555abce6f9ba/resourceGroups/9ed558468a814246acd8b1a01abfc0d1-42f7b9b85d5f46599e34c59509123c79/providers/Microsoft.Logic/workflows/6c1a68bf-163d-4000-9ab7-28d8eeb1bbc0",
-      "workflowName": "6c1a68bf-163d-4000-9ab7-28d8eeb1bbc0",
-      "workflowPath": "/subscriptions/cbd472fe-eafa-4c32-b348-555abce6f9ba/resourceGroups/9ed558468a814246acd8b1a01abfc0d1-42f7b9b85d5f46599e34c59509123c79/providers/Microsoft.Logic/workflows/6c1a68bf-163d-4000-9ab7-28d8eeb1bbc0"
-    },
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "6c1a68bf-163d-4000-9ab7-28d8eeb1bbc0"
-        }
-      },
-      "parameterHintsV2": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "6c1a68bf-163d-4000-9ab7-28d8eeb1bbc0"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "MultipleRequestors"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "f942bb90-5e85-4f06-a829-b05c209fcc4d"
   }
 }
