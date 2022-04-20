@@ -178,7 +178,7 @@ newHome_1 As screen:
 
                         textInput_Requestor_9 As text:
                             BorderColor: =RGBA(31, 124, 155, 1)
-                            Default: =Concat(dd_requestor.SelectedItems,Mail& ", ")
+                            Default: =Concat(dd_requestor.SelectedItems,Mail& "; ")
                             DisplayMode: =DisplayMode.Disabled
                             Height: =38
                             Reset: =btn_Clear_10.Pressed
