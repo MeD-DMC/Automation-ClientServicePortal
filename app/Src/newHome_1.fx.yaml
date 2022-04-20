@@ -1156,17 +1156,6 @@ newHome_1 As screen:
                                         field_2 = requestorEmail
                                     ))
                                 );
-                                'CSP-requestors'.Run(Text(
-                                            First(
-                                                FirstN(
-                                                    Sort(
-                                                        'wrtracking-production-version-001',
-                                                        ID,
-                                                        Descending
-                                                    ),
-                                                    1
-                                                )
-                                            ).ID + 6033),textInput_Requestor_9.Text);
                             TabIndex: =44
                             Text: =If(dd_lan_selector_3.SelectedText.Value="EN", LookUp(langPack, English="Add to WP").English, LookUp(langPack, English="Add to WP").French)
                             Tooltip: ="Submit the Form"
