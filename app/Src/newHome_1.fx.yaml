@@ -867,7 +867,7 @@ newHome_1 As screen:
                             FontWeight: =FontWeight.Bold
                             Height: =47
                             HoverFill: =ColorFade(RGBA(31, 124, 155, 1), -20%)
-                            OnSelect: |-
+                            OnSelect: |
                                 =Set(
                                     courseNameFolder,
                                     Concat(
@@ -975,7 +975,7 @@ newHome_1 As screen:
                                         isAdhoc: cb_isadhoc_5.Value,
                                         due_date: dateP_dueDate_9.SelectedDate,
                                         submitted_date: dateP_submitted_9.SelectedDate,
-                                        requestor_email: Office365Users.MyProfileV2().mail,
+                                        requestor_email: textInput_Requestor_9.Text,
                                         CustomA: dp_WP_Tab_5.SelectedText.Value,
                                         CustomB: If(
                                             !IsBlank(txtinput_wp_row_number_5),
@@ -999,8 +999,6 @@ newHome_1 As screen:
                                         IndentFour
                                     )
                                 );
-                                
-                                
                                 //If using both languages ---
                                 //
                                 If(
