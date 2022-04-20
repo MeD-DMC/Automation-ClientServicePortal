@@ -999,18 +999,6 @@ newHome_1 As screen:
                                         IndentFour
                                     )
                                 );
-                                'MultipleRequestors'.Run(Text(
-                                            First(
-                                                FirstN(
-                                                    Sort(
-                                                        'wrtracking-production-version-001',
-                                                        ID,
-                                                        Descending
-                                                    ),
-                                                    1
-                                                )
-                                            ).ID + 6033
-                                        ),JSON(dd_requestor.SelectedItems.Mail, IndentFour));
                                 
                                 //If using both languages ---
                                 //
