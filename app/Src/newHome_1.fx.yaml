@@ -976,6 +976,7 @@ newHome_1 As screen:
                                         due_date: dateP_dueDate_9.SelectedDate,
                                         submitted_date: dateP_submitted_9.SelectedDate,
                                         requestor_email: textInput_Requestor_9.Text,
+                                        requestor_list: JSON(dd_requestor.SelectedItems.Mail, IndentFour),
                                         CustomA: dp_WP_Tab_5.SelectedText.Value,
                                         CustomB: If(
                                             !IsBlank(txtinput_wp_row_number_5),
