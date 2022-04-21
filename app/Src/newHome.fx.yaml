@@ -178,14 +178,14 @@ newHome As screen:
 
                         textInput_Requestor_2 As text:
                             BorderColor: =RGBA(31, 124, 155, 1)
-                            Default: =Concatenate(Office365Users.MyProfileV2().surname,", ",Office365Users.MyProfileV2().givenName)
+                            Default: =Concat(dd_requestor_1.SelectedItems,Mail& "; ")
                             DisplayMode: =DisplayMode.Disabled
                             Height: =38
                             Reset: =btn_Clear_2.Pressed
                             TabIndex: =8
+                            Visible: =false
                             Width: =300
-                            X: =248
-                            Y: =132
+                            X: =965
                             ZIndex: =11
 
                         Label1_57 As label:
@@ -496,6 +496,32 @@ newHome As screen:
                                 X: =40
                                 Y: =367
                                 ZIndex: =31
+
+                        dd_requestor_1 As combobox:
+                            BorderColor: =RGBA(31, 124, 155, 1)
+                            ChevronBackground: =RGBA(31, 124, 155, 1)
+                            ChevronHoverBackground: =ColorFade(RGBA(31, 124, 155, 1), -20%)
+                            DefaultSelectedItems: |-
+                                =Office365Users.SearchUser({searchTerm:User().Email})
+                            DisplayFields: =["DisplayName"]
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =RGBA(31, 124, 155, 1)
+                            InputTextPlaceholder: ="Find User"
+                            Items: |-
+                                =Office365Users.SearchUser({searchTerm:dd_requestor_1.SearchText})
+                            OnChange: =ClearCollect(selectedUsers,dd_requestor_1.SelectedItems)
+                            PressedFill: =RGBA(31, 124, 155, 1)
+                            Reset: =
+                            SearchFields: =["DisplayName"]
+                            SearchItems: |-
+                                =Search(Office365Users.SearchUser({searchTerm:dd_requestor_1.SearchText}),dd_requestor_1.SearchText,"DisplayName")
+                            SelectionFill: =RGBA(31, 124, 155, 1)
+                            TabIndex: =10
+                            Template: =ListItemTemplate.Double
+                            Width: =300
+                            X: =250
+                            Y: =130
+                            ZIndex: =39
 
                     section2_1 As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.Start
@@ -837,7 +863,7 @@ newHome As screen:
                                 Set(resetScroll, false);
                                 ClearCollect(dataForm,
                                 {  
-                                    requestor_name: textInput_Requestor_2.Text,
+                                    requestor_name: Office365Users.MyProfileV2().displayName,
                                     Title: Text(First(FirstN(Sort('wrtracking-production-version-001', ID, Descending), 1)).ID+6033),
                                     businessLine: dd_Bizline_2.Selected.Value,
                                    // sharewith:If(IsBlank(cb_sharewith_usernames),Collect(random,{}),cb_sharewith_usernames.SelectedItems.Claims),
@@ -861,19 +887,20 @@ newHome As screen:
                                     isAdhoc:cb_isadhoc.Value,
                                     due_date:dateP_dueDate_2.SelectedDate,
                                     submitted_date:dateP_submitted_2.SelectedDate,
-                                    requestor_email:Office365Users.MyProfileV2().mail,
+                                    requestor_email:textInput_Requestor_2.Text,
+                                    requestor_list: JSON(dd_requestor_1.SelectedItems.Mail, IndentFour),
                                     CustomA:dp_WP_Tab.SelectedText.Value,
                                     CustomB:If(!IsBlank(txtinput_wp_row_number),txtinput_wp_row_number.Text,""),
                                     CustomC:If(!IsBlank(txtInput_adaptlink), Substitute(txtInput_adaptlink.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", " ")
                                 });
-                                'MeD-PRD-NewWR'.Run(JSON(dataForm,IndentFour));
+                                'MeD-PRD-NewWR2'.Run(JSON(dataForm,IndentFour));
                                 
                                 //If using both languages ---
                                 //
                                 If(dd_requestLan_2.Selected.Value="BOTH" || dd_requestLan_2.Selected.Value="Les deux",
                                 ClearCollect(dataForm,
                                 {  
-                                    requestor_name: textInput_Requestor_2.Text,
+                                    requestor_name: Office365Users.MyProfileV2().displayName,
                                     Title: Text(First(FirstN(Sort('wrtracking-production-version-001', ID, Descending), 1)).ID+6034),
                                     businessLine: dd_Bizline_2.Selected.Value,
                                    // sharewith:If(IsBlank(cb_sharewith_usernames),Collect(random,{}),cb_sharewith_usernames.SelectedItems.Claims),
@@ -897,14 +924,15 @@ newHome As screen:
                                     isAdhoc:cb_isadhoc.Value,
                                     due_date:dateP_dueDate_2.SelectedDate,
                                     submitted_date:dateP_submitted_2.SelectedDate,
-                                    requestor_email:Office365Users.MyProfileV2().mail,
+                                    requestor_email:textInput_Requestor_2.Text,
+                                    requestor_list: JSON(dd_requestor_1.SelectedItems.Mail, IndentFour),
                                     CustomA:dp_WP_Tab.SelectedText.Value,
                                     CustomB:If(!IsBlank(txtinput_wp_row_number),txtinput_wp_row_number.Text,""),
                                     CustomC:If(!IsBlank(txtInput_adaptlink_FR), Substitute(txtInput_adaptlink_FR.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", " ")
                                 })
                                 );
                                 If(dd_requestLan_2.Selected.Value="BOTH" || dd_requestLan_2.Selected.Value="Les deux",
-                                    'MeD-PRD-NewWR'.Run(JSON(dataForm,IndentFour));
+                                    'MeD-PRD-NewWR2'.Run(JSON(dataForm,IndentFour));
                                 );
                                 
                                 //Reset data ---
