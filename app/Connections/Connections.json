@@ -1,6 +1,6 @@
 {
   "0f748b89-d170-443d-b263-828a7e6d6fd8": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_sendmail/connections/e52ce20996a14fc89fc5807ba2c3db56",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_sendmail/connections/3057e8226ada4ed68815d1e2acf76c40",
     "connectionParameters": {
       "sku": "Enterprise"
     },
@@ -24,7 +24,7 @@
     "id": "0f748b89-d170-443d-b263-828a7e6d6fd8"
   },
   "16e72adb-12aa-43dd-a044-fa3fb3edb6af": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/fcd06900135c4a48b7c7eed67eb203e0",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/1039ffdf79974793b2ac965250521068",
     "connectionParameters": {
       "sku": "Enterprise",
       "workFlowCallbackUri": "https://prod-28.canadacentral.logic.azure.com:443/workflows/4f7a28951eab45c5a162e5ddf7655f3b/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ld5HKyFqNDILiQF4d-d3UwOhYdGttJKHrOEbnRNS344",
@@ -67,7 +67,7 @@
     "id": "16e72adb-12aa-43dd-a044-fa3fb3edb6af"
   },
   "29c11814-1e0c-4dfe-b672-cccc648bedfd": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/160b3eabdf3844dc962f6efc66188913",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/e6a466d36946404498bfb3a0aa3f2296",
     "connectionParameters": {
       "sku": "Enterprise"
     },
@@ -117,7 +117,7 @@
     "id": "29c11814-1e0c-4dfe-b672-cccc648bedfd"
   },
   "34171488-d34b-4621-8e5c-95d4d1ad6c53": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_office365users/connections/8fe28ccf7ce941b1a2c3902067e5ff7f",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_office365users/connections/6f7deec1ceb6409e97a9956de3e496b9",
     "connectionParameters": {
       "sku": "Enterprise"
     },
@@ -138,7 +138,7 @@
     "id": "34171488-d34b-4621-8e5c-95d4d1ad6c53"
   },
   "400da4cc-35f0-44a8-a25a-c375c7effc8f": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/00da8abba30c44c6b2ff9676d7c05746",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/99efab3e1da3446eb27b4ea483002515",
     "connectionParameters": {
       "sku": "Enterprise",
       "workFlowCallbackUri": "https://prod-21.canadacentral.logic.azure.com:443/workflows/7f61e694cd714d83a5acd17052e356fc/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=e0GTSkL3TF_fBL9ogZLDXY-w4UsPjMHyDtcTj66XYRA",
@@ -188,7 +188,7 @@
     "id": "400da4cc-35f0-44a8-a25a-c375c7effc8f"
   },
   "4595088a-7972-403a-a78c-ffb8c7ce0c9b": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_approvals/connections/661df82431ac4cefb85cc6e3e6caadd2",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_approvals/connections/c4ea832df62643b2b45537ccc963d3b2",
     "connectionParameters": {
       "sku": "Enterprise"
     },
@@ -206,7 +206,7 @@
     "id": "4595088a-7972-403a-a78c-ffb8c7ce0c9b"
   },
   "6876b3ff-a3a1-4cca-a769-eb7c2e36707f": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/b90d85375fc644bd96b800fd2871bf89",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/af73d8b0ce48428d90998ea12cf4e999",
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-27.canadacentral.logic.azure.com:443/workflows/b7d9b2e6f4a14c73aec4df0875183afa/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=haLTjXB5ZmNZbYnHh3-I9lIZ380apD4G9s-m6sF4fjY",
       "workflowEndpoint": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/9ed558468a814246acd8b1a01abfc0d1-9238fd491e2f453388513ffcdbc0bfc4/providers/Microsoft.Logic/workflows/ad4ecbb8-280b-47fd-a227-1f0b1414e687",
@@ -268,7 +268,7 @@
     "id": "6876b3ff-a3a1-4cca-a769-eb7c2e36707f"
   },
   "98b4ffbe-5c82-4a78-9e36-237c1cf70c7e": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/d1af300a-e2ef-43cd-8ec2-d0fc97f31a79",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/9a5f56299b354c4fbb94f9807e3cade8",
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-04.canadacentral.logic.azure.com:443/workflows/9d0031f669cf4b73b999f6149f18bb4c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ZGsHlLP2TmaBf7vjxIxmUz5z3wgwv0KwQymGxi-u8eY",
       "workflowEndpoint": "/subscriptions/cbd472fe-eafa-4c32-b348-555abce6f9ba/resourceGroups/9ed558468a814246acd8b1a01abfc0d1-42f7b9b85d5f46599e34c59509123c79/providers/Microsoft.Logic/workflows/d1af300a-e2ef-43cd-8ec2-d0fc97f31a79",
@@ -309,7 +309,7 @@
     "id": "98b4ffbe-5c82-4a78-9e36-237c1cf70c7e"
   },
   "c09495be-41a9-4b59-aee1-db04467b9a55": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/160b3eabdf3844dc962f6efc66188913",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/e6a466d36946404498bfb3a0aa3f2296",
     "connectionParameters": {
       "sku": "Enterprise"
     },
@@ -327,7 +327,7 @@
     "id": "c09495be-41a9-4b59-aee1-db04467b9a55"
   },
   "e8e72622-8b64-4ed1-8ee1-16eff26f2cd0": {
-    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/4c0cbdf0664d4b619c33388e74e7e845",
+    "connectionInstanceId": "/providers/microsoft.powerapps/apis/shared_logicflows/connections/bf9f3759851b48a4bc8e7d5444b648ce",
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-07.canadacentral.logic.azure.com:443/workflows/d916384140b3464e95740e0e7d2ffc7a/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Ktc7lFi4OSykn9Tw88ircw4LHdurcw1NKB2dA5WpRC8",
       "workflowEndpoint": "/subscriptions/cbd472fe-eafa-4c32-b348-555abce6f9ba/resourceGroups/9ed558468a814246acd8b1a01abfc0d1-42f7b9b85d5f46599e34c59509123c79/providers/Microsoft.Logic/workflows/d3f4a2b8-bf72-4c35-870b-d3017cc34d8d",
