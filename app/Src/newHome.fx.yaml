@@ -176,18 +176,6 @@ newHome As screen:
                             Y: =123
                             ZIndex: =10
 
-                        textInput_Requestor_2 As text:
-                            BorderColor: =RGBA(31, 124, 155, 1)
-                            Default: =Concat(dd_requestor_1.SelectedItems,Mail& "")
-                            DisplayMode: =DisplayMode.Disabled
-                            Height: =38
-                            Reset: =btn_Clear_2.Pressed
-                            TabIndex: =8
-                            Visible: =false
-                            Width: =300
-                            X: =965
-                            ZIndex: =11
-
                         Label1_57 As label:
                             Height: =37
                             TabIndex: =7

@@ -216,8 +216,9 @@ Header As CanvasComponent:
 
     Label12 As label:
         Color: =RGBA(204, 204, 204, 1)
+        Font: =Font.'Lato Black'
         Size: =10
-        Text: ="v1.0.13"
+        Text: ="v1.0.12"
         X: =537
         Y: =110
         ZIndex: =3
