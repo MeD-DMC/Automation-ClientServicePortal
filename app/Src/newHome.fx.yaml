@@ -504,6 +504,7 @@ newHome As screen:
                             DefaultSelectedItems: |-
                                 =Office365Users.SearchUser({searchTerm:User().Email})
                             DisplayFields: =["DisplayName"]
+                            DisplayMode: =DisplayMode.Disabled
                             HoverColor: =RGBA(255, 255, 255, 1)
                             HoverFill: =RGBA(31, 124, 155, 1)
                             InputTextPlaceholder: ="Find User"
