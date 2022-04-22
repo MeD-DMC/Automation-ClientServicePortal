@@ -217,7 +217,7 @@ Header As CanvasComponent:
     Label12 As label:
         Color: =RGBA(204, 204, 204, 1)
         Size: =10
-        Text: ="v1.0.12"
+        Text: ="v1.0.13"
         X: =537
         Y: =110
         ZIndex: =3
