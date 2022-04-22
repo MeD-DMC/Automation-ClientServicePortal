@@ -218,12 +218,36 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "0f748b89-d170-443d-b263-828a7e6d6fd8": {
+          "value": "shared_sendmail"
+        },
+        "29c11814-1e0c-4dfe-b672-cccc648bedfd": {
+          "value": "shared_sharepointonline"
+        },
+        "4595088a-7972-403a-a78c-ffb8c7ce0c9b": {
+          "value": "shared_approvals"
+        },
+        "c09495be-41a9-4b59-aee1-db04467b9a55": {
+          "value": "shared_sharepointonline_2"
+        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "ad4ecbb8-280b-47fd-a227-1f0b1414e687"
         }
       },
       "parameterHintsV2": {
+        "shared_approvals": {
+          "value": "4595088a-7972-403a-a78c-ffb8c7ce0c9b"
+        },
+        "shared_sendmail": {
+          "value": "0f748b89-d170-443d-b263-828a7e6d6fd8"
+        },
+        "shared_sharepointonline": {
+          "value": "29c11814-1e0c-4dfe-b672-cccc648bedfd"
+        },
+        "shared_sharepointonline_2": {
+          "value": "c09495be-41a9-4b59-aee1-db04467b9a55"
+        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "ad4ecbb8-280b-47fd-a227-1f0b1414e687"
