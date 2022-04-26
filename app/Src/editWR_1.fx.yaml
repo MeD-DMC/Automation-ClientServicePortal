@@ -346,7 +346,7 @@ editWR_1 As screen:
                                 ZIndex: =25
 
                             txtInput_adaptlink_2 As text:
-                                Default: =PlannedGallery.Selected.CustomC
+                                Default: =PlannedGallery.Selected.field_54
                                 Height: =51
                                 Visible: =If(dd_medium_3.SelectedText.Value = "ADAPT (.html)", true,false)
                                 Width: =1007
@@ -401,7 +401,7 @@ editWR_1 As screen:
                                 BorderColor: =RGBA(31, 124, 155, 1)
                                 ChevronBackground: =RGBA(31, 124, 155, 1)
                                 ChevronHoverBackground: =ColorFade(RGBA(31, 124, 155, 1), -20%)
-                                Default: =PlannedGallery.Selected.CustomA.Value
+                                Default: =PlannedGallery.Selected.field_52.Value
                                 HoverFill: =RGBA(31, 124, 155, 1)
                                 Items: =["Select / Choisir","Q1_2021","Q2_2021","Q3_2021","Q4_2021","Q1_2022","Q2_2022","Q3_2022","Q4_2022","Q1_2023","Q2_2023","Q3_2023","Q4_2023","Q1_2024","Q2_2024","Q3_2024","Q4_2024",]
                                 PressedFill: =RGBA(31, 124, 155, 1)
@@ -413,7 +413,7 @@ editWR_1 As screen:
 
                             txtinput_wp_row_number_2 As text:
                                 BorderColor: =RGBA(31, 124, 155, 1)
-                                Default: =PlannedGallery.Selected.CustomB
+                                Default: =PlannedGallery.Selected.field_53
                                 Height: =46
                                 HintText: ="Input the Work Plan Row Number"
                                 Visible: =false
@@ -901,7 +901,7 @@ editWR_1 As screen:
                                 Reset(dd_requestLan_2);Reset(slnc_courseNameEN_1);Reset(slnc_courseNameFR_1);Reset(slnc_contentTitleEN_2);Reset(slnc_contentTitleFR_2);Reset(textInput_requestDetails_2);Reset(cb_isadhoc_2);
                                 Reset(dateP_submitted_2);Reset(dd_projectstatus);Reset(cb_isgnwt);Reset(cb_isaccessibility);Reset(slnc_scormID_6);Reset(dateP_dueDate_2);Reset(dateP_submitted_2);Reset(cb_isadhoc_2);Reset(dp_WP_Tab_2);
                                 Reset(txtinput_wp_row_number_2);Reset(txtInput_adaptlink_2);Reset(slnc_classID_6);Reset(slnc_courseID_tf_5);Reset(sdd_classID_6);Reset(sdd_courseID_6);
-                                Navigate(screen_complete_1, Transition.None);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',requestor_email=requestorEmail)));
+                                Navigate(screen_complete_1, Transition.None);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
                                 
                                 
                                 
@@ -919,7 +919,7 @@ editWR_1 As screen:
                             Fill: =RGBA(255, 255, 255, 1)
                             Height: =47
                             HoverFill: =ColorFade(RGBA(31, 124, 155, 1), -20%)
-                            OnSelect: =lbl_warning_12.Visible=false;Back();ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',requestor_email=requestorEmail)));
+                            OnSelect: =lbl_warning_12.Visible=false;Back();ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
                             TabIndex: =43
                             Text: =If(dd_lan_selector_4.SelectedText.Value="EN", LookUp(langPack, Title="34").English, LookUp(langPack, Title="34").French)
                             Width: =213
