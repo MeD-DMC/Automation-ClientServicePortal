@@ -927,7 +927,7 @@ newHome As screen:
                                 })
                                 );
                                 If(dd_requestLan_2.Selected.Value="BOTH" || dd_requestLan_2.Selected.Value="Les deux",
-                                    'MeD-PRD-NewWR2'.Run(JSON(dataForm,IndentFour));
+                                    'MeD-PRD-NewWR'.Run(JSON(dataForm,IndentFour));
                                 );
                                 
                                 //Reset data ---
