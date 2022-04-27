@@ -856,10 +856,6 @@ newHome As screen:
                                 =Set(courseNameFolder, Concat(Filter(Split(slnc_courseNameEN_1.Text,""),IsMatch(Result,"^[a-zA-Z0-9\s]+")),Result));
                                 Set(resetScroll, false);
                                 
-                                // get email claims
-                                Set(requestorEmail,Concatenate("i:0#.f|membership|",Left(Concat(dd_requestor_1.SelectedItems,Mail&";"),Len(Concat(dd_requestor_1.SelectedItems,Mail&";"))-1)));
-                                Set(requestorEmail,Substitute(requestorEmail,";",";i:0#.f|membership|"));
-                                
                                 ClearCollect(dataForm,
                                 {  
                                     requestor_name: Office365Users.MyProfileV2().displayName,
@@ -894,7 +890,7 @@ newHome As screen:
                                 });
                                 
                                 //Concat(dd_requestor_1.SelectedItems,Mail&";")
-                                'CSP-NewWR-RequestorList'.Run(JSON(dataForm,IndentFour),requestorEmail);
+                                'CSP-NewWR-RequestorList'.Run(JSON(dataForm,IndentFour),Concat(dd_requestor_1.SelectedItems,Mail&";"));
                                 
                                 //If using both languages ---
                                 //
