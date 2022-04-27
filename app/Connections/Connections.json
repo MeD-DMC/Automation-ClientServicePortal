@@ -109,7 +109,8 @@
       "16e72adb-12aa-43dd-a044-fa3fb3edb6af",
       "400da4cc-35f0-44a8-a25a-c375c7effc8f",
       "e8e72622-8b64-4ed1-8ee1-16eff26f2cd0",
-      "6876b3ff-a3a1-4cca-a769-eb7c2e36707f"
+      "6876b3ff-a3a1-4cca-a769-eb7c2e36707f",
+      "a0adf29a-653a-47a4-bfb3-0e9501f5c666"
     ],
     "id": "29c11814-1e0c-4dfe-b672-cccc648bedfd"
   },
@@ -198,38 +199,6 @@
       "6876b3ff-a3a1-4cca-a769-eb7c2e36707f"
     ],
     "id": "4595088a-7972-403a-a78c-ffb8c7ce0c9b"
-  },
-  "629dfb31-ea86-448a-ad0a-ac8821305b6a": {
-    "connectionParameters": {
-      "workFlowCallbackUri": "https://prod-04.canadacentral.logic.azure.com:443/workflows/ad1bc607e3d64d8a926da61216771740/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=iNc_MZjs8Z63iKay3Fq8LRC5TWfvlAcqceJXeA-nqjE",
-      "workflowEndpoint": "/subscriptions/cbd472fe-eafa-4c32-b348-555abce6f9ba/resourceGroups/9ed558468a814246acd8b1a01abfc0d1-42f7b9b85d5f46599e34c59509123c79/providers/Microsoft.Logic/workflows/b57f6613-a3f2-4318-8be7-ab13cdd8381f",
-      "workflowName": "b57f6613-a3f2-4318-8be7-ab13cdd8381f",
-      "workflowPath": "/subscriptions/cbd472fe-eafa-4c32-b348-555abce6f9ba/resourceGroups/9ed558468a814246acd8b1a01abfc0d1-42f7b9b85d5f46599e34c59509123c79/providers/Microsoft.Logic/workflows/b57f6613-a3f2-4318-8be7-ab13cdd8381f"
-    },
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "b57f6613-a3f2-4318-8be7-ab13cdd8381f"
-        }
-      },
-      "parameterHintsV2": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "b57f6613-a3f2-4318-8be7-ab13cdd8381f"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "CSP-NewWR-RequestorList"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "629dfb31-ea86-448a-ad0a-ac8821305b6a"
   },
   "6876b3ff-a3a1-4cca-a769-eb7c2e36707f": {
     "connectionParameters": {
@@ -331,6 +300,46 @@
     },
     "dependents": [],
     "id": "98b4ffbe-5c82-4a78-9e36-237c1cf70c7e"
+  },
+  "a0adf29a-653a-47a4-bfb3-0e9501f5c666": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-04.canadacentral.logic.azure.com:443/workflows/ad1bc607e3d64d8a926da61216771740/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=iNc_MZjs8Z63iKay3Fq8LRC5TWfvlAcqceJXeA-nqjE",
+      "workflowEndpoint": "/subscriptions/cbd472fe-eafa-4c32-b348-555abce6f9ba/resourceGroups/9ed558468a814246acd8b1a01abfc0d1-42f7b9b85d5f46599e34c59509123c79/providers/Microsoft.Logic/workflows/b57f6613-a3f2-4318-8be7-ab13cdd8381f",
+      "workflowName": "b57f6613-a3f2-4318-8be7-ab13cdd8381f",
+      "workflowPath": "/subscriptions/cbd472fe-eafa-4c32-b348-555abce6f9ba/resourceGroups/9ed558468a814246acd8b1a01abfc0d1-42f7b9b85d5f46599e34c59509123c79/providers/Microsoft.Logic/workflows/b57f6613-a3f2-4318-8be7-ab13cdd8381f"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "29c11814-1e0c-4dfe-b672-cccc648bedfd": {
+          "value": "shared_sharepointonline"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "b57f6613-a3f2-4318-8be7-ab13cdd8381f"
+        }
+      },
+      "parameterHintsV2": {
+        "shared_sharepointonline": {
+          "value": "29c11814-1e0c-4dfe-b672-cccc648bedfd"
+        },
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "b57f6613-a3f2-4318-8be7-ab13cdd8381f"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "CSP-NewWR-RequestorList"
+    ],
+    "dependencies": {
+      "shared_sharepointonline": "29c11814-1e0c-4dfe-b672-cccc648bedfd"
+    },
+    "dependents": [],
+    "id": "a0adf29a-653a-47a4-bfb3-0e9501f5c666"
   },
   "c09495be-41a9-4b59-aee1-db04467b9a55": {
     "connectionParameters": {

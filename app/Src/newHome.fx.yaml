@@ -497,7 +497,7 @@ newHome As screen:
                             InputTextPlaceholder: ="Find User"
                             Items: |-
                                 =Office365Users.SearchUser({searchTerm:dd_requestor_1.SearchText})
-                            OnChange: =ClearCollect(selectedUsers,dd_requestor_1.SelectedItems)
+                            OnChange: =
                             PressedFill: =RGBA(31, 124, 155, 1)
                             Reset: =
                             SearchFields: =["DisplayName"]
@@ -856,6 +856,7 @@ newHome As screen:
                                 =Set(courseNameFolder, Concat(Filter(Split(slnc_courseNameEN_1.Text,""),IsMatch(Result,"^[a-zA-Z0-9\s]+")),Result));
                                 Set(resetScroll, false);
                                 
+                                
                                 ClearCollect(dataForm,
                                 {  
                                     requestor_name: Office365Users.MyProfileV2().displayName,
@@ -888,6 +889,8 @@ newHome As screen:
                                     CustomB:If(!IsBlank(txtinput_wp_row_number),txtinput_wp_row_number.Text,""),
                                     CustomC:If(!IsBlank(txtInput_adaptlink), Substitute(txtInput_adaptlink.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", " ")
                                 });
+                                
+                                
                                 'CSP-NewWR-RequestorList'.Run(JSON(dataForm,IndentFour),Concat(dd_requestor_1.SelectedItems,Mail&";"));
                                 
                                 //If using both languages ---
@@ -937,7 +940,7 @@ newHome As screen:
                                 Reset(dateP_submitted_2);Reset(dd_projectstatus);Reset(cb_isgnwt);Reset(cb_isaccessibility);Reset(dateP_dueDate_2);Reset(dateP_submitted_2);Reset(cb_isadhoc);Reset(dp_WP_Tab);Reset(sdd_courseID_8);Reset(slnc_courseID_tf_7);Reset(slnc_classID_8);Reset(sdd_classID_8);Reset(sdd_classID_FR);Reset(slnc_classID_FR);
                                 Reset(txtinput_wp_row_number);Reset(txtInput_adaptlink);Reset(txtInput_adaptlink_FR);
                                 
-                                Navigate(screen_complete, Transition.None);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',requestor_email=requestorEmail)));
+                                Navigate(screen_complete, Transition.None);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
                             TabIndex: =44
                             Text: =If(dd_lan_selector_1.SelectedText.Value="EN", LookUp(langPack, English="Add to WP").English, LookUp(langPack, English="Add to WP").French)
                             Tooltip: ="Submit the Form"
@@ -953,7 +956,7 @@ newHome As screen:
                             HoverFill: =ColorFade(RGBA(31, 124, 155, 1), -20%)
                             OnSelect: |-
                                 =Set(resetScroll, false);
-                                lbl_warning_4.Visible=false;Navigate(wr_status);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',requestor_email=requestorEmail)));
+                                lbl_warning_4.Visible=false;Navigate(wr_status);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
                             TabIndex: =43
                             Text: =If(dd_lan_selector_1.SelectedText.Value="EN", LookUp(langPack, English="Cancel").English, LookUp(langPack, English="Cancel").French)
                             Width: =213
