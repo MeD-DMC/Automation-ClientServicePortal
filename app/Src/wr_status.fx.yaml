@@ -3,6 +3,8 @@ wr_status As screen:
     Height: =Max(App.Height, App.DesignHeight)
     OnVisible: |-
         =Collect(formDataFR, {Image: 'header-portal'.CollegeBanner});Refresh('wrtracking-production-version-001');Reset(ActiveGallery);Reset(PlannedGallery);
+        
+        ClearCollect(onWorkPlan, Filter('wrtracking-production-version-001',projectStatus_temp.Value="OnWorkPlan");
 
     ScreenSlicer As groupContainer.verticalAutoLayoutContainer:
         Height: =Parent.Height
