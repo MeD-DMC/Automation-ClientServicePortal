@@ -1,7 +1,7 @@
 wr_status As screen:
     Fill: =RGBA(255,255,255,1)
     Height: =Max(App.Height, App.DesignHeight)
-    OnVisible: |-
+    OnVisible: |
         =Collect(formDataFR, {Image: 'header-portal'.CollegeBanner});Refresh('wrtracking-production-version-001');Reset(ActiveGallery);Reset(PlannedGallery);
 
     ScreenSlicer As groupContainer.verticalAutoLayoutContainer:
@@ -156,7 +156,7 @@ wr_status As screen:
                                 Align: =Align.Center
                                 Height: =60
                                 Size: =38
-                                Text: =CountRows(numWRCol)
+                                Text: =CountRows(rawList)
                                 Width: =99
                                 X: =30
                                 Y: =163
@@ -319,7 +319,10 @@ wr_status As screen:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             Height: =560
                             Items: |
-                                =SortByColumns(Filter('wrtracking-production-version-001',field_2= requestorEmail && projectStatus_temp.Value="OnWorkPlan"),"ID",Descending)
+                                =
+                                SortByColumns(Filter('wrtracking-production-version-001',field_2= requestorEmail && projectStatus_temp.Value="OnWorkPlan"),"ID",Descending)
+                                
+                                //SortByColumns(Filter('wrtracking-production-version-001',field_2= requestorEmail && projectStatus_temp.Value="OnWorkPlan"),"ID",Descending)
                                 
                                 //REMOVING WR requests searching for others temporarily ||StartsWith(Title, TextInput_WR_Number.Text)||StartsWith(SLNC_CourseNameEN, TextInput_WR_Number.Text)
                             Layout: =Layout.Vertical
