@@ -319,7 +319,7 @@ wr_status As screen:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             Height: =560
                             Items: |
-                                =SortByColumns(Filter('wrtracking-production-version-001',field_2= requestorEmail && projectStatus_temp.Value="OnWorkPlan"),"ID",Descending)
+                                =SortByColumns(Filter('wrtracking-production-version-001',requestorEmail in field_2),"ID",Descending)
                                 
                                 //REMOVING WR requests searching for others temporarily ||StartsWith(Title, TextInput_WR_Number.Text)||StartsWith(SLNC_CourseNameEN, TextInput_WR_Number.Text)
                             Layout: =Layout.Vertical
