@@ -863,7 +863,7 @@ newHome As screen:
                                 */
                                 ClearCollect(dataForm,
                                 {  
-                                    requestor_name: Concatenate(Office365Users.MyProfileV2().givenName," ",Office365Users.MyProfileV2().surname),
+                                    requestor_name: User().FullName,
                                     Title: Text(First(FirstN(Sort('wrtracking-production-version-001', ID, Descending), 1)).ID+6033),
                                     businessLine: dd_Bizline_2.Selected.Value,
                                    // sharewith:If(IsBlank(cb_sharewith_usernames),Collect(random,{}),cb_sharewith_usernames.SelectedItems.Claims),
@@ -903,7 +903,7 @@ newHome As screen:
                                 If(dd_requestLan_2.Selected.Value="BOTH" || dd_requestLan_2.Selected.Value="Les deux",
                                 ClearCollect(dataForm,
                                 {  
-                                    requestor_name: Office365Users.MyProfileV2().displayName,
+                                    requestor_name: User().FullName,
                                     Title: Text(First(FirstN(Sort('wrtracking-production-version-001', ID, Descending), 1)).ID+6034),
                                     businessLine: dd_Bizline_2.Selected.Value,
                                    // sharewith:If(IsBlank(cb_sharewith_usernames),Collect(random,{}),cb_sharewith_usernames.SelectedItems.Claims),
