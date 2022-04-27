@@ -914,9 +914,10 @@
     "wr_status": 23
   },
   "FunctionParamsInvariantScripts": {},
-  "HeaderLastSavedDateTimeUTC": "04/27/2022 02:47:11",
+  "HeaderLastSavedDateTimeUTC": "04/27/2022 02:53:37",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
+    "0d9bd559-4761-4e6a-a3c5-68f459ccea52": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/b57f6613a3f243188be7ab13cdd8381f-eaa1c1dd4997bbab\"",
     "0f748b89-d170-443d-b263-828a7e6d6fd8": "\"/providers/microsoft.powerapps/apis/shared_sendmail/connections/e52ce20996a14fc89fc5807ba2c3db56\"",
     "16e72adb-12aa-43dd-a044-fa3fb3edb6af": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/fcd06900135c4a48b7c7eed67eb203e0\"",
     "29c11814-1e0c-4dfe-b672-cccc648bedfd": "\"/providers/microsoft.powerapps/apis/shared_sharepointonline/connections/160b3eabdf3844dc962f6efc66188913\"",
