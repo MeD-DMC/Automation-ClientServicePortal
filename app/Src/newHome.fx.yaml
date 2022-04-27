@@ -856,6 +856,10 @@ newHome As screen:
                                 =Set(courseNameFolder, Concat(Filter(Split(slnc_courseNameEN_1.Text,""),IsMatch(Result,"^[a-zA-Z0-9\s]+")),Result));
                                 Set(resetScroll, false);
                                 
+                                // get email claims
+                                Set(requestorEmail,Concatenate("i:0#.f|membership|",Left(Concat(dd_requestor_1.SelectedItems,Mail&";"),Len(Concat(dd_requestor_1.SelectedItems,Mail&";"))-1)));
+                                Substitute(requestorEmail,";",";i:0#.f|membership|");
+                                
                                 ClearCollect(dataForm,
                                 {  
                                     requestor_name: Office365Users.MyProfileV2().displayName,
@@ -890,7 +894,7 @@ newHome As screen:
                                 });
                                 
                                 //Concat(dd_requestor_1.SelectedItems,Mail&";")
-                                'CSP-NewWR-RequestorList'.Run(JSON(dataForm,IndentFour),Left(Concat(dd_requestor_1.SelectedItems,Mail&";"),Len(Concat(dd_requestor_1.SelectedItems,Mail&";"))-1));
+                                'CSP-NewWR-RequestorList'.Run(JSON(dataForm,IndentFour),);
                                 
                                 //If using both languages ---
                                 //
@@ -944,7 +948,7 @@ newHome As screen:
                             Text: =If(dd_lan_selector_1.SelectedText.Value="EN", LookUp(langPack, English="Add to WP").English, LookUp(langPack, English="Add to WP").French)
                             Tooltip: ="Submit the Form"
                             Width: =213
-                            X: =700
+                            X: =690
                             Y: =92
                             ZIndex: =1
 
