@@ -162,7 +162,6 @@ reAssignWR As screen:
                                         allWRs,
                                         (txtinput_searchbox.Text in Title) || (txtinput_searchbox.Text in SLNC_CourseNameEN)
                                          || (txtinput_searchbox.Text in requestor_name)
-                                       
                                     ),
                                     "Title",
                                     Descending
