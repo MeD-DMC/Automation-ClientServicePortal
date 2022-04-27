@@ -3,8 +3,10 @@
   <grammars>
     <jsonTypes targetNamespace="https://canada-001.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
       <string name="ManualTriggerInput_Initializevariable_Value_def" />
+      <string name="ManualTriggerInput_Initializevariable_Value_1_def" />
       <object name="ManualTriggerInput">
         <property name="Initializevariable_Value" type="string" />
+        <property name="Initializevariable_Value_1" type="string" />
       </object>
     </jsonTypes>
   </grammars>
@@ -19,6 +21,7 @@
           </param>
           <representation mediaType="application/json">
             <param style="plain" name="Initializevariable_Value" path="/Initializevariable_Value" type="xs:string" required="true" />
+            <param style="plain" name="Initializevariable_Value_1" path="/Initializevariable_Value_1" type="xs:string" required="true" />
           </representation>
         </request>
       </method>
