@@ -321,8 +321,8 @@ wr_status As screen:
                             Items: |
                                 =SortByColumns(
                                     Filter(
-                                        onWP,
-                                        User().Email in requestor_list.Email || User().Email in requestor_email) 
+                                        plannedWRs,
+                                        (User().Email in requestor_list.Email || User().Email in requestor_email) 
                                     ),
                                     "ID",
                                     Descending
