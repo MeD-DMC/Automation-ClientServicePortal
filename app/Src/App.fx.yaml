@@ -16,6 +16,6 @@ App As appinfo:
         Set(themePurple, RGBA(105, 70, 156, 1));
         Set(themePink, RGBA(206, 28, 106, 1));
         
-        ClearCollect(userWRs, Filter('wrtracking-production-version-001',requestorEmail in field_2));
+        ClearCollect(OnWorkPlan, (Filter('wrtracking-production-version-001',projectStatus.Value="OnWorkPlan")));
     StartScreen: =
 
