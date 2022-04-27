@@ -33,7 +33,7 @@ App As appinfo:
             numWRCol,
             (Filter(
                 'wrtracking-production-version-001',
-                field_2 = requestorEmail
+                requestor_email = requestorEmail
             ))
         );
         //ClearCollect(courseIDCol, ShowColumns(CourseClasses,"CourseID_x002d_Live"));

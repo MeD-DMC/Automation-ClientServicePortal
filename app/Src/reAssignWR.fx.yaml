@@ -1,7 +1,8 @@
 reAssignWR As screen:
-    OnVisible: |-
+    OnVisible: |
         =UpdateContext({SortDescending1: !SortDescending1});
         Set(rawr_selectedBL, rawr_blSelector.Selected.Value);
+        Clear(SelectedItems);
 
     ScreenSlicer_reassign As groupContainer.horizontalAutoLayoutContainer:
         Fill: =RGBA(255, 255, 255, 1)
@@ -200,7 +201,7 @@ reAssignWR As screen:
                                 PaddingTop: =0
                                 Size: =14
                                 Text: |-
-                                    =If(dd_lan_selector_6.SelectedText.Value="EN", LookUp(langPack, Title="60").English, LookUp(langPack, Title="60").French) & ": " & ThisItem.field_13
+                                    =If(dd_lan_selector_6.SelectedText.Value="EN", LookUp(langPack, Title="60").English, LookUp(langPack, Title="60").French) & ": " & ThisItem.SLNC_CourseID
                                 VerticalAlign: =VerticalAlign.Top
                                 Width: =Parent.TemplateWidth - 104
                                 X: =61
@@ -217,7 +218,7 @@ reAssignWR As screen:
                                 PaddingTop: =0
                                 Size: =12
                                 Text: |-
-                                    =If(dd_lan_selector_6.SelectedText.Value="EN", LookUp(langPack, Title="65").English, LookUp(langPack, Title="65").French) & ": " & ThisItem.field_1
+                                    =If(dd_lan_selector_6.SelectedText.Value="EN", LookUp(langPack, Title="65").English, LookUp(langPack, Title="65").French) & ": " & ThisItem.requestor_name
                                 VerticalAlign: =VerticalAlign.Top
                                 Width: =503
                                 X: =153
@@ -257,7 +258,7 @@ reAssignWR As screen:
                                 Size: =12
                                 Text: |-
                                     =If(dd_lan_selector_6.SelectedText.Value="EN", LookUp(langPack, Title="48").English, LookUp(langPack, Title="48").French)
-                                     & ":" & ThisItem.field_15
+                                     & ":" & ThisItem.SLNC_CourseNameEN
                                 VerticalAlign: =VerticalAlign.Top
                                 Width: =536
                                 X: =61
@@ -268,6 +269,7 @@ reAssignWR As screen:
                                 Height: =40
                                 OnCheck: =Collect(SelectedItems, ThisItem)
                                 OnUncheck: =Remove(SelectedItems, ThisItem)
+                                Reset: =If(CountRows(SelectedItems) = 0, true, false)
                                 Text: =""
                                 Width: =40
                                 X: =9
@@ -301,7 +303,7 @@ reAssignWR As screen:
                                 PaddingTop: =0
                                 Size: =12
                                 Text: |-
-                                    =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="47").English, LookUp(langPack, Title="47").French),": ", If(dd_lan_selector.SelectedText.Value="EN", LookUp(ProjectStatus,Title = ThisItem.projectStatus_temp.Value).Title,LookUp(ProjectStatus,Title = ThisItem.projectStatus_temp.Value).French))
+                                    =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="47").English, LookUp(langPack, Title="47").French),": ", If(dd_lan_selector.SelectedText.Value="EN", LookUp(ProjectStatus,Title = ThisItem.projectStatus.Value).Title,LookUp(ProjectStatus,Title = ThisItem.projectStatus.Value).French))
                                 VerticalAlign: =VerticalAlign.Top
                                 Width: =287
                                 X: =348
