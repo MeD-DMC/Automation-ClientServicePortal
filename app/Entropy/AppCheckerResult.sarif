@@ -293,46 +293,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "wr_status.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "wr_status.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charOffset": 259,
-                  "snippet": {
-                    "text": ""
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "wr_status",
-                "type": "wr_status"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ParenClose",
-              "Eof"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "newHome_backup.Canvas2_4.DataCard2_4.Main_4.Container4_4.section1_4.dd_typeofwork_5.Items"
                 }
               ],
@@ -1191,7 +1151,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrColonExpected",
-          "ruleIndex": 6
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1232,7 +1192,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrExpectedFound-Ex-Fnd",
-          "ruleIndex": 5
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -35591,77 +35551,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.themePink"
+                  "fullyQualifiedName": "App.mediumFlag"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.themePink",
+                  "fullyQualifiedName": "App.mediumFlag",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "themePink",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.themePurple"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.themePurple",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "themePurple",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.themeCyan"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.themeCyan",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "themeCyan",
+                "member": "mediumFlag",
                 "module": "App",
                 "type": "App"
               }
@@ -35711,17 +35611,77 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.mediumFlag"
+                  "fullyQualifiedName": "App.themeCyan"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.mediumFlag",
+                  "fullyQualifiedName": "App.themeCyan",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "mediumFlag",
+                "member": "themeCyan",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.themePurple"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.themePurple",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "themePurple",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.themePink"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.themePink",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "themePink",
                 "module": "App",
                 "type": "App"
               }
@@ -42299,23 +42259,6 @@
               }
             },
             {
-              "id": "app-ErrExpectedFound-Ex-Fnd",
-              "messageStrings": {
-                "issue": {
-                  "text": "Unexpected characters. The formula contains '{0}' where '{1}' is expected."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Remove or replace the unexpected characters with an expected character."
-                ],
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
               "id": "app-ErrColonExpected",
               "messageStrings": {
                 "issue": {
@@ -42326,6 +42269,23 @@
                 "componentType": "app",
                 "howToFix": [
                   "Edit your formula so that it includes a colon."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrExpectedFound-Ex-Fnd",
+              "messageStrings": {
+                "issue": {
+                  "text": "Unexpected characters. The formula contains '{0}' where '{1}' is expected."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove or replace the unexpected characters with an expected character."
                 ],
                 "level": "High",
                 "primaryCategory": "formula",
