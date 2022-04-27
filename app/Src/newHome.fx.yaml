@@ -886,7 +886,7 @@ newHome As screen:
                                     isAdhoc:cb_isadhoc.Value,
                                     due_date:dateP_dueDate_2.SelectedDate,
                                     submitted_date:dateP_submitted_2.SelectedDate,
-                                    requestor_email:Concat(dd_requestor_1.SelectedItems,Mail& ""),
+                                    requestor_email:Concat(dd_requestor_1.SelectedItems,Mail& ";"),
                                     //requestor_list:JSON(dd_requestor_1.SelectedItems.Mail),
                                     CustomA:dp_WP_Tab.SelectedText.Value,
                                     CustomB:If(!IsBlank(txtinput_wp_row_number),txtinput_wp_row_number.Text,""),
@@ -894,8 +894,8 @@ newHome As screen:
                                 });
                                 
                                 //Concat(dd_requestor_1.SelectedItems,Mail&";")
-                                //'MeD-PRD-NewWR'.Run(JSON(dataForm,IndentFour));
-                                'MeD-PRD-NewWR'.Run(JSON(dataForm,IndentFour),Left(Concat(dd_requestor_1.SelectedItems,Mail&";"),Len(Concat(dd_requestor_1.SelectedItems,Mail&";"))-1));
+                                //'MeD-PRD-NewWR'.Run(JSON(dataForm,IndentFour)); - need to readd flow
+                                'CSP-NewWR'.Run(JSON(dataForm,IndentFour),Left(Concat(dd_requestor_1.SelectedItems,Mail&";"),Len(Concat(dd_requestor_1.SelectedItems,Mail&";"))-1));
                                 
                                 //If using both languages ---
                                 //
@@ -935,6 +935,7 @@ newHome As screen:
                                 );
                                 If(dd_requestLan_2.Selected.Value="BOTH" || dd_requestLan_2.Selected.Value="Les deux",
                                     //'MeD-PRD-NewWR'.Run(JSON(dataForm,IndentFour));
+                                    'CSP-NewWR'.Run(JSON(dataForm,IndentFour),Left(Concat(dd_requestor_1.SelectedItems,Mail&";"),Len(Concat(dd_requestor_1.SelectedItems,Mail&";"))-1));
                                 );
                                 
                                 //Reset data ---
