@@ -492,7 +492,6 @@ newHome As screen:
                             DefaultSelectedItems: |-
                                 =Office365Users.SearchUser({searchTerm:User().Email})
                             DisplayFields: =["DisplayName"]
-                            DisplayMode: =DisplayMode.Disabled
                             HoverColor: =RGBA(255, 255, 255, 1)
                             HoverFill: =RGBA(31, 124, 155, 1)
                             InputTextPlaceholder: ="Find User"
@@ -856,6 +855,7 @@ newHome As screen:
                             OnSelect: |-
                                 =Set(courseNameFolder, Concat(Filter(Split(slnc_courseNameEN_1.Text,""),IsMatch(Result,"^[a-zA-Z0-9\s]+")),Result));
                                 Set(resetScroll, false);
+                                
                                 ClearCollect(dataForm,
                                 {  
                                     requestor_name: Office365Users.MyProfileV2().displayName,
@@ -883,12 +883,11 @@ newHome As screen:
                                     due_date:dateP_dueDate_2.SelectedDate,
                                     submitted_date:dateP_submitted_2.SelectedDate,
                                     requestor_email:Concat(dd_requestor_1.SelectedItems,Mail& ""),
-                                    requestor_list: JSON(dd_requestor_1.SelectedItems.Mail, IndentFour),
                                     CustomA:dp_WP_Tab.SelectedText.Value,
                                     CustomB:If(!IsBlank(txtinput_wp_row_number),txtinput_wp_row_number.Text,""),
                                     CustomC:If(!IsBlank(txtInput_adaptlink), Substitute(txtInput_adaptlink.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", " ")
                                 });
-                                'MeD-PRD-NewWR'.Run(JSON(dataForm,IndentFour));
+                                'CSP-NewWR-RequestorList'.Run(JSON(dataForm,IndentFour));
                                 
                                 //If using both languages ---
                                 //
