@@ -10961,8 +10961,85 @@
                   "relativeAddress": 0
                 },
                 "region": {
+                  "charLength": 1,
+                  "charOffset": 5094,
+                  "snippet": {
+                    "text": ")"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadToken",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charOffset": 5893,
+                  "snippet": {
+                    "text": ""
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "newHome",
+                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ParenClose",
+              "Eof"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
                   "charLength": 151,
-                  "charOffset": 2587,
+                  "charOffset": 2638,
                   "snippet": {
                     "text": "'MeD-PRD-NewWR'.Run(JSON(dataForm,IndentFour),Left(Concat(dd_requestor_1.SelectedItems,Mail&\";\"),Len(Concat(dd_requestor_1.SelectedItems,Mail&\";\"))-1))"
                   }
@@ -10987,124 +11064,6 @@
           },
           "ruleId": "app-ErrUnknownNamespaceFunction",
           "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 46,
-                  "charOffset": 4992,
-                  "snippet": {
-                    "text": "'MeD-PRD-NewWR'.Run(JSON(dataForm,IndentFour))"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Run",
-              "'MeD-PRD-NewWR'"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrUnknownNamespaceFunction",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 5038,
-                  "snippet": {
-                    "text": ";"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrTypeError",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 142,
-                  "charOffset": 4900,
-                  "snippet": {
-                    "text": "If(dd_requestLan_2.Selected.Value=\"BOTH\" || dd_requestLan_2.Selected.Value=\"Les deux\",\r\n    'MeD-PRD-NewWR'.Run(JSON(dataForm,IndentFour));\r\n)"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "newHome",
-                "type": "newHome.Canvas2_1.DataCard2_1.Main_1.Container4_1.submission_1.btn_Submit_3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "If"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 2
         },
         {
           "locations": [
@@ -42466,16 +42425,16 @@
               }
             },
             {
-              "id": "app-ErrTypeError",
+              "id": "app-ErrBadToken",
               "messageStrings": {
                 "issue": {
-                  "text": "Incompatible type. We can't evaluate your formula because of a type error."
+                  "text": "Unexpected characters. Characters are used in the formula in an unexpected way."
                 }
               },
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Check the types of the values involved in the formula and ensure the types match."
+                  "Remove or replace the unexpected characters."
                 ],
                 "level": "High",
                 "primaryCategory": "formula",
