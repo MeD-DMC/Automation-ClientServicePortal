@@ -35551,77 +35551,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.themePink"
+                  "fullyQualifiedName": "App.mediumFlag"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.themePink",
+                  "fullyQualifiedName": "App.mediumFlag",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "themePink",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.themePurple"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.themePurple",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "themePurple",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.themeCyan"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.themeCyan",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "themeCyan",
+                "member": "mediumFlag",
                 "module": "App",
                 "type": "App"
               }
@@ -35671,17 +35611,77 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.mediumFlag"
+                  "fullyQualifiedName": "App.themeCyan"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.mediumFlag",
+                  "fullyQualifiedName": "App.themeCyan",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "mediumFlag",
+                "member": "themeCyan",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.themePurple"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.themePurple",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "themePurple",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.themePink"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.themePink",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "themePink",
                 "module": "App",
                 "type": "App"
               }
