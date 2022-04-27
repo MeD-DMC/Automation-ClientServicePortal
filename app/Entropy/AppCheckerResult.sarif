@@ -35701,6 +35701,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.rawr_selectedBL"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.rawr_selectedBL",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "rawr_selectedBL",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.Asset 1"
                 }
               ],

@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |
+    OnStart: |-
         =lbl_warning_4.Visible = false;
         ClearCollect(
             langPack,
@@ -84,9 +84,16 @@ App As appinfo:
             activeWRs,
             Filter(
                 'wrtracking-production-version-001',
-                projectStatus.Value = "WithMeD" || projectStatus.Value = "ToBeLoadedLive" ||  projectStatus.Value = "WithDT" || projectStatus.Value = "Initialize" ||   projectStatus.Value = "WaitingForApproval" || projectStatus.Value = "OnHold"
+                projectStatus.Value = "WithMeD" || projectStatus.Value = "ToBeLoadedLive" || projectStatus.Value = "WithDT" || projectStatus.Value = "Initialize" || projectStatus.Value = "WaitingForApproval" || projectStatus.Value = "OnHold"
             )
-        
-        )
+        );
+        ClearCollect(
+            allWRs,
+            Filter(
+                'wrtracking-production-version-001',
+                 projectStatus.Value = "WithMeD" || projectStatus.Value = "ToBeLoadedLive" || projectStatus.Value = "WithDT" || projectStatus.Value = "Initialize" || projectStatus.Value = "WaitingForApproval" || projectStatus.Value = "OnHold" || projectStatus.Value = "Select" || projectStatus.Value = "WaitingForApproval" || projectStatus.Value = "OnWorkPlan"
+            )
+        );
+                
     StartScreen: =
 

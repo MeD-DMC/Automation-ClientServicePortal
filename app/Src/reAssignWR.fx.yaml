@@ -156,7 +156,17 @@ reAssignWR As screen:
 
                         "gallery_WR As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
                             Height: =Parent.Height
-                            Items: =SortByColumns(Filter('wrtracking-production-version-001',(businessLine.Value = rawr_selectedBL) && (projectStatus.Value="WithMeD" || projectStatus.Value="WithDT" || projectStatus.Value="OnHold" || projectStatus.Value="Initialize" || projectStatus.Value="ToBeLoadedLive" || projectStatus.Value="Select" || projectStatus.Value="WaitingForApproval" || projectStatus.Value="OnWorkPlan") && (StartsWith(Title, txtinput_searchbox.Text) || StartsWith(SLNC_CourseNameEN, txtinput_searchbox.Text) || StartsWith(requestor_name, txtinput_searchbox.Text) )),"Title", Descending)
+                            Items: |-
+                                =SortByColumns(
+                                    Filter(
+                                        allWRs,
+                                        (txtinput_searchbox.Text in Title) || (txtinput_searchbox.Text in SLNC_CourseNameEN)
+                                         || (txtinput_searchbox.Text in requestor_name)
+                                       
+                                    ),
+                                    "Title",
+                                    Descending
+                                )
                             Layout: =Layout.Vertical
                             LayoutMinHeight: =287
                             LayoutMinWidth: =320
