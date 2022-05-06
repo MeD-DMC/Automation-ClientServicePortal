@@ -6794,7 +6794,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "dateP_dueDate_3",
-      "ParentIndex": 16,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7072,7 +7072,14 @@
         "Fill",
         "Font",
         "FontWeight",
-        "Color",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "Color",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisabledColor",
         {
           "AFDDataSourceName": "",
@@ -7158,7 +7165,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "dateP_submitted_3",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7960,7 +7967,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "dd_medium_3",
-      "ParentIndex": 15,
+      "ParentIndex": 16,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11610,7 +11617,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1_71",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12233,7 +12240,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1_73",
-      "ParentIndex": 12,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12562,7 +12569,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1_74",
-      "ParentIndex": 13,
+      "ParentIndex": 14,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13131,7 +13138,14 @@
         "Font",
         "FontWeight",
         "Align",
-        "VerticalAlign",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "VerticalAlign",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -13191,7 +13205,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1_76",
-      "ParentIndex": 20,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -23014,7 +23028,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "textInput_Bizline_3",
-      "ParentIndex": 14,
+      "ParentIndex": 15,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

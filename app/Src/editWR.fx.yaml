@@ -101,6 +101,7 @@ editWR As screen:
                                 ZIndex: =14
 
                             dateP_submitted_3 As datepicker:
+                                Color: =RGBA(168, 0, 81, 1)
                                 DisplayMode: =DisplayMode.View
                                 Format: ="yyyy-mm-dd"
                                 PaddingLeft: =5
@@ -204,12 +205,13 @@ editWR As screen:
                                 ZIndex: =1
 
                             Label1_76 As label:
-                                Height: =37
+                                Height: =53
                                 TabIndex: =17
                                 Text: =If(dd_lan_selector_2.SelectedText.Value="EN", LookUp(langPack, Title="16").English, LookUp(langPack, Title="16").French)
-                                Width: =144
-                                X: =960
-                                Y: =188
+                                VerticalAlign: =VerticalAlign.Bottom
+                                Width: =347
+                                X: =971
+                                Y: =126
                                 ZIndex: =3
 
                             dateP_dueDate_3 As datepicker:
@@ -220,7 +222,7 @@ editWR As screen:
                                 Reset: =btn_Clear_3.Pressed
                                 TabIndex: =18
                                 Width: =158
-                                X: =1127
+                                X: =974
                                 Y: =186
                                 ZIndex: =4
 
