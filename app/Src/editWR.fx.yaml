@@ -88,15 +88,14 @@ editWR As screen:
                                 Height: =42
                                 TabIndex: =11
                                 Text: =If(dd_lan_selector_2.SelectedText.Value="EN", LookUp(langPack, Title="19").English, LookUp(langPack, Title="19").French)
-                                X: =617
+                                X: =714
                                 Y: =76
                                 ZIndex: =13
 
                             Label1_71 As label:
-                                Height: =37
                                 TabIndex: =5
                                 Text: =If(dd_lan_selector_2.SelectedText.Value="EN", LookUp(langPack, Title="15").English, LookUp(langPack, Title="15").French)
-                                Width: =160
+                                Width: =404
                                 X: =101
                                 Y: =78
                                 ZIndex: =14
@@ -108,8 +107,8 @@ editWR As screen:
                                 PaddingTop: =5
                                 TabIndex: =6
                                 Width: =140
-                                X: =269
-                                Y: =77
+                                X: =502
+                                Y: =78
                                 ZIndex: =15
 
                             dd_typeofwork_3 As dropdown:
@@ -125,8 +124,8 @@ editWR As screen:
                                     UpdateContext({mediumFlag:false}), UpdateContext({mediumFlag:true}));
                                 Reset: =btn_Clear_3.Pressed
                                 TabIndex: =12
-                                Width: =527
-                                X: =758
+                                Width: =414
+                                X: =871
                                 Y: =75
                                 ZIndex: =16
 
@@ -923,7 +922,7 @@ editWR As screen:
                                 Reset(dateP_submitted_2);Reset(dd_projectstatus_1);Reset(cb_isgnwt_2);Reset(cb_isaccessibility_2);Reset(dateP_dueDate_2);Reset(dateP_submitted_2);Reset(cb_isadhoc_1);Reset(dp_WP_Tab_1);
                                 Reset(txtinput_wp_row_number_1);Reset(txtInput_adaptlink_1);Reset(sdd_courseID_3);Reset(slnc_courseID_tf_2);Reset(slnc_classID_3);Reset(sdd_classID_3);
                                 Navigate(screen_complete_1,None);
-                                ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',requestor_email=requestorEmail)));
+                                ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
                                 
                                 
                                 
@@ -942,7 +941,7 @@ editWR As screen:
                             HoverFill: =ColorFade(RGBA(31, 124, 155, 1), -20%)
                             OnSelect: |-
                                 =Set(resetScroll, false);
-                                lbl_warning_6.Visible=false;Back();ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',requestor_email=requestorEmail)));
+                                lbl_warning_6.Visible=false;Back();ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
                             TabIndex: =43
                             Text: =If(dd_lan_selector_2.SelectedText.Value="EN", LookUp(langPack, Title="34").English, LookUp(langPack, Title="34").French)
                             Width: =213
@@ -1011,7 +1010,7 @@ editWR As screen:
                                 Reset(dp_WP_Tab_1);Reset(sdd_courseID_3);Reset(slnc_courseID_tf_2);Reset(slnc_classID_3);Reset(sdd_classID_3);
                                 Reset(txtinput_wp_row_number_1);Reset(txtInput_adaptlink_1);
                                 
-                                Navigate(screen_complete, Transition.None);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',requestor_email=requestorEmail)));
+                                Navigate(screen_complete, Transition.None);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
                             TabIndex: =43
                             Text: =If(dd_lan_selector_2.SelectedText.Value="EN", LookUp(langPack, Title="55").English, LookUp(langPack, Title="55").French)
                             Width: =213
