@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
     "CdpRevision": {
       "BaseUrl": "/",
-      "LastChangedTimeString": "2022-03-24T16:38:32.5950000Z",
+      "LastChangedTimeString": "2022-04-12T16:42:16.0150000Z",
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
@@ -39,7 +39,8 @@
       "Likes": "Likes",
       "Modified": "Modified",
       "Section": "Section",
-      "Title": "qID"
+      "Title": "qID",
+      "usernames": "usernames"
     },
     "DatasetName": "https://014gc.sharepoint.com/sites/MeD",
     "EncodeDataset": true,
