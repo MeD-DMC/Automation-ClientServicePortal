@@ -161,7 +161,7 @@ newHome As screen:
                         Text: ="*"
                         Width: =28
                         X: =680
-                        Y: =299
+                        Y: =283
                         ZIndex: =10
 
                     Label1_57 As label:
@@ -303,7 +303,7 @@ newHome As screen:
                         Text: ="*"
                         Width: =19
                         X: =217
-                        Y: =296
+                        Y: =280
                         ZIndex: =24
 
                     Container19 As groupContainer:
