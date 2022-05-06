@@ -184,7 +184,7 @@ Header As CanvasComponent:
                         Height: =44
                         LayoutMinWidth: =0
                         OnSelect: |-
-                            =If(Header.SelectedLanguage="EN", Download ("https://014gc.sharepoint.com/:w:/s/MeD/EYr8j8rPH1FDkmTuXHWbE6gBSHFMIoOGDkbz9MGsbWWIag?e=rVjvMe"), Notify("Cette fonction n'est actuellement pas disponible en français. Nous nous excusons pour tout inconvénient."))
+                            =If(Header.SelectedLanguage="EN", Download ("https://014gc.sharepoint.com/:w:/s/MeD/EYr8j8rPH1FDkmTuXHWbE6gBSHFMIoOGDkbz9MGsbWWIag?e=rVjvMe"), Download ("https://014gc.sharepoint.com/:w:/s/MeD/ETah6475-RhEhz5XeoAUi8YBJZ8bISwzlbCxNVN9D8lEsQ?e=c1eo7u"))
                         PaddingBottom: =0
                         PaddingTop: =0
                         Size: =11
