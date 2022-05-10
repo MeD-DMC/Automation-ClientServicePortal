@@ -1,8 +1,29 @@
 wr_status As screen:
     Fill: =RGBA(255,255,255,1)
     Height: =Max(App.Height, App.DesignHeight)
-    OnVisible: |
+    OnVisible: |-
         =Collect(formDataFR, {Image: 'header-portal'.CollegeBanner});Refresh('wrtracking-production-version-001');Reset(ActiveGallery);Reset(PlannedGallery);
+        ClearCollect(
+            plannedWRs,
+            Filter(
+                'wrtracking-production-version-001',
+                projectStatus_temp.Value = "OnWorkPlan"
+            )
+        );
+        ClearCollect(
+            activeWRs,
+            Filter(
+                'wrtracking-production-version-001',
+                projectStatus_temp.Value = "WithMeD" || projectStatus_temp.Value = "ToBeLoadedLive" ||  projectStatus_temp.Value = "WithDT" || projectStatus_temp.Value = "Initialize" ||   projectStatus_temp.Value = "WaitingForApproval" || projectStatus_temp.Value = "OnHold"
+            )
+        );
+        ClearCollect(
+            allWRs,
+            Filter(
+                'wrtracking-production-version-001',
+                (projectStatus_temp.Value="WithMeD" || projectStatus_temp.Value="WithDT" || projectStatus_temp.Value="OnHold" || projectStatus_temp.Value="Initialize" || projectStatus_temp.Value="ToBeLoadedLive" || projectStatus_temp.Value="Select" || projectStatus_temp.Value="WaitingForApproval" || projectStatus_temp.Value="OnWorkPlan")
+            )
+        );
 
     ScreenSlicer As groupContainer.verticalAutoLayoutContainer:
         Height: =Parent.Height
@@ -310,7 +331,29 @@ wr_status As screen:
                                 Color: =RGBA(105, 69, 156, 1)
                                 Height: =32
                                 Icon: =Icon.Reload
-                                OnSelect: =Refresh('wrtracking-production-version-001');Reset(PlannedGallery);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
+                                OnSelect: |-
+                                    =Refresh('wrtracking-production-version-001');Reset(PlannedGallery);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
+                                    ClearCollect(
+                                        plannedWRs,
+                                        Filter(
+                                            'wrtracking-production-version-001',
+                                            projectStatus_temp.Value = "OnWorkPlan"
+                                        )
+                                    );
+                                    ClearCollect(
+                                        activeWRs,
+                                        Filter(
+                                            'wrtracking-production-version-001',
+                                            projectStatus_temp.Value = "WithMeD" || projectStatus_temp.Value = "ToBeLoadedLive" ||  projectStatus_temp.Value = "WithDT" || projectStatus_temp.Value = "Initialize" ||   projectStatus_temp.Value = "WaitingForApproval" || projectStatus_temp.Value = "OnHold"
+                                        )
+                                    );
+                                    ClearCollect(
+                                        allWRs,
+                                        Filter(
+                                            'wrtracking-production-version-001',
+                                            (projectStatus_temp.Value="WithMeD" || projectStatus_temp.Value="WithDT" || projectStatus_temp.Value="OnHold" || projectStatus_temp.Value="Initialize" || projectStatus_temp.Value="ToBeLoadedLive" || projectStatus_temp.Value="Select" || projectStatus_temp.Value="WaitingForApproval" || projectStatus_temp.Value="OnWorkPlan")
+                                        )
+                                    );
                                 Width: =32
                                 X: =Parent.Width-RefreshPlanned.Width-46
                                 ZIndex: =2
@@ -495,7 +538,29 @@ wr_status As screen:
                                 Color: =RGBA(205, 28, 105, 1)
                                 Height: =32
                                 Icon: =Icon.Reload
-                                OnSelect: =Refresh('wrtracking-production-version-001');Reset(ActiveGallery);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
+                                OnSelect: |-
+                                    =Refresh('wrtracking-production-version-001');Reset(ActiveGallery);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
+                                    ClearCollect(
+                                        plannedWRs,
+                                        Filter(
+                                            'wrtracking-production-version-001',
+                                            projectStatus_temp.Value = "OnWorkPlan"
+                                        )
+                                    );
+                                    ClearCollect(
+                                        activeWRs,
+                                        Filter(
+                                            'wrtracking-production-version-001',
+                                            projectStatus_temp.Value = "WithMeD" || projectStatus_temp.Value = "ToBeLoadedLive" ||  projectStatus_temp.Value = "WithDT" || projectStatus_temp.Value = "Initialize" ||   projectStatus_temp.Value = "WaitingForApproval" || projectStatus_temp.Value = "OnHold"
+                                        )
+                                    );
+                                    ClearCollect(
+                                        allWRs,
+                                        Filter(
+                                            'wrtracking-production-version-001',
+                                            (projectStatus_temp.Value="WithMeD" || projectStatus_temp.Value="WithDT" || projectStatus_temp.Value="OnHold" || projectStatus_temp.Value="Initialize" || projectStatus_temp.Value="ToBeLoadedLive" || projectStatus_temp.Value="Select" || projectStatus_temp.Value="WaitingForApproval" || projectStatus_temp.Value="OnWorkPlan")
+                                        )
+                                    );
                                 Width: =32
                                 X: =Parent.Width-RefreshActive.Width -46
                                 ZIndex: =1
