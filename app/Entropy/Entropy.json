@@ -974,7 +974,7 @@
     "wr_status": 112
   },
   "FunctionParamsInvariantScripts": {},
-  "HeaderLastSavedDateTimeUTC": "05/12/2022 21:13:11",
+  "HeaderLastSavedDateTimeUTC": "05/12/2022 21:13:18",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0f748b89-d170-443d-b263-828a7e6d6fd8": "\"/providers/microsoft.powerapps/apis/shared_sendmail/connections/e52ce20996a14fc89fc5807ba2c3db56\"",
