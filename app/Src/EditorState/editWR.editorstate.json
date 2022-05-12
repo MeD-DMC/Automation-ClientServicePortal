@@ -120,7 +120,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "as_medium_10",
-      "ParentIndex": 12,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1231,7 +1231,14 @@
         "PaddingRight",
         "PaddingBottom",
         "PaddingLeft",
-        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "If(mediumFlag=true,true,false)",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ContentLanguage"
       ],
       "HasDynamicProperties": false,
@@ -1512,7 +1519,14 @@
         "PaddingRight",
         "PaddingBottom",
         "PaddingLeft",
-        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "true",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ContentLanguage"
       ],
       "HasDynamicProperties": false,
@@ -1731,7 +1745,7 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultLabelStyle",
@@ -1793,7 +1807,14 @@
         "PaddingRight",
         "PaddingBottom",
         "PaddingLeft",
-        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "true",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ContentLanguage"
       ],
       "HasDynamicProperties": false,
@@ -2012,7 +2033,7 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultLabelStyle",
@@ -2074,7 +2095,14 @@
         "PaddingRight",
         "PaddingBottom",
         "PaddingLeft",
-        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "true",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ContentLanguage"
       ],
       "HasDynamicProperties": false,
@@ -2293,7 +2321,7 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultLabelStyle",
@@ -2355,7 +2383,14 @@
         "PaddingRight",
         "PaddingBottom",
         "PaddingLeft",
-        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "true",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ContentLanguage"
       ],
       "HasDynamicProperties": false,
@@ -2636,7 +2671,14 @@
         "PaddingRight",
         "PaddingBottom",
         "PaddingLeft",
-        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "true",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ContentLanguage"
       ],
       "HasDynamicProperties": false,
@@ -2917,7 +2959,14 @@
         "PaddingRight",
         "PaddingBottom",
         "PaddingLeft",
-        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "true",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ContentLanguage"
       ],
       "HasDynamicProperties": false,
@@ -3136,7 +3185,7 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultLabelStyle",
@@ -3198,7 +3247,14 @@
         "PaddingRight",
         "PaddingBottom",
         "PaddingLeft",
-        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "true",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "ContentLanguage"
       ],
       "HasDynamicProperties": false,
@@ -8320,7 +8376,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "dd_projectstatus_1",
-      "ParentIndex": 8,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8714,7 +8770,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "dd_requestLan_3",
-      "ParentIndex": 10,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11932,7 +11988,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1_72",
-      "ParentIndex": 9,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -21445,6 +21501,14 @@
           "InvariantPropertyName": "TabIndex",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "true",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -21653,6 +21717,11 @@
         {
           "Category": "Design",
           "PropertyName": "TabIndex",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Visible",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -23719,7 +23788,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "textInput_Requestor_3",
-      "ParentIndex": 11,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
