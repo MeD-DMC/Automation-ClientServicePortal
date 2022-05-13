@@ -283,12 +283,12 @@ viewWR As screen:
 
                         dd_projectstatus_3 As dropdown:
                             Default: |
-                                =If(dd_lan_selector_5.SelectedText.Value="EN", LookUp(ProjectStatus, Title=ActiveGallery.Selected.projectStatus_temp.Value).Title, LookUp(ProjectStatus, Title=ActiveGallery.Selected.projectStatus_temp.Value).French)
+                                =If(dd_lan_selector_5.SelectedText.Value="EN", LookUp(ProjectStatus, Title=ActiveGallery.Selected.projectStatus.Value).Title, LookUp(ProjectStatus, Title=ActiveGallery.Selected.projectStatus.Value).French)
                             DisplayMode: =DisplayMode.View
                             FontWeight: =FontWeight.Semibold
                             Height: =54
                             Items: |-
-                                =[If(dd_lan_selector_5.SelectedText.Value="EN", LookUp(ProjectStatus, Title=ActiveGallery.Selected.projectStatus_temp.Value).Title, LookUp(ProjectStatus, Title=ActiveGallery.Selected.projectStatus_temp.Value).French)
+                                =[If(dd_lan_selector_5.SelectedText.Value="EN", LookUp(ProjectStatus, Title=ActiveGallery.Selected.projectStatus.Value).Title, LookUp(ProjectStatus, Title=ActiveGallery.Selected.projectStatus.Value).French)
                                 ]
                             Reset: =btn_Clear_5.Pressed
                             Width: =205

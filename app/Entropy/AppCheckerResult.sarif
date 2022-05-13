@@ -35911,77 +35911,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.mediumFlag"
+                  "fullyQualifiedName": "App.themePink"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.mediumFlag",
+                  "fullyQualifiedName": "App.themePink",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "mediumFlag",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.themeBlack"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.themeBlack",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "themeBlack",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 13
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.themeCyan"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.themeCyan",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "themeCyan",
+                "member": "themePink",
                 "module": "App",
                 "type": "App"
               }
@@ -36031,17 +35971,77 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.themePink"
+                  "fullyQualifiedName": "App.themeCyan"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.themePink",
+                  "fullyQualifiedName": "App.themeCyan",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "themePink",
+                "member": "themeCyan",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.themeBlack"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.themeBlack",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "themeBlack",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.mediumFlag"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.mediumFlag",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "mediumFlag",
                 "module": "App",
                 "type": "App"
               }
