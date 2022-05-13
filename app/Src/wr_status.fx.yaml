@@ -477,7 +477,7 @@ wr_status As screen:
                                 Text: |-
                                     =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="52").English, LookUp(langPack, Title="52").French),": ", Text(ThisItem.project_status_date,"yyyy-mmm-dd"))
                                 Width: =270
-                                X: =242
+                                X: =Parent.Width-Subtitle3_1.Width-40
                                 Y: =111
                                 ZIndex: =35
 
@@ -708,8 +708,8 @@ wr_status As screen:
                                 Text: |-
                                     =Concatenate(If(dd_lan_selector.SelectedText.Value="EN", LookUp(langPack, Title="52").English, LookUp(langPack, Title="52").French),": ", Text(ThisItem.project_status_date,"yyyy-mmm-dd"))
                                 Width: =270
-                                X: =243
-                                Y: =108
+                                X: =Parent.Width-Subtitle3_2.Width-40
+                                Y: =111
                                 ZIndex: =45
 
                             Separator3_1 As rectangle:
