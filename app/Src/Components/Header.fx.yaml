@@ -167,7 +167,7 @@ Header As CanvasComponent:
                         Height: =44
                         LayoutMinWidth: =0
                         OnSelect: |-
-                            =If(Header.SelectedLanguage="EN", Download("https://014gc.sharepoint.com/:w:/r/sites/MeD/Shared%20Documents/Planning/MeD%20DevOps%20%26%20Tools%20Workstream/Projects/Client%20Service%20Portal%20(CSP)/Documentation/CLG-ClientServicePortal-FAQ_EN.docx?d=w0c2373d7ebb6419d8737d1b8c3692387&csf=1&web=1"), Notify("Cette fonction n'est actuellement pas disponible en français. Nous nous excusons pour tout inconvénient."))
+                            =If(Header.SelectedLanguage="EN", Download("https://014gc.sharepoint.com/:w:/s/MeD/EddzIwy2651BhzfRuMNpI4cBtN7E31XFBIvpXr8TBIveYw?e=7F5zU1"), Download("https://014gc.sharepoint.com/:w:/s/MeD/EXThNjxYEaNFowc8medZho4BexEEtBzcJEk99Q2YmV2-nA?e=PI8ce7"))
                         PaddingBottom: =0
                         PaddingTop: =0
                         Size: =11
@@ -218,7 +218,7 @@ Header As CanvasComponent:
         Color: =RGBA(204, 204, 204, 1)
         Font: =Font.Lato
         Size: =10
-        Text: ="v1.0.18"
+        Text: ="v1.0.19"
         X: =537
         Y: =110
         ZIndex: =3
