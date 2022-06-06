@@ -218,7 +218,7 @@ Header As CanvasComponent:
         Color: =RGBA(204, 204, 204, 1)
         Font: =Font.Lato
         Size: =10
-        Text: ="v1.0.21"
+        Text: ="v1.0.22"
         X: =537
         Y: =110
         ZIndex: =3
