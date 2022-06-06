@@ -219,7 +219,7 @@ editWR As screen:
                                 DefaultDate: =PlannedGallery.Selected.due_date
                                 Format: ="yyyy-mm-dd"
                                 IconBackground: =RGBA(31, 124, 155, 1)
-                                Reset: =btn_Clear_3.Pressed
+                                Reset: =
                                 TabIndex: =18
                                 Width: =158
                                 X: =974
@@ -915,7 +915,7 @@ editWR As screen:
                                     isAccessibility:If(cb_isaccessibility_2.Value = true, true, false),
                                     isGNWT:If(cb_isgnwt_2.Value = true, true, false),
                                     isAdhoc: If(cb_isadhoc_1.Value = true, true, false),
-                                    due_date:dateP_dueDate_2.SelectedDate,
+                                    due_date:dateP_dueDate_3.SelectedDate,
                                     submitted_date:dateP_submitted_2.SelectedDate,
                                     requestor_email:Office365Users.MyProfileV2().mail,
                                     CustomA:dp_WP_Tab_1.SelectedText.Value,
