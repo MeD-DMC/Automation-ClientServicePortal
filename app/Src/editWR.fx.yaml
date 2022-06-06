@@ -49,7 +49,7 @@ editWR As screen:
                     section1_2 As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.Start
                         FillPortions: =0
-                        Height: =If(dd_medium_3.SelectedText.Value = "ADAPT (.html)", txtInput_adaptlink_1.Y+60,cb_isgnwt_2.Y+70)
+                        Height: =If(EditScreen_medium.SelectedText.Value = "ADAPT", EditScreen_adaptDetails.Y+60,EditScreen_gnwtcheck.Y+70)
                         LayoutMinHeight: =
                         LayoutMinWidth: =250
                         Width: =Parent.Width
@@ -100,7 +100,7 @@ editWR As screen:
                                 Y: =78
                                 ZIndex: =14
 
-                            dateP_submitted_3 As datepicker:
+                            EditScreen_submitdate As datepicker:
                                 Color: =RGBA(168, 0, 81, 1)
                                 DisplayMode: =DisplayMode.View
                                 Format: ="yyyy-mm-dd"
@@ -112,7 +112,7 @@ editWR As screen:
                                 Y: =78
                                 ZIndex: =15
 
-                            dd_typeofwork_3 As dropdown:
+                            EditScreen_worktype As dropdown:
                                 Default: ="Select / Choisir"
                                 DisplayMode: =DisplayMode.View
                                 Height: =43
@@ -120,7 +120,7 @@ editWR As screen:
                                 OnChange: |-
                                     =If(
                                     
-                                    IsMatch(dd_typeofwork_3.SelectedText.Value,"Other",Contains) Or
+                                    IsMatch(EditScreen_worktype.SelectedText.Value,"Other",Contains) Or
                                     
                                     UpdateContext({mediumFlag:false}), UpdateContext({mediumFlag:true}));
                                 Reset: =btn_Clear_3.Pressed
@@ -137,7 +137,7 @@ editWR As screen:
                             Y: =60
                             ZIndex: =17
 
-                            textInput_Requestor_3 As text:
+                            EditScreen_requestor As text:
                                 BorderColor: |
                                     =RGBA(31, 124, 155, 1)
                                 Default: =PlannedGallery.Selected.requestor_name
@@ -168,7 +168,7 @@ editWR As screen:
                                 Y: =131
                                 ZIndex: =11
 
-                            dd_requestLan_3 As dropdown:
+                            EditScreen_language As dropdown:
                                 BorderColor: |
                                     =RGBA(31, 124, 155, 1)
                                 ChevronBackground: |
@@ -178,7 +178,7 @@ editWR As screen:
                                 HoverColor: =RGBA(255, 255, 255, 1)
                                 Items: =Choices('wrtracking-production-version-001'.request_language)
                                 OnChange: |-
-                                    =If(IsMatch(dd_requestLan_3.SelectedText.Value,"Select",Contains),
+                                    =If(IsMatch(EditScreen_language.SelectedText.Value,"Select",Contains),
                                     UpdateContext({langFlag:true}), UpdateContext({langFlag:false}));
                                 Reset: =btn_Clear_3.Pressed
                                 SelectionFill: =RGBA(31, 124, 155, 1)
@@ -214,7 +214,7 @@ editWR As screen:
                                 Y: =126
                                 ZIndex: =3
 
-                            dateP_dueDate_3 As datepicker:
+                            EditScreen_duedate As datepicker:
                                 BorderColor: =RGBA(31, 124, 155, 1)
                                 DefaultDate: =PlannedGallery.Selected.due_date
                                 Format: ="yyyy-mm-dd"
@@ -226,7 +226,7 @@ editWR As screen:
                                 Y: =186
                                 ZIndex: =4
 
-                            textInput_Bizline_3 As combobox:
+                            EditScreen_BusinessLine As combobox:
                                 BorderColor: =RGBA(31, 124, 155, 1)
                                 ChevronBackground: =RGBA(31, 124, 155, 1)
                                 ChevronHoverBackground: =ColorFade(RGBA(31, 124, 155, 1), -20%)
@@ -259,7 +259,7 @@ editWR As screen:
                                 Y: =188
                                 ZIndex: =6
 
-                            dd_medium_3 As dropdown:
+                            EditScreen_medium As dropdown:
                                 BorderColor: =RGBA(31, 124, 155, 1)
                                 ChevronBackground: =RGBA(31, 124, 155, 1)
                                 ChevronHoverBackground: =ColorFade(RGBA(31, 124, 155, 1), -20%)
@@ -268,7 +268,7 @@ editWR As screen:
                                 HoverFill: =RGBA(31, 124, 155, 1)
                                 Items: =Choices('wrtracking-production-version-001'.medium)
                                 OnChange: |-
-                                    =If(IsMatch(dd_medium_3.SelectedText.Value,"Select",Contains),
+                                    =If(IsMatch(EditScreen_medium.SelectedText.Value,"Select",Contains),
                                     UpdateContext({mediumFlag:true}), UpdateContext({mediumFlag:false}));
                                 OnSelect: =
                                 PressedFill: =RGBA(31, 124, 155, 1)
@@ -289,7 +289,7 @@ editWR As screen:
                                 Y: =188
                                 ZIndex: =8
 
-                        cb_isaccessibility_2 As checkbox:
+                        EditScreen_prioritycheck As checkbox:
                             BorderColor: =RGBA(31, 124, 155, 1)
                             CheckboxBorderColor: =RGBA(31, 124, 155, 1)
                             CheckmarkFill: =RGBA(31, 124, 155, 1)
@@ -302,7 +302,7 @@ editWR As screen:
                             Y: =244
                             ZIndex: =18
 
-                        cb_isgnwt_2 As checkbox:
+                        EditScreen_gnwtcheck As checkbox:
                             BorderColor: =RGBA(31, 124, 155, 1)
                             CheckboxBorderColor: =RGBA(31, 124, 155, 1)
                             CheckmarkFill: =RGBA(31, 124, 155, 1)
@@ -352,16 +352,16 @@ editWR As screen:
                                 Height: =47
                                 TabIndex: =19
                                 Text: ="Adapt Details | Détails d'Adapt"
-                                Visible: =If(dd_medium_3.SelectedText.Value = "ADAPT (.html)", true,false)
+                                Visible: =If(EditScreen_medium.SelectedText.Value = "ADAPT", true,false)
                                 Width: =393
                                 X: =40
                                 Y: =372
                                 ZIndex: =25
 
-                            txtInput_adaptlink_1 As text:
+                            EditScreen_adaptDetails As text:
                                 Default: =PlannedGallery.Selected.CustomC
                                 Height: =51
-                                Visible: =If(dd_medium_3.SelectedText.Value = "ADAPT (.html)", true,false)
+                                Visible: =If(EditScreen_medium.SelectedText.Value = "ADAPT", true,false)
                                 Width: =984
                                 X: =269
                                 Y: =413
@@ -374,7 +374,7 @@ editWR As screen:
                                 Text: |-
                                     ="Preview Link:              
                                     Lien d'aperçu:"
-                                Visible: =If(dd_medium_3.SelectedText.Value = "ADAPT (.html)", true,false)
+                                Visible: =If(EditScreen_medium.SelectedText.Value = "ADAPT", true,false)
                                 Width: =160
                                 X: =96
                                 Y: =407
@@ -466,7 +466,7 @@ editWR As screen:
                     section2_2 As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.Start
                         FillPortions: =0
-                        Height: =textInput_requestDetails_3.Y+textInput_requestDetails_3.Height+10
+                        Height: =EditScreen_details.Y+EditScreen_details.Height+10
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
                         Width: =Parent.Width
@@ -513,13 +513,13 @@ editWR As screen:
                                 Color: =RGBA(168, 0, 0, 1)
                                 Height: =27
                                 Text: ="*"
-                                Visible: =If(dd_typeofwork_3.Selected.Value = "Graphics / Graphiques", false, true)
+                                Visible: =If(EditScreen_worktype.Selected.Value = "Graphics / Graphiques", false, true)
                                 Width: =44
                                 X: =229
                                 Y: =332
                                 ZIndex: =10
 
-                            slnc_contentTitleEN_3 As text:
+                            EditScreen_contenttitleEN As text:
                                 BorderColor: =RGBA(31, 124, 155, 1)
                                 Default: =PlannedGallery.Selected.SLNC_ContentTitleEN
                                 Height: =43
@@ -559,7 +559,7 @@ editWR As screen:
                                 Color: =RGBA(168, 0, 0, 1)
                                 Height: =36
                                 Text: ="*"
-                                Visible: =If(dd_typeofwork_3.Selected.Value = "Graphics / Graphiques", false, true)
+                                Visible: =If(EditScreen_worktype.Selected.Value = "Graphics / Graphiques", false, true)
                                 Width: =67
                                 X: =193
                                 Y: =81
@@ -575,7 +575,7 @@ editWR As screen:
                                 Y: =80
                                 ZIndex: =25
 
-                            slnc_courseID_tf_2 As text:
+                            EditScreen_SLCID As text:
                                 BorderColor: =RGBA(31, 124, 155, 1)
                                 Default: =PlannedGallery.Selected.SLNC_CourseID
                                 Format: =TextFormat.Number
@@ -588,7 +588,7 @@ editWR As screen:
                                 Y: =84
                                 ZIndex: =28
 
-                            sdd_courseID_3 As text:
+                            EditScreen_SDCID As text:
                                 BorderColor: =RGBA(31, 124, 155, 1)
                                 Default: =PlannedGallery.Selected.SDD_CourseID
                                 Format: =TextFormat.Number
@@ -609,7 +609,7 @@ editWR As screen:
                             Y: =60
                             ZIndex: =31
 
-                            sdd_classID_3 As text:
+                            EditScreen_SDSID As text:
                                 BorderColor: =RGBA(31, 124, 155, 1)
                                 Default: =PlannedGallery.Selected.SDD_ClassID
                                 Format: =TextFormat.Number
@@ -630,7 +630,7 @@ editWR As screen:
                                 Y: =150
                                 ZIndex: =19
 
-                            slnc_classID_3 As text:
+                            EditScreen_SLSID As text:
                                 BorderColor: =RGBA(31, 124, 155, 1)
                                 Default: =PlannedGallery.Selected.SLNC_ClassID
                                 Format: =TextFormat.Number
@@ -659,7 +659,7 @@ editWR As screen:
                                 Color: =RGBA(168, 0, 0, 1)
                                 Height: =28
                                 Text: ="*"
-                                Visible: =If(dd_typeofwork_3.Selected.Value = "Graphics / Graphiques", false, true)
+                                Visible: =If(EditScreen_worktype.Selected.Value = "Graphics / Graphiques", false, true)
                                 Width: =43
                                 X: =172
                                 Y: =149
@@ -704,7 +704,7 @@ editWR As screen:
                                 Y: =486
                                 ZIndex: =4
 
-                        grp_request_details_2 As group:
+                        EditScreen_coments As group:
                             Height: =5
                             Width: =5
                             X: =77
@@ -721,7 +721,7 @@ editWR As screen:
                                 Y: =583
                                 ZIndex: =1
 
-                            textInput_requestDetails_3 As text:
+                            EditScreen_details As text:
                                 BorderColor: =RGBA(31, 124, 155, 1)
                                 Default: =PlannedGallery.Selected.request_details
                                 Height: =158
@@ -745,9 +745,9 @@ editWR As screen:
                                 Height: =45
                                 Size: =11
                                 Text: |-
-                                    =If(!IsBlank(slnc_courseNameEN_2.Text),If(
+                                    =If(!IsBlank(EditScreen_coursenameEN.Text),If(
                                         IsMatch(
-                                    slnc_courseNameEN_2.Text,
+                                    EditScreen_coursenameEN.Text,
                                     "^[A-Za-z0-9-_ ]+$"
                                     ),"",
                                     "Course Name shall not contain special characters! | Le nom du cours ne doit pas contenir de caractères spéciaux"
@@ -768,7 +768,7 @@ editWR As screen:
                                 Y: =227
                                 ZIndex: =14
 
-                            slnc_courseNameEN_2 As text:
+                            EditScreen_coursenameEN As text:
                                 BorderColor: =RGBA(31, 124, 155, 1)
                                 Default: =PlannedGallery.Selected.SLNC_CourseNameEN
                                 Height: =108
@@ -790,7 +790,7 @@ editWR As screen:
                                 Y: =227
                                 ZIndex: =16
 
-                            slnc_courseNameFR_2 As text:
+                            EditScreen_coursenameFR As text:
                                 BorderColor: =RGBA(31, 124, 155, 1)
                                 Default: =PlannedGallery.Selected.SLNC_CourseNameFR
                                 Height: =108
@@ -807,7 +807,7 @@ editWR As screen:
                             Color: =RGBA(168, 0, 0, 1)
                             Height: =27
                             Text: ="*"
-                            Visible: =If(dd_typeofwork_3.Selected.Value = "Graphics / Graphiques", false, true)
+                            Visible: =If(EditScreen_worktype.Selected.Value = "Graphics / Graphiques", false, true)
                             Width: =44
                             X: =864
                             Y: =85
@@ -833,13 +833,13 @@ editWR As screen:
                                 Color: =RGBA(168, 0, 0, 1)
                                 Height: =36
                                 Text: ="*"
-                                Visible: =If(dd_typeofwork_3.Selected.Value = "Graphics / Graphiques", false, true)
+                                Visible: =If(EditScreen_worktype.Selected.Value = "Graphics / Graphiques", false, true)
                                 Width: =67
                                 X: =229
                                 Y: =404
                                 ZIndex: =9
 
-                            slnc_contentTitleFR_3 As text:
+                            EditScreen_contenttitleFR As text:
                                 BorderColor: =RGBA(31, 124, 155, 1)
                                 Default: =PlannedGallery.Selected.SLNC_ContentTitleFR
                                 Height: =43
@@ -853,7 +853,7 @@ editWR As screen:
                             Color: =RGBA(168, 0, 0, 1)
                             Height: =28
                             Text: ="*"
-                            Visible: =If(dd_typeofwork_3.Selected.Value = "Graphics / Graphiques", false, true)
+                            Visible: =If(EditScreen_worktype.Selected.Value = "Graphics / Graphiques", false, true)
                             Width: =43
                             X: =246
                             Y: =227
@@ -863,7 +863,7 @@ editWR As screen:
                             Color: =RGBA(168, 0, 0, 1)
                             Height: =28
                             Text: ="*"
-                            Visible: =If(dd_typeofwork_3.Selected.Value = "Graphics / Graphiques", false, true)
+                            Visible: =If(EditScreen_worktype.Selected.Value = "Graphics / Graphiques", false, true)
                             Width: =43
                             X: =925
                             Y: =227
@@ -878,55 +878,55 @@ editWR As screen:
 
                         btn_Submit_4 As button:
                             DisplayMode: |
-                                =If(dd_typeofwork_3.Selected.Value = "Graphics / Graphiques" ,Edit,If(mediumFlag || langFlag || IsBlank(slnc_courseID_tf_2) || IsBlank(slnc_classID_3) || IsBlank(sdd_courseID_3) || IsBlank(sdd_classID_3) ||  IsBlank(slnc_contentTitleEN_3) || IsBlank(slnc_contentTitleFR_3), Disabled, Edit)) 
+                                =If(EditScreen_worktype.Selected.Value = "Graphics / Graphiques" ,Edit,If(mediumFlag || langFlag || IsBlank(EditScreen_SLCID) || IsBlank(EditScreen_SLSID) || IsBlank(EditScreen_SDCID) || IsBlank(EditScreen_SDSID) ||  IsBlank(EditScreen_contenttitleEN) || IsBlank(EditScreen_contenttitleFR), Disabled, Edit)) 
                             Fill: =RGBA(31, 124, 155, 1)
                             FontWeight: =FontWeight.Normal
                             Height: =47
                             HoverFill: =ColorFade(RGBA(31, 124, 155, 1), -20%)
                             OnSelect: |+
-                                =Set(courseNameFolder, Concat(Filter(Split(slnc_courseNameEN_2.Text,""),IsMatch(Result,"^[a-zA-Z0-9\s]+")),Result));
+                                =Set(courseNameFolder, Concat(Filter(Split(EditScreen_coursenameEN.Text,""),IsMatch(Result,"^[a-zA-Z0-9\s]+")),Result));
                                 Set(resetScroll, false);
                                 
                                 ClearCollect(dataForm,
                                 {
                                     ID: PlannedGallery.Selected.ID,
                                     Title:PlannedGallery.Selected.Title,
-                                    typeofwork: dd_typeofwork_3.Selected.Value,
-                                    businessLine: textInput_Bizline_3.Selected.Value,
-                                    medium:dd_medium_3.Selected.Value,
-                                    request_language:dd_requestLan_3.Selected.Value,
-                                    SLNC_CourseNameEN:If(IsBlank(slnc_courseNameEN_2),"",slnc_courseNameEN_2.Text),
-                                    SLNC_CourseNameFR:If(IsBlank(slnc_courseNameFR_2),"",slnc_courseNameFR_2.Text),
+                                    typeofwork: EditScreen_worktype.Selected.Value,
+                                    businessLine: EditScreen_BusinessLine.Selected.Value,
+                                    medium:EditScreen_medium.Selected.Value,
+                                    request_language:EditScreen_language.Selected.Value,
+                                    SLNC_CourseNameEN:If(IsBlank(EditScreen_coursenameEN),"",EditScreen_coursenameEN.Text),
+                                    SLNC_CourseNameFR:If(IsBlank(EditScreen_coursenameFR),"",EditScreen_coursenameFR.Text),
                                     CourseFolderName:If(IsBlank(courseNameFolder),"",courseNameFolder),
                                 
-                                    SLNC_ClassID:If(IsBlank(slnc_classID_3),"",slnc_classID_3.Text),
-                                    SLNC_CourseID:If(IsBlank(slnc_courseID_tf_2),"",slnc_courseID_tf_2.Text),
-                                    SDD_ClassID:If(IsBlank(sdd_classID_3),"",sdd_classID_3.Text),
-                                    SDD_CourseID:If(IsBlank(sdd_courseID_3),"",sdd_courseID_3.Text),
+                                    SLNC_ClassID:If(IsBlank(EditScreen_SLSID),"",EditScreen_SLSID.Text),
+                                    SLNC_CourseID:If(IsBlank(EditScreen_SLCID),"",EditScreen_SLCID.Text),
+                                    SDD_ClassID:If(IsBlank(EditScreen_SDSID),"",EditScreen_SDSID.Text),
+                                    SDD_CourseID:If(IsBlank(EditScreen_SDCID),"",EditScreen_SDCID.Text),
                                 
-                                    SLNC_ContentTitleEN: If(IsBlank(slnc_contentTitleEN_3),"",slnc_contentTitleEN_3.Text),
-                                    SLNC_ContentTitleFR:If(IsBlank(slnc_contentTitleFR_3),"",slnc_contentTitleFR_3.Text),
-                                    request_details: If(IsBlank(textInput_requestDetails_3),"",textInput_requestDetails_3.Text),
-                                    project_status_date:dateP_submitted_2.SelectedDate,
+                                    SLNC_ContentTitleEN: If(IsBlank(EditScreen_contenttitleEN),"",EditScreen_contenttitleEN.Text),
+                                    SLNC_ContentTitleFR:If(IsBlank(EditScreen_contenttitleFR),"",EditScreen_contenttitleFR.Text),
+                                    request_details: If(IsBlank(EditScreen_details),"",EditScreen_details.Text),
+                                    project_status_date:EditScreen_submitdate.SelectedDate,
                                     //projectStatus:{'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",Id: dd_projectstatus_1.Selected.Id,Value:dd_projectstatus_1.Selected.Value},
                                     projectStatus: Text(LookUp(ProjectStatus,ID = 16).ID), 
-                                    scormID_EN:If(IsBlank(slnc_scormID_6), "", If(dd_requestLan_6.SelectedText.Value = "EN", slnc_scormID_6.Text,"")),
-                                    scormID_FR:If(IsBlank(slnc_scormID_6), "",If(dd_requestLan_6.SelectedText.Value = "FR", slnc_scormID_6.Text,"")),
-                                    isAccessibility:If(cb_isaccessibility_2.Value = true, true, false),
-                                    isGNWT:If(cb_isgnwt_2.Value = true, true, false),
+                                    scormID_EN:If(IsBlank(slnc_scormID_6), "", If(EditScreen_language.SelectedText.Value = "EN", slnc_scormID_6.Text,"")),
+                                    scormID_FR:If(IsBlank(slnc_scormID_6), "",If(EditScreen_language.SelectedText.Value = "FR", slnc_scormID_6.Text,"")),
+                                    isAccessibility:If(EditScreen_prioritycheck.Value = true, true, false),
+                                    isGNWT:If(EditScreen_gnwtcheck.Value = true, true, false),
                                     isAdhoc: If(cb_isadhoc_1.Value = true, true, false),
-                                    due_date:dateP_dueDate_3.SelectedDate,
+                                    due_date:EditScreen_duedate.SelectedDate,
                                     submitted_date:dateP_submitted_2.SelectedDate,
                                     requestor_email:Office365Users.MyProfileV2().mail,
                                     CustomA:dp_WP_Tab_1.SelectedText.Value,
                                     CustomB:"",
-                                    CustomC:If(!IsBlank(txtInput_adaptlink_1), Substitute(txtInput_adaptlink_1.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", "")
+                                    CustomC:If(!IsBlank(EditScreen_adaptDetails), Substitute(EditScreen_adaptDetails.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", "")
                                 });
                                 'MeD-PRD-InitialWRApproval'.Run(JSON(dataForm, IndentFour));
-                                Reset(textInput_Bizline_3);Reset(textInput_Requestor_3);Reset(dd_typeofwork_3);Reset(dd_medium_3);
-                                Reset(dd_requestLan_3);Reset(slnc_courseNameEN_2);Reset(slnc_courseNameFR_2);Reset(slnc_contentTitleEN_3);Reset(slnc_contentTitleFR_3);Reset(textInput_requestDetails_3);
-                                Reset(dateP_submitted_2);Reset(dd_projectstatus_1);Reset(cb_isgnwt_2);Reset(cb_isaccessibility_2);Reset(dateP_dueDate_2);Reset(dateP_submitted_2);Reset(cb_isadhoc_1);Reset(dp_WP_Tab_1);
-                                Reset(txtinput_wp_row_number_1);Reset(txtInput_adaptlink_1);Reset(sdd_courseID_3);Reset(slnc_courseID_tf_2);Reset(slnc_classID_3);Reset(sdd_classID_3);
+                                Reset(EditScreen_BusinessLine);Reset(EditScreen_requestor);Reset(EditScreen_worktype);Reset(EditScreen_medium);
+                                Reset(EditScreen_language);Reset(EditScreen_coursenameEN);Reset(EditScreen_coursenameFR);Reset(EditScreen_contenttitleEN);Reset(EditScreen_contenttitleFR);Reset(EditScreen_details);
+                                Reset(dateP_submitted_2);Reset(dd_projectstatus_1);Reset(EditScreen_gnwtcheck);Reset(EditScreen_prioritycheck);Reset(EditScreen_duedate);Reset(EditScreen_submitdate);Reset(cb_isadhoc_1);Reset(dp_WP_Tab_1);
+                                Reset(txtinput_wp_row_number_1);Reset(EditScreen_adaptDetails);Reset(EditScreen_SDCID);Reset(EditScreen_SLCID);Reset(EditScreen_SLSID);Reset(EditScreen_SDSID);
                                 Navigate(screen_complete_1,None);
                                 ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
                                 
@@ -978,43 +978,43 @@ editWR As screen:
                                 {  
                                     ID: PlannedGallery.Selected.ID,
                                     Title:PlannedGallery.Selected.Title,
-                                    typeofwork: dd_typeofwork_3.Selected.Value,
-                                    businessLine: textInput_Bizline_3.Selected.Value,
-                                    medium:dd_medium_3.Selected.Value,
-                                    request_language:dd_requestLan_3.Selected.Value,
-                                    SLNC_CourseNameEN:If(IsBlank(slnc_courseNameEN_2),"",slnc_courseNameEN_2.Text),
-                                    SLNC_CourseNameFR:If(IsBlank(slnc_courseNameFR_2),"",slnc_courseNameFR_2.Text),
+                                    typeofwork: EditScreen_worktype.Selected.Value,
+                                    businessLine: EditScreen_BusinessLine.Selected.Value,
+                                    medium:EditScreen_medium.Selected.Value,
+                                    request_language:EditScreen_language.Selected.Value,
+                                    SLNC_CourseNameEN:If(IsBlank(EditScreen_coursenameEN),"",EditScreen_coursenameEN.Text),
+                                    SLNC_CourseNameFR:If(IsBlank(EditScreen_coursenameFR),"",EditScreen_coursenameFR.Text),
                                     CourseFolderName:If(IsBlank(courseNameFolder),"",courseNameFolder),
-                                    SLNC_ClassID:If(IsBlank(slnc_classID_3), "",slnc_classID_3.Text),
-                                    SLNC_CourseID:If(IsBlank(slnc_courseID_tf_2),"",slnc_courseID_tf_2.Text),
-                                    SDD_ClassID:If(IsBlank(sdd_classID_3),"",sdd_classID_3.Text),
-                                    SDD_CourseID:If(IsBlank(sdd_courseID_3),"",sdd_courseID_3.Text),
-                                    SLNC_ContentTitleEN: If(IsBlank(slnc_contentTitleEN_3),"",slnc_contentTitleEN_3.Text),
-                                    SLNC_ContentTitleFR:If(IsBlank(slnc_contentTitleFR_3),"",slnc_contentTitleFR_3.Text),
-                                    request_details: If(IsBlank(textInput_requestDetails_3),"",textInput_requestDetails_3.Text),
+                                    SLNC_ClassID:If(IsBlank(EditScreen_SLSID), "",EditScreen_SLSID.Text),
+                                    SLNC_CourseID:If(IsBlank(EditScreen_SLCID),"",EditScreen_SLCID.Text),
+                                    SDD_ClassID:If(IsBlank(EditScreen_SDSID),"",EditScreen_SDSID.Text),
+                                    SDD_CourseID:If(IsBlank(EditScreen_SDCID),"",EditScreen_SDCID.Text),
+                                    SLNC_ContentTitleEN: If(IsBlank(EditScreen_contenttitleEN),"",EditScreen_contenttitleEN.Text),
+                                    SLNC_ContentTitleFR:If(IsBlank(EditScreen_contenttitleFR),"",EditScreen_contenttitleFR.Text),
+                                    request_details: If(IsBlank(EditScreen_details),"",EditScreen_details.Text),
                                     project_status_date:dateP_submitted_2.SelectedDate,
                                     //projectStatus:{'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",Id: dd_projectstatus_1.Selected.Id,Value:dd_projectstatus_1.Selected.Value},
                                     projectStatus: Text(LookUp(ProjectStatus,ID = 1).ID), 
                                     scormID_EN:If(IsBlank(slnc_scormID_6), "", If(dd_requestLan_6.SelectedText.Value = "EN", slnc_scormID_6.Text,"")),
                                     scormID_FR:If(IsBlank(slnc_scormID_6), "",If(dd_requestLan_6.SelectedText.Value = "FR", slnc_scormID_6.Text,"")),
-                                    isAccessibility:If(cb_isaccessibility_2.Value = true, true, false),
-                                    isGNWT:If(cb_isgnwt_2.Value = true, true, false),
+                                    isAccessibility:If(EditScreen_prioritycheck.Value = true, true, false),
+                                    isGNWT:If(EditScreen_gnwtcheck.Value = true, true, false),
                                     isAdhoc: If(cb_isadhoc_1.Value = true, true, false),
                                     due_date:dateP_dueDate_2.SelectedDate,
                                     submitted_date:dateP_submitted_2.SelectedDate,
                                     requestor_email:Office365Users.MyProfileV2().mail,
                                     CustomA:dp_WP_Tab_1.SelectedText.Value,
                                     CustomB:"",
-                                    CustomC:If(!IsBlank(txtInput_adaptlink_1), Substitute(txtInput_adaptlink_1.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", " ")
+                                    CustomC:If(!IsBlank(EditScreen_adaptDetails), Substitute(EditScreen_adaptDetails.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", " ")
                                 
                                 });
                                 'MeD-PRD-SaveWR'.Run(JSON(dataForm,IncludeBinaryData));
                                 
-                                Reset(dd_Bizline_2);Reset(textInput_Requestor_3);Reset(dd_typeofwork_3);Reset(dd_medium_3);
-                                Reset(dd_requestLan_3);Reset(slnc_courseNameEN_2);Reset(slnc_courseNameFR_2);Reset(slnc_contentTitleEN_3);Reset(slnc_contentTitleFR_3);Reset(textInput_requestDetails_3);
-                                Reset(dateP_submitted_2);Reset(dd_projectstatus_1);Reset(cb_isgnwt_2);Reset(cb_isaccessibility_2);Reset(dateP_dueDate_2);Reset(dateP_submitted_2);Reset(cb_isadhoc_1);
-                                Reset(dp_WP_Tab_1);Reset(sdd_courseID_3);Reset(slnc_courseID_tf_2);Reset(slnc_classID_3);Reset(sdd_classID_3);
-                                Reset(txtinput_wp_row_number_1);Reset(txtInput_adaptlink_1);
+                                Reset(dd_Bizline_2);Reset(EditScreen_requestor);Reset(EditScreen_worktype);Reset(EditScreen_medium);
+                                Reset(EditScreen_language);Reset(EditScreen_coursenameEN);Reset(EditScreen_coursenameFR);Reset(EditScreen_contenttitleEN);Reset(EditScreen_contenttitleFR);Reset(EditScreen_details);
+                                Reset(dateP_submitted_2);Reset(dd_projectstatus_1);Reset(EditScreen_gnwtcheck);Reset(EditScreen_prioritycheck);Reset(dateP_dueDate_2);Reset(dateP_submitted_2);Reset(cb_isadhoc_1);
+                                Reset(dp_WP_Tab_1);Reset(EditScreen_SDCID);Reset(EditScreen_SLCID);Reset(EditScreen_SLSID);Reset(EditScreen_SDSID);
+                                Reset(txtinput_wp_row_number_1);Reset(EditScreen_adaptDetails);
                                 
                                 Navigate(screen_complete, Transition.None);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
                             TabIndex: =43

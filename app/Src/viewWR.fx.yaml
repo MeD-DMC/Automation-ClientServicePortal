@@ -319,7 +319,7 @@ viewWR As screen:
                                 Height: =47
                                 TabIndex: =19
                                 Text: ="Adapt Details | Détails d'Adapt"
-                                Visible: =If(dd_medium_3.SelectedText.Value = "ADAPT (.html)", true,false)
+                                Visible: =If(EditScreen_medium.SelectedText.Value = "ADAPT (.html)", true,false)
                                 Width: =393
                                 X: =40
                                 Y: =503
@@ -329,7 +329,7 @@ viewWR As screen:
                                 Default: =PlannedGallery.Selected.CustomC
                                 DisplayMode: =DisplayMode.View
                                 Height: =51
-                                Visible: =If(dd_medium_3.SelectedText.Value = "ADAPT (.html)", true,false)
+                                Visible: =If(EditScreen_medium.SelectedText.Value = "ADAPT (.html)", true,false)
                                 Width: =1007
                                 X: =273
                                 Y: =556
@@ -342,7 +342,7 @@ viewWR As screen:
                                 Text: |-
                                     ="Preview Link:              
                                     Lien d'aperçu:"
-                                Visible: =If(dd_medium_3.SelectedText.Value = "ADAPT (.html)", true,false)
+                                Visible: =If(EditScreen_medium.SelectedText.Value = "ADAPT (.html)", true,false)
                                 Width: =160
                                 X: =96
                                 Y: =550

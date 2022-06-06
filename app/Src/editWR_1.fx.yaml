@@ -339,7 +339,7 @@ editWR_1 As screen:
                                 Height: =47
                                 TabIndex: =19
                                 Text: ="Adapt Details | Détails d'Adapt"
-                                Visible: =If(dd_medium_3.SelectedText.Value = "ADAPT (.html)", true,false)
+                                Visible: =If(EditScreen_medium.SelectedText.Value = "ADAPT (.html)", true,false)
                                 Width: =393
                                 X: =40
                                 Y: =517
@@ -348,7 +348,7 @@ editWR_1 As screen:
                             txtInput_adaptlink_2 As text:
                                 Default: =PlannedGallery.Selected.CustomC
                                 Height: =51
-                                Visible: =If(dd_medium_3.SelectedText.Value = "ADAPT (.html)", true,false)
+                                Visible: =If(EditScreen_medium.SelectedText.Value = "ADAPT (.html)", true,false)
                                 Width: =1007
                                 X: =273
                                 Y: =570
@@ -361,7 +361,7 @@ editWR_1 As screen:
                                 Text: |-
                                     ="Preview Link:              
                                     Lien d'aperçu:"
-                                Visible: =If(dd_medium_3.SelectedText.Value = "ADAPT (.html)", true,false)
+                                Visible: =If(EditScreen_medium.SelectedText.Value = "ADAPT (.html)", true,false)
                                 Width: =160
                                 X: =96
                                 Y: =564
