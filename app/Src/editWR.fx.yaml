@@ -101,13 +101,14 @@ editWR As screen:
                                 ZIndex: =14
 
                             EditScreen_submitdate As datepicker:
-                                Color: =RGBA(168, 0, 81, 1)
-                                DisplayMode: =DisplayMode.View
+                                BorderColor: =RGBA(0, 121, 187, 1)
+                                Color: =RGBA(0, 18, 107, 1)
+                                DefaultDate: =PlannedGallery.Selected.submitted_date
                                 Format: ="yyyy-mm-dd"
                                 PaddingLeft: =5
                                 PaddingTop: =5
                                 TabIndex: =6
-                                Width: =140
+                                Width: =152
                                 X: =502
                                 Y: =78
                                 ZIndex: =15
@@ -883,7 +884,7 @@ editWR As screen:
                             FontWeight: =FontWeight.Normal
                             Height: =47
                             HoverFill: =ColorFade(RGBA(31, 124, 155, 1), -20%)
-                            OnSelect: |+
+                            OnSelect: |-
                                 =Set(courseNameFolder, Concat(Filter(Split(EditScreen_coursenameEN.Text,""),IsMatch(Result,"^[a-zA-Z0-9\s]+")),Result));
                                 Set(resetScroll, false);
                                 
@@ -916,11 +917,25 @@ editWR As screen:
                                     isGNWT:If(EditScreen_gnwtcheck.Value = true, true, false),
                                     isAdhoc: If(cb_isadhoc_1.Value = true, true, false),
                                     due_date:EditScreen_duedate.SelectedDate,
-                                    submitted_date:dateP_submitted_2.SelectedDate,
+                                    submitted_date:EditScreen_submitdate.SelectedDate,
                                     requestor_email:Office365Users.MyProfileV2().mail,
                                     CustomA:dp_WP_Tab_1.SelectedText.Value,
                                     CustomB:"",
-                                    CustomC:If(!IsBlank(EditScreen_adaptDetails), Substitute(EditScreen_adaptDetails.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", "")
+                                    CustomC:If(Find("/#editor/", EditScreen_adaptDetails.Text) > 0 , 
+                                        Concatenate("https://esdcadapt.canadacentral.cloudapp.azure.com/#editor/", 
+                                        Mid(EditScreen_adaptDetails.Text,
+                                        Find("/#editor/", EditScreen_adaptDetails.Text) + 9, 24), 
+                                        "/menu"),
+                                    If(Find("/5dc446fd27f08836496b6b9e/", EditScreen_adaptDetails.Text) > 0, 
+                                        Concatenate("https://esdcadapt.canadacentral.cloudapp.azure.com/#editor/", 
+                                        Mid(EditScreen_adaptDetails.Text,
+                                        Find("/5dc446fd27f08836496b6b9e/", EditScreen_adaptDetails.Text) + 26, 24), 
+                                        "/menu"),
+                                    If(IsBlank(EditScreen_adaptDetails), 
+                                        "", EditScreen_adaptDetails.Text)
+                                ))
+                                
+                                
                                 });
                                 'MeD-PRD-InitialWRApproval'.Run(JSON(dataForm, IndentFour));
                                 Reset(EditScreen_BusinessLine);Reset(EditScreen_requestor);Reset(EditScreen_worktype);Reset(EditScreen_medium);
@@ -929,9 +944,6 @@ editWR As screen:
                                 Reset(txtinput_wp_row_number_1);Reset(EditScreen_adaptDetails);Reset(EditScreen_SDCID);Reset(EditScreen_SLCID);Reset(EditScreen_SLSID);Reset(EditScreen_SDSID);
                                 Navigate(screen_complete_1,None);
                                 ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
-                                
-                                
-                                
                             TabIndex: =44
                             Text: =If(dd_lan_selector_2.SelectedText.Value="EN", LookUp(langPack, Title="56").English, LookUp(langPack, Title="56").French)
                             Tooltip: ="Submit the Form"
@@ -992,27 +1004,27 @@ editWR As screen:
                                     SLNC_ContentTitleEN: If(IsBlank(EditScreen_contenttitleEN),"",EditScreen_contenttitleEN.Text),
                                     SLNC_ContentTitleFR:If(IsBlank(EditScreen_contenttitleFR),"",EditScreen_contenttitleFR.Text),
                                     request_details: If(IsBlank(EditScreen_details),"",EditScreen_details.Text),
-                                    project_status_date:dateP_submitted_2.SelectedDate,
+                                    project_status_date:Today(),
                                     //projectStatus:{'@odata.type':"#Microsoft.Azure.Connectors.SharePoint.SPListExpandedReference",Id: dd_projectstatus_1.Selected.Id,Value:dd_projectstatus_1.Selected.Value},
                                     projectStatus: Text(LookUp(ProjectStatus,ID = 1).ID), 
-                                    scormID_EN:If(IsBlank(slnc_scormID_6), "", If(dd_requestLan_6.SelectedText.Value = "EN", slnc_scormID_6.Text,"")),
-                                    scormID_FR:If(IsBlank(slnc_scormID_6), "",If(dd_requestLan_6.SelectedText.Value = "FR", slnc_scormID_6.Text,"")),
+                                    scormID_EN:"deprecated",
+                                    scormID_FR:"deprecated",
                                     isAccessibility:If(EditScreen_prioritycheck.Value = true, true, false),
                                     isGNWT:If(EditScreen_gnwtcheck.Value = true, true, false),
                                     isAdhoc: If(cb_isadhoc_1.Value = true, true, false),
-                                    due_date:dateP_dueDate_2.SelectedDate,
-                                    submitted_date:dateP_submitted_2.SelectedDate,
+                                    due_date:EditScreen_duedate.SelectedDate,
+                                    submitted_date:EditScreen_submitdate.SelectedDate,
                                     requestor_email:Office365Users.MyProfileV2().mail,
                                     CustomA:dp_WP_Tab_1.SelectedText.Value,
                                     CustomB:"",
-                                    CustomC:If(!IsBlank(EditScreen_adaptDetails), Substitute(EditScreen_adaptDetails.Text,"/preview/5dc446fd27f08836496b6b9e/","/#editor/")&"menu", " ")
+                                    CustomC:If(IsBlank(EditScreen_adaptDetails), "", EditScreen_adaptDetails)
                                 
                                 });
                                 'MeD-PRD-SaveWR'.Run(JSON(dataForm,IncludeBinaryData));
                                 
-                                Reset(dd_Bizline_2);Reset(EditScreen_requestor);Reset(EditScreen_worktype);Reset(EditScreen_medium);
+                                Reset(EditScreen_BusinessLine);Reset(EditScreen_requestor);Reset(EditScreen_worktype);Reset(EditScreen_medium);
                                 Reset(EditScreen_language);Reset(EditScreen_coursenameEN);Reset(EditScreen_coursenameFR);Reset(EditScreen_contenttitleEN);Reset(EditScreen_contenttitleFR);Reset(EditScreen_details);
-                                Reset(dateP_submitted_2);Reset(dd_projectstatus_1);Reset(EditScreen_gnwtcheck);Reset(EditScreen_prioritycheck);Reset(dateP_dueDate_2);Reset(dateP_submitted_2);Reset(cb_isadhoc_1);
+                                Reset(EditScreen_submitdate);Reset(dd_projectstatus_1);Reset(EditScreen_gnwtcheck);Reset(EditScreen_prioritycheck);Reset(EditScreen_duedate);Reset(cb_isadhoc_1);
                                 Reset(dp_WP_Tab_1);Reset(EditScreen_SDCID);Reset(EditScreen_SLCID);Reset(EditScreen_SLSID);Reset(EditScreen_SDSID);
                                 Reset(txtinput_wp_row_number_1);Reset(EditScreen_adaptDetails);
                                 

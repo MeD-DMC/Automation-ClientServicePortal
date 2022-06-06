@@ -4,8 +4,42 @@ VincentTestPage As screen:
     VTTestHeader As Header:
 
     Label3 As label:
-        Text: =If(VTTestHeader.Language="EN", LookUp(langPack, Title="1").English, LookUp(langPack, Title="1").French)
-        X: =156
-        Y: =464
+        FontWeight: =FontWeight.Lighter
+        Height: =47
+        Text: |-
+            =If(Find("/#editor/", testlblB.Text) > 0 , 
+                
+                Concatenate("https://esdcadapt.canadacentral.cloudapp.azure.com/#editor/", Mid(testlblB.Text,Find("/#editor/", testlblB.Text) + 9, 24), "/menu"),
+            
+            //else 
+            If(Find("/5dc446fd27f08836496b6b9e/", testlblB.Text) > 0, 
+                
+                Concatenate("https://esdcadapt.canadacentral.cloudapp.azure.com/#editor/", Mid(testlblB.Text,Find("/5dc446fd27f08836496b6b9e/", testlblB.Text) + 26, 24), "/menu"),
+            
+            //else
+            If(IsBlank(testlblB), 
+                "", testlblB.Text)
+            ))
+        Width: =1096
+        X: =52
+        Y: =480
         ZIndex: =2
+
+    testlblA As label:
+        Height: =43
+        Text: |-
+            ="https://esdcadapt.canadacentral.cloudapp.azure.com/preview/5dc446fd27f08836496b6b9e/628fe9a1104bcd0cd3dcf5da/#/id/628fe9a1104bcd0cd3dcf5dc"
+        Width: =1262
+        X: =52
+        Y: =545
+        ZIndex: =3
+
+    testlblB As label:
+        Height: =56
+        Text: |-
+            ="https://esdcadapt.canadacentral.cloudapp.azure.com/preview/5dc446fd27f08836496b6b9e/628fe9a1104bcd0cd3dcf5da/#/id/628fe9a1104bcd0cd3dcf5dc"
+        Width: =1277
+        X: =52
+        Y: =588
+        ZIndex: =4
 

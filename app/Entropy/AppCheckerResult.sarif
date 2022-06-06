@@ -212,87 +212,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "VincentTestPage.Label3.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "VincentTestPage.Label3.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 9,
-                  "charOffset": 15,
-                  "snippet": {
-                    "text": ".Language"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "VincentTestPage",
-                "type": "VincentTestPage.Label3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Language"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "VincentTestPage.Label3.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "VincentTestPage.Label3.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 24,
-                  "snippet": {
-                    "text": "="
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "VincentTestPage",
-                "type": "VincentTestPage.Label3"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Error",
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrIncompatibleTypesForEquality-Left-Right",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "newHome_backup.Canvas2_4.DataCard2_4.Main_4.Container4_4.section1_4.dd_typeofwork_5.Items"
                 }
               ],
@@ -41922,6 +41841,36 @@
                 "member": "Items",
                 "module": "editWR",
                 "type": "editWR.Canvas2_2.DataCard2_2.Main_2.Container4_2.section1_2.EditScreen_worktype"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 17
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "editWR.Canvas2_2.DataCard2_2.Main_2.Container4_2.section1_2.EditScreen_submitdate.DefaultDate"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "editWR.Canvas2_2.DataCard2_2.Main_2.Container4_2.section1_2.EditScreen_submitdate.DefaultDate",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "DefaultDate",
+                "module": "editWR",
+                "type": "editWR.Canvas2_2.DataCard2_2.Main_2.Container4_2.section1_2.EditScreen_submitdate"
               }
             }
           ],
