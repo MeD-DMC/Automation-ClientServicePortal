@@ -953,7 +953,7 @@ newHome As screen:
                             
                             Navigate(screen_complete, Transition.None);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',requestor_email=requestorEmail)));
                         TabIndex: =44
-                        Text: =If(dd_lan_selector_1.SelectedText.Value="EN", LookUp(langPack, English="Add to WP").English, LookUp(langPack, English="Add to WP").French)
+                        Text: =If(dd_lan_selector_1.SelectedText.Value="EN", LookUp(langPack, ID="69").English, LookUp(langPack, ID="69").French)
                         Tooltip: ="Submit the Form"
                         Width: =213
                         X: =690
