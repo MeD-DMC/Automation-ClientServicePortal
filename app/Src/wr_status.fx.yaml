@@ -127,7 +127,7 @@ wr_status As screen:
                         btn_newWR As button:
                             BorderStyle: =BorderStyle.None
                             Fill: =RGBA(31, 124, 155, 1)
-                            Height: =60
+                            Height: =80
                             OnSelect: =Navigate(newHome,None);Clear(dataForm)
                             RadiusBottomLeft: =9
                             RadiusBottomRight: =9
@@ -143,7 +143,7 @@ wr_status As screen:
                         btn_takeWR As button:
                             BorderStyle: =BorderStyle.None
                             Fill: =RGBA(31, 124, 155, 1)
-                            Height: =60
+                            Height: =80
                             OnSelect: =Navigate(reAssignWR,None);Clear(dataForm)
                             RadiusBottomLeft: =9
                             RadiusBottomRight: =9
