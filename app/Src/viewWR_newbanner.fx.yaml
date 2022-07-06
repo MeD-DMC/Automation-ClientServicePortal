@@ -286,11 +286,11 @@ viewWR_newbanner As screen:
 
                         dd_projectstatus_4 As dropdown:
                             Default: |
-                                =If(dd_lan_selector_4.SelectedText.Value="EN", LookUp(ProjectStatus, Title=ActiveGallery.Selected.projectStatus.Value).Title, LookUp(ProjectStatus, Title=ActiveGallery.Selected.projectStatus.Value).French)
+                                =If(dd_lan_selector_4.SelectedText.Value="EN", LookUp(ProjectStatus, Title=ActiveGallery.Selected.projectStatus_temp.Value).Title, LookUp(ProjectStatus, Title=ActiveGallery.Selected.projectStatus_temp.Value).French)
                             DisplayMode: =DisplayMode.View
                             FontWeight: =FontWeight.Semibold
                             Items: |-
-                                =[If(dd_lan_selector_4.SelectedText.Value="EN", LookUp(ProjectStatus, Title=ActiveGallery.Selected.projectStatus.Value).Title, LookUp(ProjectStatus, Title=ActiveGallery.Selected.projectStatus.Value).French)
+                                =[If(dd_lan_selector_4.SelectedText.Value="EN", LookUp(ProjectStatus, Title=ActiveGallery.Selected.projectStatus_temp.Value).Title, LookUp(ProjectStatus, Title=ActiveGallery.Selected.projectStatus_temp.Value).French)
                                 ]
                             Reset: =btn_Clear_5.Pressed
                             Width: =103

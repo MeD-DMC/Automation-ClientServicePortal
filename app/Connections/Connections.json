@@ -90,7 +90,8 @@
       "e8e72622-8b64-4ed1-8ee1-16eff26f2cd0",
       "6876b3ff-a3a1-4cca-a769-eb7c2e36707f",
       "3e0a4be0-c28e-4d2e-a53b-b0f87a67a4f8",
-      "0c90d2ac-44bc-4610-9fde-a154d00eae0f"
+      "0c90d2ac-44bc-4610-9fde-a154d00eae0f",
+      "e2b32c60-8078-4824-a600-e451d611ffc3"
     ],
     "id": "0f748b89-d170-443d-b263-828a7e6d6fd8"
   },
@@ -182,7 +183,8 @@
       "e8e72622-8b64-4ed1-8ee1-16eff26f2cd0",
       "6876b3ff-a3a1-4cca-a769-eb7c2e36707f",
       "3e0a4be0-c28e-4d2e-a53b-b0f87a67a4f8",
-      "0c90d2ac-44bc-4610-9fde-a154d00eae0f"
+      "0c90d2ac-44bc-4610-9fde-a154d00eae0f",
+      "e2b32c60-8078-4824-a600-e451d611ffc3"
     ],
     "id": "29c11814-1e0c-4dfe-b672-cccc648bedfd"
   },
@@ -266,7 +268,8 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "6876b3ff-a3a1-4cca-a769-eb7c2e36707f"
+      "6876b3ff-a3a1-4cca-a769-eb7c2e36707f",
+      "e2b32c60-8078-4824-a600-e451d611ffc3"
     ],
     "id": "4595088a-7972-403a-a78c-ffb8c7ce0c9b"
   },
@@ -331,6 +334,23 @@
     "dependents": [],
     "id": "6876b3ff-a3a1-4cca-a769-eb7c2e36707f"
   },
+  "95b78bd4-27bb-44da-9f58-3b014dc882f1": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "Microsoft Teams",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1459/1.0.1459.2387/teams/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_teams"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "e2b32c60-8078-4824-a600-e451d611ffc3"
+    ],
+    "id": "95b78bd4-27bb-44da-9f58-3b014dc882f1"
+  },
   "98b4ffbe-5c82-4a78-9e36-237c1cf70c7e": {
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-04.canadacentral.logic.azure.com:443/workflows/9d0031f669cf4b73b999f6149f18bb4c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ZGsHlLP2TmaBf7vjxIxmUz5z3wgwv0KwQymGxi-u8eY",
@@ -387,6 +407,43 @@
       "6876b3ff-a3a1-4cca-a769-eb7c2e36707f"
     ],
     "id": "c09495be-41a9-4b59-aee1-db04467b9a55"
+  },
+  "e2b32c60-8078-4824-a600-e451d611ffc3": {
+    "connectionParameters": {
+      "workFlowCallbackUri": "https://prod-04.canadacentral.logic.azure.com:443/workflows/787425c9c34b4b2798d2cc45775e0dc6/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=ztCLGfWrJfhN8QzXg0HMcVjyU1gKCDzQoqSJXjlTUmY",
+      "workflowEndpoint": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/9ed558468a814246acd8b1a01abfc0d1-9238fd491e2f453388513ffcdbc0bfc4/providers/Microsoft.Logic/workflows/d00ab0dd-7b5d-4168-95fe-99fbc2aac5c0",
+      "workflowName": "d00ab0dd-7b5d-4168-95fe-99fbc2aac5c0",
+      "workflowPath": "/subscriptions/2c8cfba1-d125-4f31-a479-50156c7ed09f/resourceGroups/9ed558468a814246acd8b1a01abfc0d1-9238fd491e2f453388513ffcdbc0bfc4/providers/Microsoft.Logic/workflows/d00ab0dd-7b5d-4168-95fe-99fbc2aac5c0"
+    },
+    "connectionRef": {
+      "displayName": "Logic flows",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
+      "parameterHints": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "d00ab0dd-7b5d-4168-95fe-99fbc2aac5c0"
+        }
+      },
+      "parameterHintsV2": {
+        "workflowEntityId": {},
+        "workflowName": {
+          "value": "d00ab0dd-7b5d-4168-95fe-99fbc2aac5c0"
+        }
+      }
+    },
+    "datasets": {},
+    "dataSources": [
+      "MED-DMC-InitialWRApproval"
+    ],
+    "dependencies": {
+      "shared_approvals": "4595088a-7972-403a-a78c-ffb8c7ce0c9b",
+      "shared_sendmail": "0f748b89-d170-443d-b263-828a7e6d6fd8",
+      "shared_sharepointonline": "29c11814-1e0c-4dfe-b672-cccc648bedfd",
+      "shared_teams": "95b78bd4-27bb-44da-9f58-3b014dc882f1"
+    },
+    "dependents": [],
+    "id": "e2b32c60-8078-4824-a600-e451d611ffc3"
   },
   "e8e72622-8b64-4ed1-8ee1-16eff26f2cd0": {
     "connectionParameters": {
