@@ -27,6 +27,7 @@
       "Author#Claims": "Created By Claims",
       "ComplianceAssetId": "Compliance Asset Id",
       "Created": "Created",
+      "Dateapproved": "Date approved",
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
       "field_1": "requestor_name",
