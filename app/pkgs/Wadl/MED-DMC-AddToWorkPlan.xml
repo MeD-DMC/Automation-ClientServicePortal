@@ -1,5 +1,5 @@
-<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://canada-001.azure-apim.net/apim/logicflows" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="MEDDMC-CSP-NewWR" xmlns="http://wadl.dev.java.net/2009/02">
-  <doc title="MEDDMC-CSP-NewWR" />
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://canada-001.azure-apim.net/apim/logicflows" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="MED-DMC-AddToWorkPlan" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="MED-DMC-AddToWorkPlan" />
   <grammars>
     <jsonTypes targetNamespace="https://canada-001.azure-apim.net/apim/logicflows" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
       <string name="ManualTriggerInput_Initializevariable_Value_def" />

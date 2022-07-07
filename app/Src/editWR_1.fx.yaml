@@ -901,7 +901,7 @@ editWR_1 As screen:
                                 Reset(dd_requestLan_2);Reset(slnc_courseNameEN_1);Reset(slnc_courseNameFR_1);Reset(slnc_contentTitleEN_2);Reset(slnc_contentTitleFR_2);Reset(textInput_requestDetails_2);Reset(cb_isadhoc_2);
                                 Reset(dateP_submitted_2);Reset(dd_projectstatus);Reset(cb_isgnwt);Reset(cb_isaccessibility);Reset(slnc_scormID_6);Reset(dateP_dueDate_2);Reset(dateP_submitted_2);Reset(cb_isadhoc_2);Reset(dp_WP_Tab_2);
                                 Reset(txtinput_wp_row_number_2);Reset(txtInput_adaptlink_2);Reset(slnc_classID_6);Reset(slnc_courseID_tf_5);Reset(sdd_classID_6);Reset(sdd_courseID_6);
-                                Navigate(screen_complete_1, Transition.None);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
+                                Navigate(screen_complete_1, Transition.None);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',requestor_email=requestorEmail)));
                                 
                                 
                                 
@@ -919,7 +919,7 @@ editWR_1 As screen:
                             Fill: =RGBA(255, 255, 255, 1)
                             Height: =47
                             HoverFill: =ColorFade(RGBA(31, 124, 155, 1), -20%)
-                            OnSelect: =lbl_warning_12.Visible=false;Back();ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',field_2=requestorEmail)));
+                            OnSelect: =lbl_warning_12.Visible=false;Back();ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',requestor_email=requestorEmail)));
                             TabIndex: =43
                             Text: =If(dd_lan_selector_4.SelectedText.Value="EN", LookUp(langPack, Title="34").English, LookUp(langPack, Title="34").French)
                             Width: =213

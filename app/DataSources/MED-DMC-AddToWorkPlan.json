@@ -1,8 +1,8 @@
 [
   {
     "ApiId": "/providers/microsoft.powerapps/apis/shared_logicflows",
-    "FlowNameId": "ae2b36fe-4f89-4cfc-b66b-5874579623b5",
-    "Name": "MEDDMC-CSP-NewWR",
+    "FlowNameId": "4c74035a-e1a4-440f-8c37-39f83e561e07",
+    "Name": "MED-DMC-AddToWorkPlan",
     "ServiceKind": "ConnectedWadl",
     "Type": "ServiceInfo",
     "WorkflowEntityId": null
