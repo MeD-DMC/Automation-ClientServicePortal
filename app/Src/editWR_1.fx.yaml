@@ -401,7 +401,7 @@ editWR_1 As screen:
                                 BorderColor: =RGBA(31, 124, 155, 1)
                                 ChevronBackground: =RGBA(31, 124, 155, 1)
                                 ChevronHoverBackground: =ColorFade(RGBA(31, 124, 155, 1), -20%)
-                                Default: =PlannedGallery.Selected.CustomA.Value
+                                Default: =PlannedGallery.Selected.field_52.Value
                                 HoverFill: =RGBA(31, 124, 155, 1)
                                 Items: =["Select / Choisir","Q1_2021","Q2_2021","Q3_2021","Q4_2021","Q1_2022","Q2_2022","Q3_2022","Q4_2022","Q1_2023","Q2_2023","Q3_2023","Q4_2023","Q1_2024","Q2_2024","Q3_2024","Q4_2024",]
                                 PressedFill: =RGBA(31, 124, 155, 1)
@@ -413,7 +413,7 @@ editWR_1 As screen:
 
                             txtinput_wp_row_number_2 As text:
                                 BorderColor: =RGBA(31, 124, 155, 1)
-                                Default: =PlannedGallery.Selected.CustomB
+                                Default: =PlannedGallery.Selected.field_53
                                 Height: =46
                                 HintText: ="Input the Work Plan Row Number"
                                 Visible: =false

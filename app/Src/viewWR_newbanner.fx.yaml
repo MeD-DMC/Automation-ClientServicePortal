@@ -258,7 +258,7 @@ viewWR_newbanner As screen:
                                 ZIndex: =8
 
                         cb_isaccessibility_5 As checkbox:
-                            Default: =ActiveGallery.Selected.isAccessibility
+                            Default: =ActiveGallery.Selected.isPriority
                             DisplayMode: =DisplayMode.View
                             Size: =11
                             Text: =If(dd_lan_selector_4.SelectedText.Value="EN", LookUp(langPack, Title="20").English, LookUp(langPack, Title="20").French)
@@ -320,7 +320,7 @@ viewWR_newbanner As screen:
                             ZIndex: =25
 
                         dp_WP_Tab_4 As dropdown:
-                            Default: =PlannedGallery.Selected.CustomA.Value
+                            Default: =PlannedGallery.Selected.field_52.Value
                             DisplayMode: =DisplayMode.View
                             Items: =["Select / Choisir","Q1_2021","Q2_2021","Q3_2021","Q4_2021","Q1_2022","Q2_2022","Q3_2022","Q4_2022","Q1_2023","Q2_2023","Q3_2023","Q4_2023","Q1_2024","Q2_2024","Q3_2024","Q4_2024",]
                             Width: =300
@@ -329,7 +329,7 @@ viewWR_newbanner As screen:
                             ZIndex: =26
 
                         txtinput_wp_row_number_4 As text:
-                            Default: =PlannedGallery.Selected.CustomB
+                            Default: =PlannedGallery.Selected.field_53
                             DisplayMode: =DisplayMode.View
                             Height: =46
                             HintText: ="Input the Work Plan Row Number"

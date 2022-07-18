@@ -12,7 +12,6 @@
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "0c90d2ac-44bc-4610-9fde-a154d00eae0f",
       "0fe6309e-eaba-4f9f-bce8-fe9912d58747"
     ],
     "id": "0903e8bf-f406-40ff-9313-bd87778b4d6b"
@@ -37,7 +36,6 @@
       "e8e72622-8b64-4ed1-8ee1-16eff26f2cd0",
       "6876b3ff-a3a1-4cca-a769-eb7c2e36707f",
       "3e0a4be0-c28e-4d2e-a53b-b0f87a67a4f8",
-      "0c90d2ac-44bc-4610-9fde-a154d00eae0f",
       "e2b32c60-8078-4824-a600-e451d611ffc3",
       "0fe6309e-eaba-4f9f-bce8-fe9912d58747"
     ],
@@ -55,12 +53,30 @@
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
+        "0903e8bf-f406-40ff-9313-bd87778b4d6b": {
+          "value": "shared_sharepointonline"
+        },
+        "0f748b89-d170-443d-b263-828a7e6d6fd8": {
+          "value": "shared_sendmail"
+        },
+        "29c11814-1e0c-4dfe-b672-cccc648bedfd": {
+          "value": "shared_sharepointonline_2"
+        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "4c74035a-e1a4-440f-8c37-39f83e561e07"
         }
       },
       "parameterHintsV2": {
+        "shared_sendmail": {
+          "value": "0f748b89-d170-443d-b263-828a7e6d6fd8"
+        },
+        "shared_sharepointonline": {
+          "value": "0903e8bf-f406-40ff-9313-bd87778b4d6b"
+        },
+        "shared_sharepointonline_2": {
+          "value": "29c11814-1e0c-4dfe-b672-cccc648bedfd"
+        },
         "workflowEntityId": {},
         "workflowName": {
           "value": "4c74035a-e1a4-440f-8c37-39f83e561e07"
@@ -142,9 +158,6 @@
           "MeD FAQ DB": {
             "tableName": "147552d2-5b52-4437-b567-aaee2cf07dbb"
           },
-          "MeD_CSP_UserGroup": {
-            "tableName": "66c3097a-e789-40cc-add7-7c365800bce5"
-          },
           "ProjectStatus": {
             "tableName": "31855860-0252-4ceb-8516-fca00cf82163"
           },
@@ -152,14 +165,21 @@
             "tableName": "59205985-4c96-4bca-b91a-f1bed6b45413"
           }
         }
+      },
+      "https://014gc.sharepoint.com/sites/MeD-DMC": {
+        "dataSources": {
+          "MED-ToolPatchNotes": {
+            "tableName": "448830bd-b422-4856-a8e4-385fc6608555"
+          }
+        }
       }
     },
     "dataSources": [
       "ProjectStatus",
-      "MeD_CSP_UserGroup",
       "wrtracking-production-version-001",
       "LangTranslation",
-      "MeD FAQ DB"
+      "MeD FAQ DB",
+      "MED-ToolPatchNotes"
     ],
     "dependencies": {},
     "dependents": [
@@ -167,7 +187,6 @@
       "e8e72622-8b64-4ed1-8ee1-16eff26f2cd0",
       "6876b3ff-a3a1-4cca-a769-eb7c2e36707f",
       "3e0a4be0-c28e-4d2e-a53b-b0f87a67a4f8",
-      "0c90d2ac-44bc-4610-9fde-a154d00eae0f",
       "e2b32c60-8078-4824-a600-e451d611ffc3",
       "0fe6309e-eaba-4f9f-bce8-fe9912d58747"
     ],

@@ -3,7 +3,7 @@
     "ApiId": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
     "CdpRevision": {
       "BaseUrl": "/",
-      "LastChangedTimeString": "2021-11-04T16:19:22.0140000Z",
+      "LastChangedTimeString": "2022-07-18T16:29:10.4690000Z",
       "RevisionNumber": 1
     },
     "ConnectedDataSourceInfoNameMapping": {
@@ -17,7 +17,7 @@
       "{Link}": "Link to item",
       "{ModerationComment}": "Comments associated with the content approval of this list item",
       "{ModerationStatus}": "Content approval status",
-      "{Name}": "Name ({Name})",
+      "{Name}": "Name",
       "{Path}": "Folder path",
       "{Thumbnail}": "Thumbnail",
       "{TriggerWindowEndToken}": "Trigger Window End Token",
@@ -29,19 +29,15 @@
       "Created": "Created",
       "Editor": "Modified By",
       "Editor#Claims": "Modified By Claims",
-      "email": "email",
-      "email#Claims": "email Claims",
       "ID": "ID",
       "Modified": "Modified",
-      "Name": "username",
-      "Name#Claims": "username Claims",
       "Title": "Title"
     },
-    "DatasetName": "https://014gc.sharepoint.com/sites/MeD",
+    "DatasetName": "https://014gc.sharepoint.com/sites/MeD-DMC",
     "EncodeDataset": true,
     "IsSampleData": false,
     "IsWritable": true,
-    "Name": "MeD_CSP_UserGroup",
+    "Name": "MED-ToolPatchNotes",
     "Type": "ConnectedDataSourceInfo"
   }
 ]

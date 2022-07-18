@@ -294,7 +294,7 @@ editWR As screen:
                             BorderColor: =RGBA(31, 124, 155, 1)
                             CheckboxBorderColor: =RGBA(31, 124, 155, 1)
                             CheckmarkFill: =RGBA(31, 124, 155, 1)
-                            Default: =PlannedGallery.Selected.isAccessibility
+                            Default: =PlannedGallery.Selected.isPriority
                             Height: =66
                             Size: =11
                             Text: =If(dd_lan_selector_2.SelectedText.Value="EN", LookUp(langPack, Title="20").English, LookUp(langPack, Title="20").French)
@@ -401,59 +401,6 @@ editWR As screen:
                             X: =575
                             Y: =188
                             ZIndex: =34
-
-                        Group9 As group:
-                            Height: =5
-                            Width: =5
-                            X: =60
-                            Y: =60
-                            ZIndex: =34
-
-                            cb_isadhoc_1 As checkbox:
-                                Default: =PlannedGallery.Selected.isAdHoc
-                                Height: |
-                                    =0
-                                Size: =11
-                                Text: =If(dd_lan_selector_2.SelectedText.Value="EN", LookUp(langPack, Title="26").English, LookUp(langPack, Title="26").French)
-                                Visible: =false
-                                Width: =1032
-                                X: =101
-                                Y: =474
-                                ZIndex: =24
-
-                            dp_WP_Tab_1 As dropdown:
-                                Default: =PlannedGallery.Selected.CustomA.Value
-                                Height: |
-                                    =0
-                                Items: =["Select / Choisir","Q1_2021","Q2_2021","Q3_2021","Q4_2021","Q1_2022","Q2_2022","Q3_2022","Q4_2022","Q1_2023","Q2_2023","Q3_2023","Q4_2023","Q1_2024","Q2_2024","Q3_2024","Q4_2024",]
-                                Visible: =false
-                                Width: =300
-                                X: =995
-                                Y: =259
-                                ZIndex: =28
-
-                            txtinput_wp_row_number_1 As text:
-                                Default: =PlannedGallery.Selected.CustomB
-                                Height: |
-                                    =0
-                                HintText: ="Input the Work Plan Row Number"
-                                Visible: =false
-                                Width: =530
-                                X: =819
-                                Y: =258
-                                ZIndex: =29
-
-                            Label2_30 As label:
-                                FontWeight: =FontWeight.Bold
-                                Height: |
-                                    =0
-                                TabIndex: =3
-                                Text: =If(dd_lan_selector_2.SelectedText.Value="EN", LookUp(langPack, Title="23").English, LookUp(langPack, Title="23").French)
-                                Visible: =false
-                                Width: =450
-                                X: =72
-                                Y: =377
-                                ZIndex: =32
 
                         as_medium_10 As label:
                             Color: =RGBA(168, 0, 0, 1)
@@ -915,12 +862,9 @@ editWR As screen:
                                     scormID_FR:If(IsBlank(slnc_scormID_6), "",If(EditScreen_language.SelectedText.Value = "FR", slnc_scormID_6.Text,"")),
                                     isAccessibility:If(EditScreen_prioritycheck.Value = true, true, false),
                                     isGNWT:If(EditScreen_gnwtcheck.Value = true, true, false),
-                                    isAdhoc: If(cb_isadhoc_1.Value = true, true, false),
                                     due_date:EditScreen_duedate.SelectedDate,
                                     submitted_date:EditScreen_submitdate.SelectedDate,
                                     requestor_email:Office365Users.MyProfileV2().mail,
-                                    CustomA:dp_WP_Tab_1.SelectedText.Value,
-                                    CustomB:"",
                                     CustomC:If(Find("/#editor/", EditScreen_adaptDetails.Text) > 0 , 
                                         Concatenate("https://esdcadapt.canadacentral.cloudapp.azure.com/#editor/", 
                                         Mid(EditScreen_adaptDetails.Text,
@@ -940,8 +884,7 @@ editWR As screen:
                                 'MED-DMC-InitialWRApproval'.Run(JSON(dataForm, IndentFour));
                                 Reset(EditScreen_BusinessLine);Reset(EditScreen_requestor);Reset(EditScreen_worktype);Reset(EditScreen_medium);
                                 Reset(EditScreen_language);Reset(EditScreen_coursenameEN);Reset(EditScreen_coursenameFR);Reset(EditScreen_contenttitleEN);Reset(EditScreen_contenttitleFR);Reset(EditScreen_details);
-                                Reset(dateP_submitted_2);Reset(dd_projectstatus_1);Reset(EditScreen_gnwtcheck);Reset(EditScreen_prioritycheck);Reset(EditScreen_duedate);Reset(EditScreen_submitdate);Reset(cb_isadhoc_1);Reset(dp_WP_Tab_1);
-                                Reset(txtinput_wp_row_number_1);Reset(EditScreen_adaptDetails);Reset(EditScreen_SDCID);Reset(EditScreen_SLCID);Reset(EditScreen_SLSID);Reset(EditScreen_SDSID);
+                                Reset(dateP_submitted_2);Reset(dd_projectstatus_1);Reset(EditScreen_gnwtcheck);Reset(EditScreen_prioritycheck);Reset(EditScreen_duedate);Reset(EditScreen_submitdate);Reset(EditScreen_adaptDetails);Reset(EditScreen_SDCID);Reset(EditScreen_SLCID);Reset(EditScreen_SLSID);Reset(EditScreen_SDSID);
                                 Navigate(screen_complete_1,None);
                                 ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',requestor_email=requestorEmail)));
                             TabIndex: =44
@@ -1011,12 +954,9 @@ editWR As screen:
                                     scormID_FR:"deprecated",
                                     isAccessibility:If(EditScreen_prioritycheck.Value = true, true, false),
                                     isGNWT:If(EditScreen_gnwtcheck.Value = true, true, false),
-                                    isAdhoc: If(cb_isadhoc_1.Value = true, true, false),
                                     due_date:EditScreen_duedate.SelectedDate,
                                     submitted_date:EditScreen_submitdate.SelectedDate,
                                     requestor_email:Office365Users.MyProfileV2().mail,
-                                    CustomA:dp_WP_Tab_1.SelectedText.Value,
-                                    CustomB:"",
                                     CustomC:If(IsBlank(EditScreen_adaptDetails), "", EditScreen_adaptDetails)
                                 
                                 });
@@ -1024,9 +964,7 @@ editWR As screen:
                                 
                                 Reset(EditScreen_BusinessLine);Reset(EditScreen_requestor);Reset(EditScreen_worktype);Reset(EditScreen_medium);
                                 Reset(EditScreen_language);Reset(EditScreen_coursenameEN);Reset(EditScreen_coursenameFR);Reset(EditScreen_contenttitleEN);Reset(EditScreen_contenttitleFR);Reset(EditScreen_details);
-                                Reset(EditScreen_submitdate);Reset(dd_projectstatus_1);Reset(EditScreen_gnwtcheck);Reset(EditScreen_prioritycheck);Reset(EditScreen_duedate);Reset(cb_isadhoc_1);
-                                Reset(dp_WP_Tab_1);Reset(EditScreen_SDCID);Reset(EditScreen_SLCID);Reset(EditScreen_SLSID);Reset(EditScreen_SDSID);
-                                Reset(txtinput_wp_row_number_1);Reset(EditScreen_adaptDetails);
+                                Reset(EditScreen_submitdate);Reset(dd_projectstatus_1);Reset(EditScreen_gnwtcheck);Reset(EditScreen_prioritycheck);Reset(EditScreen_duedate);Reset(EditScreen_SDCID);Reset(EditScreen_SLCID);Reset(EditScreen_SLSID);Reset(EditScreen_SDSID);Reset(EditScreen_adaptDetails);
                                 
                                 Navigate(screen_complete, Transition.None);ClearCollect(numWRCol, (Filter('wrtracking-production-version-001',requestor_email=requestorEmail)));
                             TabIndex: =43

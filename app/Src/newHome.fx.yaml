@@ -889,13 +889,10 @@ newHome As screen:
                                 projectStatus:Text(LookUp(ProjectStatus,ID = 1).ID),
                                 isAccessibility:cb_isaccessibility.Value,
                                 isGNWT:cb_isgnwt.Value,
-                                isAdhoc:cb_isadhoc.Value,
                                 due_date:dateP_dueDate_2.SelectedDate,
                                 submitted_date:dateP_submitted_2.SelectedDate,
                                 requestor_email:Concat(dd_requestor_1.SelectedItems,Mail& ""),
                                 requestor_list:JSON(dd_requestor_1.SelectedItems.Mail),
-                                CustomA:dp_WP_Tab.SelectedText.Value,
-                                CustomB:If(!IsBlank(txtinput_wp_row_number),txtinput_wp_row_number.Text,""),
                                 CustomC:If(!IsBlank(txtInput_adaptlink),txtInput_adaptlink.Text , " ")
                             });
                             
